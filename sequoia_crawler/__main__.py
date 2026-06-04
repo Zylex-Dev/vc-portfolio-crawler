@@ -9,6 +9,7 @@ from . import api
 from .enrich import enrich_all
 from .export import write_csv, write_json
 from .http_client import PoliteClient
+from .listing import fetch_stage_map, normalize_name
 from .sitemap import fetch_company_slugs
 
 log = logging.getLogger("sequoia_crawler")
@@ -35,6 +36,26 @@ def _check_completeness(client, companies) -> None:
     )
     if missing:
         log.warning("Slugs in sitemap but not in API: %s", sorted(missing)[:20])
+
+
+def apply_stages(client, companies) -> None:
+    """Fetch the directory listing once and set each company's Current Stage.
+
+    Best-effort: a listing failure must not abort the whole crawl, so companies
+    simply keep `stage = None` if the listing can't be fetched or matched.
+    """
+    try:
+        stage_map = fetch_stage_map(client)
+    except Exception as exc:  # noqa: BLE001 - stage data is best-effort
+        log.warning("stage enrichment skipped: %s", exc)
+        return
+    matched = 0
+    for c in companies:
+        stage = stage_map.get(normalize_name(c.name))
+        if stage:
+            c.stage = stage
+            matched += 1
+    log.info("Stage: matched %d/%d companies from listing", matched, len(companies))
 
 
 def _parse_args(argv):
@@ -69,6 +90,9 @@ def main(argv=None) -> int:
     if args.limit:
         companies = companies[: args.limit]
         log.info("Limited to %d companies", len(companies))
+
+    log.info("Fetching Current Stage from company listing ...")
+    apply_stages(client, companies)
 
     if not args.no_enrich:
         log.info("Enriching %d companies (workers=%d) ...", len(companies), args.workers)

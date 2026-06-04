@@ -13,8 +13,8 @@ class Company:
     sectors: list[str] = field(default_factory=list)
     website: Optional[str] = None
     description: Optional[str] = None
-    status: Optional[str] = None
-    status_year: Optional[int] = None
+    stage: Optional[str] = None
+    stage_year: Optional[int] = None
     founded_year: Optional[int] = None
     partnered_year: Optional[int] = None
     logo_url: Optional[str] = None
@@ -31,6 +31,6 @@ class Company:
 
 CSV_FIELDS = [
     "id", "name", "slug", "sequoia_url", "sectors", "website",
-    "description", "status", "status_year", "founded_year",
+    "description", "stage", "stage_year", "founded_year",
     "partnered_year", "logo_url", "source_modified",
 ]
