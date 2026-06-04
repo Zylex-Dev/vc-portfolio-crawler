@@ -9,9 +9,10 @@ and exports them to JSON and CSV.
 1. Enumerates the full company list from the WordPress REST API
    (`/wp-json/wp/v2/company`, paginated).
 2. Resolves sector names from the categories taxonomy.
-3. Enriches each company from its server-rendered detail page
-   (`/companies/<slug>/`): website, description, status, founded/partnered years, logo.
-4. Writes `output/companies.json` and `output/companies.csv`.
+4. Enriches each company from its server-rendered detail page
+   (`/companies/<slug>/`): website, description, `stage_year` (exit-milestone
+   year), founded/partnered years, logo.
+5. Writes `output/sequoia_companies.json` and `output/sequoia_companies.csv`.
 
 ## Setup
 
