@@ -18,7 +18,10 @@ log = logging.getLogger("sequoia_crawler")
 def build_companies(client) -> list:
     sectors = api.fetch_categories(client)
     log.info("Loaded %d sector categories", len(sectors))
-    return [api.to_company(raw, sectors) for raw in api.iter_companies(client)]
+    return [
+        api.to_company(raw, sectors, company_id=i)
+        for i, raw in enumerate(api.iter_companies(client), start=1)
+    ]
 
 
 def _check_completeness(client, companies) -> None:

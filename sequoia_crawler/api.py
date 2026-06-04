@@ -41,14 +41,14 @@ def iter_companies(client, base: str = BASE) -> Iterator[dict]:
     )
 
 
-def to_company(raw: dict, sectors_map: dict[int, str]) -> Company:
+def to_company(raw: dict, sectors_map: dict[int, str], company_id: int) -> Company:
     sectors = [
         sectors_map[cid]
         for cid in raw.get("categories", [])
         if cid in sectors_map and sectors_map[cid] not in _DROP_SECTORS
     ]
     return Company(
-        id=raw["id"],
+        id=company_id,
         name=html.unescape(raw["title"]["rendered"]).strip(),
         slug=raw["slug"],
         sequoia_url=raw["link"],

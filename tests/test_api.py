@@ -38,15 +38,17 @@ def test_iter_companies_paginates_via_total_pages_header():
     assert len(client.calls) == 2
 
 
-def test_to_company_maps_fields_and_resolves_sectors():
+def test_to_company_maps_fields_and_assigns_given_id():
     raw = {
-        "id": 10, "slug": "admob",
+        "id": 22119, "slug": "admob",
         "link": "https://sequoiacap.com/companies/admob/",
         "title": {"rendered": "AdMob &amp; Co"},
         "categories": [186, 1],
         "modified": "2026-06-02T21:10:47",
     }
-    c = to_company(raw, {186: "GTM", 1: "Uncategorized"})
+    c = to_company(raw, {186: "GTM", 1: "Uncategorized"}, company_id=7)
+    # Sequential id, not the WordPress post id from the API.
+    assert c.id == 7
     assert c.name == "AdMob & Co"
     assert c.slug == "admob"
     assert c.sequoia_url == "https://sequoiacap.com/companies/admob/"

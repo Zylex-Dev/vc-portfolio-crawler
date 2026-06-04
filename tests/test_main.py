@@ -16,6 +16,22 @@ def test_main_writes_both_outputs(tmp_path, monkeypatch):
     assert (tmp_path / "sequoia_companies.csv").exists()
 
 
+def test_build_companies_assigns_sequential_ids(monkeypatch):
+    raws = [
+        {"id": 900, "slug": "a", "link": "u", "title": {"rendered": "A"},
+         "categories": [], "modified": None},
+        {"id": 12, "slug": "b", "link": "u", "title": {"rendered": "B"},
+         "categories": [], "modified": None},
+        {"id": 555, "slug": "c", "link": "u", "title": {"rendered": "C"},
+         "categories": [], "modified": None},
+    ]
+    monkeypatch.setattr(cli.api, "fetch_categories", lambda *_: {})
+    monkeypatch.setattr(cli.api, "iter_companies", lambda *_: iter(raws))
+    companies = cli.build_companies(None)
+    assert [c.id for c in companies] == [1, 2, 3]
+    assert [c.slug for c in companies] == ["a", "b", "c"]
+
+
 def test_apply_stages_assigns_by_normalized_name(monkeypatch):
     comps = [
         Company(id=1, name="AdMob", slug="admob", sequoia_url="u"),
