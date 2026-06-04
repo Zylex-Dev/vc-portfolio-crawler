@@ -54,3 +54,63 @@ def test_no_enrich_passes_enrich_false(tmp_path, monkeypatch):
     monkeypatch.setattr(seq_mod, "SequoiaCrawler", Fake)
     cli.main(["--fund", "sequoia", "--out", str(tmp_path), "--no-enrich", "--format", "json"])
     assert received["enrich"] is False
+
+
+def test_build_companies_assigns_sequential_ids(monkeypatch):
+    """Verifies sequential IDs are assigned regardless of WordPress IDs."""
+    import vc_crawler.crawlers.sequoia.api as seq_api
+    raws = [
+        {"id": 900, "slug": "a", "link": "u", "title": {"rendered": "A"},
+         "categories": [], "modified": None},
+        {"id": 12, "slug": "b", "link": "u", "title": {"rendered": "B"},
+         "categories": [], "modified": None},
+        {"id": 555, "slug": "c", "link": "u", "title": {"rendered": "C"},
+         "categories": [], "modified": None},
+    ]
+    monkeypatch.setattr(seq_api, "fetch_categories", lambda *_: {})
+    monkeypatch.setattr(seq_api, "iter_companies", lambda *_: iter(raws))
+    from vc_crawler.crawlers.sequoia.crawler import SequoiaCrawler
+    class FakeClient: pass
+    crawler = SequoiaCrawler(FakeClient())
+    # Patch out completeness/stages/enrich — not testing those here
+    monkeypatch.setattr(crawler, "_check_completeness", lambda *_: None)
+    monkeypatch.setattr(crawler, "_apply_stages", lambda *_: None)
+    companies = crawler.run(enrich=False)
+    assert [c.id for c in companies] == [1, 2, 3]
+    assert [c.slug for c in companies] == ["a", "b", "c"]
+
+
+def test_apply_stages_assigns_by_normalized_name(monkeypatch):
+    """Verifies _apply_stages maps stage values to companies by name."""
+    from vc_crawler.crawlers.sequoia.crawler import SequoiaCrawler
+    from vc_crawler.crawlers.sequoia.listing import normalize_name
+    import vc_crawler.crawlers.sequoia.crawler as crawler_mod
+    comps = [
+        Company(id=1, fund="sequoia", name="AdMob", slug="admob", fund_url="u"),
+        Company(id=2, fund="sequoia", name="Unlisted Co", slug="x", fund_url="u"),
+    ]
+    monkeypatch.setattr(
+        crawler_mod, "fetch_stage_map",
+        lambda *_: {normalize_name("AdMob"): "Acquired"},
+    )
+    class FakeClient: pass
+    crawler = SequoiaCrawler(FakeClient())
+    crawler._apply_stages(comps)
+    assert comps[0].stage == "Acquired"
+    assert comps[1].stage is None
+
+
+def test_apply_stages_survives_fetch_failure(monkeypatch):
+    """Verifies _apply_stages doesn't raise on network failure."""
+    from vc_crawler.crawlers.sequoia.crawler import SequoiaCrawler
+    import vc_crawler.crawlers.sequoia.crawler as crawler_mod
+
+    def boom(*_):
+        raise RuntimeError("network down")
+
+    monkeypatch.setattr(crawler_mod, "fetch_stage_map", boom)
+    class FakeClient: pass
+    comps = [Company(id=1, fund="sequoia", name="AdMob", slug="admob", fund_url="u")]
+    crawler = SequoiaCrawler(FakeClient())
+    crawler._apply_stages(comps)  # must not raise
+    assert comps[0].stage is None
