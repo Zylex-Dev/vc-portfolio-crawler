@@ -13,6 +13,15 @@ _STATUS_RE = re.compile(
 _FOUNDED_RE = re.compile(r"Founded\s+(\d{4})", re.IGNORECASE)
 _PARTNERED_RE = re.compile(r"Partnered\s+(\d{4})", re.IGNORECASE)
 
+# Canonical spelling for the milestone labels Sequoia uses.
+_STATUS_NORMALIZE = {
+    "acquired": "Acquired",
+    "acquisition": "Acquired",
+    "ipo": "IPO",
+    "public": "Public",
+    "merged": "Merged",
+}
+
 # Hosts that are never the company's own marketing site.
 _SKIP_HOSTS = (
     "sequoiacap.com", "twitter.com", "x.com", "facebook.com",
@@ -55,17 +64,34 @@ def _search_year(pattern: re.Pattern, text: str) -> Optional[int]:
     return int(m.group(1)) if m else None
 
 
+def _find_description(soup: BeautifulSoup) -> Optional[str]:
+    # The company blurb is rendered in a `div.wysiwyg` block on the detail page.
+    node = soup.select_one("div.wysiwyg")
+    if node:
+        text = node.get_text(" ", strip=True)
+        if text:
+            return text
+    return _meta(soup, prop="og:description", name="description")
+
+
+def _find_logo(soup: BeautifulSoup) -> Optional[str]:
+    img = soup.select_one("img.company__logo-image")
+    if img and img.get("src"):
+        return img["src"].strip()
+    return _meta(soup, prop="og:image")
+
+
 def parse_detail(html_text: str) -> dict:
     soup = BeautifulSoup(html_text, "lxml")
     text = soup.get_text(" ", strip=True)
 
-    description = _meta(soup, prop="og:description", name="description")
+    description = _find_description(soup)
 
     status = None
     status_year = None
     m = _STATUS_RE.search(text)
     if m:
-        status = m.group(1).title()
+        status = _STATUS_NORMALIZE.get(m.group(1).lower(), m.group(1).title())
         if m.group(2):
             status_year = int(m.group(2))
 
@@ -76,5 +102,5 @@ def parse_detail(html_text: str) -> dict:
         "status_year": status_year,
         "founded_year": _search_year(_FOUNDED_RE, text),
         "partnered_year": _search_year(_PARTNERED_RE, text),
-        "logo_url": _meta(soup, prop="og:image"),
+        "logo_url": _find_logo(soup),
     }

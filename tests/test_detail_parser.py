@@ -13,7 +13,19 @@ def test_parse_detail_extracts_all_fields():
     assert data["status_year"] == 2010
     assert data["founded_year"] == 2006
     assert data["partnered_year"] == 2006
-    assert data["logo_url"].endswith("admob-logo.png")
+    assert data["logo_url"].endswith("admob-logo.svg")
+
+
+def test_parse_detail_normalizes_ipo_status():
+    data = parse_detail('<html><body><div class="l-pillbox"><span>IPO 2019</span></div></body></html>')
+    assert data["status"] == "IPO"
+    assert data["status_year"] == 2019
+
+
+def test_parse_detail_maps_acquisition_to_acquired():
+    data = parse_detail("<html><body><p>Acquisition 2021</p></body></html>")
+    assert data["status"] == "Acquired"
+    assert data["status_year"] == 2021
 
 
 def test_parse_detail_missing_fields_are_none():
