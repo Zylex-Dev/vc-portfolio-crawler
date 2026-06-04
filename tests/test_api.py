@@ -1,4 +1,4 @@
-from sequoia_crawler.api import fetch_categories, iter_companies, to_company
+from vc_crawler.crawlers.sequoia.api import fetch_categories, iter_companies, to_company
 
 
 class FakeResp:
@@ -49,8 +49,9 @@ def test_to_company_maps_fields_and_assigns_given_id():
     c = to_company(raw, {186: "GTM", 1: "Uncategorized"}, company_id=7)
     # Sequential id, not the WordPress post id from the API.
     assert c.id == 7
+    assert c.fund == "sequoia"
     assert c.name == "AdMob & Co"
     assert c.slug == "admob"
-    assert c.sequoia_url == "https://sequoiacap.com/companies/admob/"
+    assert c.fund_url == "https://sequoiacap.com/companies/admob/"
     assert c.sectors == ["GTM"]
     assert c.source_modified == "2026-06-02T21:10:47"

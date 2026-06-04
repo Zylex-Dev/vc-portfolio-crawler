@@ -1,6 +1,6 @@
 import pytest
 
-from sequoia_crawler.http_client import build_session, PoliteClient
+from vc_crawler.http_client import build_session, PoliteClient
 
 
 class FakeResp:

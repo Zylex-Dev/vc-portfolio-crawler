@@ -1,10 +1,10 @@
-from sequoia_crawler.models import Company, CSV_FIELDS
+from vc_crawler.models import Company, CSV_FIELDS
 
 
 def _company():
     return Company(
-        id=1, name="AdMob", slug="admob",
-        sequoia_url="https://sequoiacap.com/companies/admob/",
+        id=1, fund="sequoia", name="AdMob", slug="admob",
+        fund_url="https://sequoiacap.com/companies/admob/",
         sectors=["GTM", "AI"], website="https://www.admob.com",
     )
 
@@ -21,8 +21,10 @@ def test_stage_year_field_exists_and_status_is_gone():
     c = _company()
     assert c.stage_year is None
     assert "stage_year" in CSV_FIELDS
-    assert "status" not in CSV_FIELDS
-    assert not hasattr(c, "status")
+    assert "fund_url" in CSV_FIELDS
+    assert "invested_year" in CSV_FIELDS
+    assert "sequoia_url" not in CSV_FIELDS
+    assert "partnered_year" not in CSV_FIELDS
 
 
 def test_to_csv_row_joins_sectors():

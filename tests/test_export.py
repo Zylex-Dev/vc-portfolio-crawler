@@ -1,13 +1,13 @@
 import csv
 import json
 
-from sequoia_crawler.export import write_json, write_csv
-from sequoia_crawler.models import Company
+from vc_crawler.export import write_json, write_csv
+from vc_crawler.models import Company
 
 
 def _company():
     return Company(
-        id=1, name="AdMob", slug="admob", sequoia_url="https://x/",
+        id=1, fund="sequoia", name="AdMob", slug="admob", fund_url="https://x/",
         sectors=["GTM", "AI"], website="https://www.admob.com", stage="Acquired",
         stage_year=2010,
     )

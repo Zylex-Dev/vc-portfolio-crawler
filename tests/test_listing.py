@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from sequoia_crawler.listing import (
+from vc_crawler.crawlers.sequoia.listing import (
     fetch_stage_map,
     normalize_name,
     parse_stage_map,

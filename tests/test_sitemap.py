@@ -1,4 +1,4 @@
-from sequoia_crawler.sitemap import fetch_company_slugs
+from vc_crawler.crawlers.sequoia.sitemap import fetch_company_slugs
 
 SAMPLE_XML = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

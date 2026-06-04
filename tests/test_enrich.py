@@ -1,5 +1,5 @@
-from sequoia_crawler.enrich import enrich_company, enrich_all
-from sequoia_crawler.models import Company
+from vc_crawler.crawlers.sequoia.enrich import enrich_company, enrich_all
+from vc_crawler.models import Company
 
 HTML = (
     '<html><head>'
@@ -28,8 +28,8 @@ class FailClient:
 
 def _company(slug="a"):
     return Company(
-        id=1, name="A", slug=slug,
-        sequoia_url=f"https://sequoiacap.com/companies/{slug}/",
+        id=1, fund="sequoia", name="A", slug=slug,
+        fund_url=f"https://sequoiacap.com/companies/{slug}/",
     )
 
 

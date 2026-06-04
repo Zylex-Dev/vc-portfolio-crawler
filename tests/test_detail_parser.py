@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from sequoia_crawler.detail_parser import parse_detail
+from vc_crawler.crawlers.sequoia.detail_parser import parse_detail
 
 FIXTURE = Path(__file__).parent / "fixtures" / "admob_like.html"
 
@@ -11,7 +11,7 @@ def test_parse_detail_extracts_all_fields():
     assert "pay-per-click" in data["description"]
     assert data["stage_year"] == 2010
     assert data["founded_year"] == 2006
-    assert data["partnered_year"] == 2006
+    assert data["invested_year"] == 2006
     assert data["logo_url"].endswith("admob-logo.svg")
     assert "status" not in data
 
@@ -32,5 +32,5 @@ def test_parse_detail_missing_fields_are_none():
     assert data["description"] is None
     assert data["stage_year"] is None
     assert data["founded_year"] is None
-    assert data["partnered_year"] is None
+    assert data["invested_year"] is None
     assert data["logo_url"] is None
