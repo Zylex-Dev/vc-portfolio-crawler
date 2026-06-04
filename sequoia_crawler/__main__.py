@@ -76,11 +76,11 @@ def main(argv=None) -> int:
 
     args.out.mkdir(parents=True, exist_ok=True)
     if args.format in ("json", "both"):
-        write_json(companies, args.out / "companies.json")
-        log.info("Wrote %s", args.out / "companies.json")
+        write_json(companies, args.out / "sequoia_companies.json")
+        log.info("Wrote %s", args.out / "sequoia_companies.json")
     if args.format in ("csv", "both"):
-        write_csv(companies, args.out / "companies.csv")
-        log.info("Wrote %s", args.out / "companies.csv")
+        write_csv(companies, args.out / "sequoia_companies.csv")
+        log.info("Wrote %s", args.out / "sequoia_companies.csv")
 
     log.info("Done: %d companies", len(companies))
     return 0

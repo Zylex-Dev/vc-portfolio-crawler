@@ -11,8 +11,8 @@ def test_main_writes_both_outputs(tmp_path, monkeypatch):
     monkeypatch.setattr(cli, "_check_completeness", lambda client, companies: None)
     rc = cli.main(["--out", str(tmp_path), "--no-enrich", "--format", "both"])
     assert rc == 0
-    assert (tmp_path / "companies.json").exists()
-    assert (tmp_path / "companies.csv").exists()
+    assert (tmp_path / "sequoia_companies.json").exists()
+    assert (tmp_path / "sequoia_companies.csv").exists()
 
 
 def test_main_limit_truncates(tmp_path, monkeypatch):
