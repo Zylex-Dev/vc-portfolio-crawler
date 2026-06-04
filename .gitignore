@@ -1,6 +1,5 @@
 .venv/
 __pycache__/
 *.pyc
-output/*.json
-output/*.csv
+output/
 tests/fixtures/*_real.html
