@@ -4,6 +4,8 @@ import pytest
 from vc_crawler.crawlers.a16z_speedrun.parser import (
     parse_portfolio_page,
     PORTFOLIO_URL,
+    fetch_cohort_companies,
+    API_BASE,
 )
 
 FIXTURE_HTML = Path(__file__).parent / "fixtures" / "speedrun_portfolio.html"
@@ -65,14 +67,12 @@ class _FakeClient:
 
 
 def test_fetch_cohort_returns_all_records_single_page():
-    from vc_crawler.crawlers.a16z_speedrun.parser import fetch_cohort_companies
     client = _FakeClient({"cohort=SR001": json.loads(FIXTURE_SR001.read_text())})
     results = fetch_cohort_companies(client, "SR001")
     assert len(results) == 2
 
 
 def test_fetch_cohort_paginates_until_next_is_null():
-    from vc_crawler.crawlers.a16z_speedrun.parser import fetch_cohort_companies
     client = _FakeClient({
         "offset=1": json.loads(FIXTURE_SR002_P2.read_text()),
         "cohort=SR002": json.loads(FIXTURE_SR002_P1.read_text()),
@@ -82,7 +82,6 @@ def test_fetch_cohort_paginates_until_next_is_null():
 
 
 def test_fetch_cohort_returns_raw_dicts():
-    from vc_crawler.crawlers.a16z_speedrun.parser import fetch_cohort_companies
     client = _FakeClient({"cohort=SR001": json.loads(FIXTURE_SR001.read_text())})
     results = fetch_cohort_companies(client, "SR001")
     assert isinstance(results[0], dict)
@@ -90,14 +89,16 @@ def test_fetch_cohort_returns_raw_dicts():
 
 
 def test_fetch_cohort_makes_at_least_one_request():
-    from vc_crawler.crawlers.a16z_speedrun.parser import fetch_cohort_companies
     client = _FakeClient({"cohort=SR001": json.loads(FIXTURE_SR001.read_text())})
     fetch_cohort_companies(client, "SR001")
     assert len(client.calls) >= 1
 
 
 def test_fetch_cohort_first_url_contains_cohort_param():
-    from vc_crawler.crawlers.a16z_speedrun.parser import fetch_cohort_companies
     client = _FakeClient({"cohort=SR001": json.loads(FIXTURE_SR001.read_text())})
     fetch_cohort_companies(client, "SR001")
     assert "cohort=SR001" in client.calls[0]
+
+
+def test_api_base_constant():
+    assert API_BASE == "https://speedrun-be.a16z.com/api/companies/companies/"
