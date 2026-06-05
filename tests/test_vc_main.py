@@ -114,3 +114,17 @@ def test_apply_stages_survives_fetch_failure(monkeypatch):
     crawler = SequoiaCrawler(FakeClient())
     crawler._apply_stages(comps)  # must not raise
     assert comps[0].stage is None
+
+
+def test_main_writes_speedrun_outputs(tmp_path, monkeypatch):
+    import vc_crawler.crawlers.a16z_speedrun.crawler as sr_mod
+    class Fake:
+        def __init__(self, client): pass
+        def run(self, **kw):
+            return [Company(id=1, fund="a16z-speedrun", name="Cantor", slug="cantor",
+                            fund_url="https://speedrun.a16z.com/companies/cantor")]
+    monkeypatch.setattr(sr_mod, "SpeedrunCrawler", Fake)
+    rc = cli.main(["--fund", "a16z-speedrun", "--out", str(tmp_path), "--format", "both"])
+    assert rc == 0
+    assert (tmp_path / "a16z-speedrun_companies.json").exists()
+    assert (tmp_path / "a16z-speedrun_companies.csv").exists()
