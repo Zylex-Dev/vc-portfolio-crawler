@@ -55,7 +55,7 @@ def _parse_popup(popup) -> dict:
     for holder in popup.find_all(class_="pop-up-right-content-holder"):
         if "w-condition-invisible" in holder.get("class", []):
             continue
-        title_el = holder.find(class_="invaestment-title")
+        title_el = holder.find(class_="invaestment-title")  # sic: upstream Webflow typo
         val_el = holder.find("p")
         if not title_el or not val_el:
             continue
