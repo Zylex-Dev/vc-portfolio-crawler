@@ -43,7 +43,7 @@ class ReachCrawler(BaseCrawler):
         nonce_resp = self.client.get(NONCE_URL)
         nonce = json.loads(nonce_resp.text)["data"]["nonce"]
 
-        offset = _BATCH_SIZE
+        offset = _BATCH_SIZE  # first batch already in static HTML
         while True:
             data = urllib.parse.urlencode(
                 _BASE_ARGS + [
