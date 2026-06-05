@@ -8,6 +8,7 @@ Crawls company portfolio data from venture capital fund websites and exports to 
 | [Sequoia Capital](https://sequoiacap.com/our-companies/) | WordPress REST API + detail pages | ~400 |
 | [Andreessen Horowitz (a16z)](https://a16z.com/portfolio/) | JS-embedded JSON in portfolio page | ~840 |
 | [a16z Speedrun](https://speedrun.a16z.com/companies/) | Public REST API, cohorts SR001–SR006 | ~240 |
+| [Owl Ventures](https://www.owlvc.com/portfolio) | Webflow CMS HTML (single request) | ~92 |
 
 ## Setup
 
@@ -28,6 +29,9 @@ python3 -m venv .venv
 # Crawl a16z Speedrun — all cohorts SR001–SR006 (~240 companies)
 .venv/bin/python -m vc_crawler --fund a16z-speedrun
 
+# Crawl Owl Ventures portfolio (single request, ~92 EdTech companies)
+.venv/bin/python -m vc_crawler --fund owl-ventures
+
 # Quick test: first 5 companies, JSON only, verbose logging
 .venv/bin/python -m vc_crawler --fund a16z --limit 5 --format json --verbose
 
@@ -39,12 +43,13 @@ Output files are written to `data/{fund}/`:
 - `data/a16z/companies.json` / `data/a16z/companies.csv`
 - `data/sequoia/companies.json` / `data/sequoia/companies.csv`
 - `data/a16z-speedrun/companies.json` / `data/a16z-speedrun/companies.csv`
+- `data/owl-ventures/companies.json` / `data/owl-ventures/companies.csv`
 
 ### All Options
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `--fund {sequoia,a16z,a16z-speedrun}` | *(required)* | Which fund to crawl |
+| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures}` | *(required)* | Which fund to crawl |
 | `--out DIR` | `data` | Output directory |
 | `--format {json,csv,both}` | `both` | Output format(s) |
 | `--workers N` | `5` | Enrichment threads (Sequoia only) |
@@ -60,7 +65,7 @@ Both funds export a unified schema:
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | int | Sequential ID (1-based) |
-| `fund` | str | `"sequoia"` or `"a16z"` |
+| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, or `"owl-ventures"` |
 | `name` | str | Company name |
 | `slug` | str | URL-friendly identifier |
 | `fund_url` | str | Link to company page on fund site |
@@ -73,8 +78,8 @@ Both funds export a unified schema:
 | `invested_year` | int? | Year the fund invested |
 | `logo_url` | str? | Company logo URL |
 | `ticker_symbol` | str? | Stock ticker (a16z exits) |
-| `acquirer` | str? | Acquiring company (a16z M&A) |
-| `founders` | list[str]? | Founder names (a16z) |
+| `acquirer` | str? | Acquiring company (a16z M&A, Owl Ventures) |
+| `founders` | list[str]? | Founder names (a16z, Owl Ventures) |
 
 ## How It Works
 
@@ -87,6 +92,9 @@ Two-step pipeline:
 2. For each cohort paginate `https://speedrun-be.a16z.com/api/companies/companies/?cohort=SRxxx` (public REST API, no auth) until `next` is `null`
 
 All company data (description, industries, founders, website, logo) is returned inline — no detail-page requests needed. The `stage` field holds the cohort name.
+
+### Owl Ventures
+Single HTTP request to `https://www.owlvc.com/portfolio`. The site is built on Webflow CMS — all 92 portfolio companies are fully embedded in the static HTML as `div.portfolio-card` elements. No JS rendering required. Each card contains the company name, logo, description, website, education sector tags (Pre K-12, Post-Secondary, Future of Work), acquisition status, founded year, investment round, and founder names.
 
 ### Sequoia
 Multi-stage pipeline:
@@ -102,7 +110,7 @@ Multi-stage pipeline:
 2. Implement `class YourCrawler(BaseCrawler)` with `run(*, limit, workers, enrich) -> list[Company]`
 3. Add one line to `_FUND_REGISTRY` in `vc_crawler/__main__.py`
 
-See `vc_crawler/crawlers/a16z_speedrun/` for a minimal single-stage example, or `vc_crawler/crawlers/sequoia/` for a multi-stage enrichment example.
+See `vc_crawler/crawlers/owl_ventures/` or `vc_crawler/crawlers/a16z_speedrun/` for a minimal single-stage example, or `vc_crawler/crawlers/sequoia/` for a multi-stage enrichment example.
 
 ## Tests
 
