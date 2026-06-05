@@ -15,10 +15,14 @@ class FakeResp:
 class FakeSession:
     def __init__(self, resp):
         self.resp = resp
-        self.calls = []
+        self.calls: list[tuple] = []
 
     def get(self, url, **kwargs):
-        self.calls.append((url, kwargs))
+        self.calls.append(("get", url, kwargs))
+        return self.resp
+
+    def post(self, url, **kwargs):
+        self.calls.append(("post", url, kwargs))
         return self.resp
 
 
@@ -39,7 +43,8 @@ def test_polite_get_delegates_and_sets_timeout():
     client = PoliteClient(session=sess, delay=0, timeout=15)
     out = client.get("https://example.com", params={"a": 1})
     assert out is resp
-    url, kwargs = sess.calls[0]
+    method, url, kwargs = sess.calls[0]
+    assert method == "get"
     assert url == "https://example.com"
     assert kwargs["timeout"] == 15
     assert kwargs["params"] == {"a": 1}
@@ -51,23 +56,9 @@ def test_polite_get_raises_on_http_error():
         client.get("https://example.com")
 
 
-class FakeSessionWithPost:
-    def __init__(self, resp):
-        self.resp = resp
-        self.calls: list[tuple] = []
-
-    def get(self, url, **kwargs):
-        self.calls.append(("get", url, kwargs))
-        return self.resp
-
-    def post(self, url, **kwargs):
-        self.calls.append(("post", url, kwargs))
-        return self.resp
-
-
 def test_polite_post_delegates_and_sets_timeout():
     resp = FakeResp(200)
-    sess = FakeSessionWithPost(resp)
+    sess = FakeSession(resp)
     client = PoliteClient(session=sess, delay=0, timeout=15)
     out = client.post("https://example.com", data="foo=bar")
     assert out is resp
@@ -79,9 +70,6 @@ def test_polite_post_delegates_and_sets_timeout():
 
 
 def test_polite_post_raises_on_http_error():
-    class FakeSessionErr:
-        def post(self, url, **kwargs):
-            return FakeResp(500)
-    client = PoliteClient(session=FakeSessionErr(), delay=0)
+    client = PoliteClient(session=FakeSession(FakeResp(500)), delay=0)
     with pytest.raises(RuntimeError):
         client.post("https://example.com")
