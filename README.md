@@ -70,7 +70,7 @@ Both funds export a unified schema:
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | int | Sequential ID (1-based) |
-| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, or `"owl-ventures"` |
+| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, `"owl-ventures"`, or `"reach-capital"` |
 | `name` | str | Company name |
 | `slug` | str | URL-friendly identifier |
 | `fund_url` | str | Link to company page on fund site |
