@@ -9,6 +9,7 @@ Crawls company portfolio data from venture capital fund websites and exports to 
 | [Andreessen Horowitz (a16z)](https://a16z.com/portfolio/) | JS-embedded JSON in portfolio page | ~840 |
 | [a16z Speedrun](https://speedrun.a16z.com/companies/) | Public REST API, cohorts SR001–SR006 | ~240 |
 | [Owl Ventures](https://www.owlvc.com/portfolio) | Webflow CMS HTML (single request) | ~92 |
+| [Reach Capital](https://www.reachcapital.com/companies/?sector=learning) | WordPress AJAX infinite-scroll (Learning sector) | ~95 |
 
 ## Setup
 
@@ -32,6 +33,9 @@ python3 -m venv .venv
 # Crawl Owl Ventures portfolio (single request, ~92 EdTech companies)
 .venv/bin/python -m vc_crawler --fund owl-ventures
 
+# Crawl Reach Capital Learning portfolio (~95 companies, AJAX pagination)
+.venv/bin/python -m vc_crawler --fund reach-capital
+
 # Quick test: first 5 companies, JSON only, verbose logging
 .venv/bin/python -m vc_crawler --fund a16z --limit 5 --format json --verbose
 
@@ -44,12 +48,13 @@ Output files are written to `data/{fund}/`:
 - `data/sequoia/companies.json` / `data/sequoia/companies.csv`
 - `data/a16z-speedrun/companies.json` / `data/a16z-speedrun/companies.csv`
 - `data/owl-ventures/companies.json` / `data/owl-ventures/companies.csv`
+- `data/reach-capital/companies.json` / `data/reach-capital/companies.csv`
 
 ### All Options
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures}` | *(required)* | Which fund to crawl |
+| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures,reach-capital}` | *(required)* | Which fund to crawl |
 | `--out DIR` | `data` | Output directory |
 | `--format {json,csv,both}` | `both` | Output format(s) |
 | `--workers N` | `5` | Enrichment threads (Sequoia only) |
@@ -95,6 +100,13 @@ All company data (description, industries, founders, website, logo) is returned 
 
 ### Owl Ventures
 Single HTTP request to `https://www.owlvc.com/portfolio`. The site is built on Webflow CMS — all 92 portfolio companies are fully embedded in the static HTML as `div.portfolio-card` elements. No JS rendering required. Each card contains the company name, logo, description, website, education sector tags (Pre K-12, Post-Secondary, Future of Work), acquisition status, founded year, investment round, and founder names.
+
+### Reach Capital
+Two-step pipeline:
+1. Fetch `https://www.reachcapital.com/companies/?sector=learning` — first 16 companies are in the static HTML
+2. Obtain a WordPress nonce via `admin-ajax.php?action=reach_get_nonce`, then POST to `admin-ajax.php` with action `reach_portfolio_filter` and PHP-array-encoded args, incrementing `offset` by 16 until the response is empty
+
+All company data (name, description, website, logo, founded year, leadership) is embedded in the HTML card markup. No detail-page requests needed.
 
 ### Sequoia
 Multi-stage pipeline:

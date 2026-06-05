@@ -142,3 +142,18 @@ def test_main_writes_owl_ventures_outputs(tmp_path, monkeypatch):
     assert rc == 0
     assert (tmp_path / "owl-ventures" / "companies.json").exists()
     assert (tmp_path / "owl-ventures" / "companies.csv").exists()
+
+
+def test_main_writes_reach_capital_outputs(tmp_path, monkeypatch):
+    import vc_crawler.crawlers.reach_capital.crawler as rc_mod
+    class Fake:
+        def __init__(self, client): pass
+        def run(self, **kw):
+            return [Company(id=1, fund="reach-capital", name="BookNook",
+                            slug="booknook",
+                            fund_url="https://www.reachcapital.com/companies/?sector=learning")]
+    monkeypatch.setattr(rc_mod, "ReachCrawler", Fake)
+    rc = cli.main(["--fund", "reach-capital", "--out", str(tmp_path), "--format", "both"])
+    assert rc == 0
+    assert (tmp_path / "reach-capital" / "companies.json").exists()
+    assert (tmp_path / "reach-capital" / "companies.csv").exists()
