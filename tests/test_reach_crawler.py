@@ -112,7 +112,7 @@ def test_stops_when_ajax_returns_empty():
 def test_offset_increments_in_ajax_posts():
     client = _make_client(extra_ajax_pages=1)
     ReachCrawler(client).run()
-    # First POST: offset=16, second POST: offset=32, third POST (empty stop): offset=48
+    # First POST: offset=16, second POST: offset=32
     assert "args%5Boffset%5D=16" in client.post_data[0]
     assert "args%5Boffset%5D=32" in client.post_data[1]
 
