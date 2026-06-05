@@ -128,3 +128,17 @@ def test_main_writes_speedrun_outputs(tmp_path, monkeypatch):
     assert rc == 0
     assert (tmp_path / "a16z-speedrun" / "companies.json").exists()
     assert (tmp_path / "a16z-speedrun" / "companies.csv").exists()
+
+
+def test_main_writes_owl_ventures_outputs(tmp_path, monkeypatch):
+    import vc_crawler.crawlers.owl_ventures.crawler as owl_mod
+    class Fake:
+        def __init__(self, client): pass
+        def run(self, **kw):
+            return [Company(id=1, fund="owl-ventures", name="Amira Learning",
+                            slug="amira", fund_url="https://www.owlvc.com/portfolio/amira")]
+    monkeypatch.setattr(owl_mod, "OwlCrawler", Fake)
+    rc = cli.main(["--fund", "owl-ventures", "--out", str(tmp_path), "--format", "both"])
+    assert rc == 0
+    assert (tmp_path / "owl-ventures" / "companies.json").exists()
+    assert (tmp_path / "owl-ventures" / "companies.csv").exists()

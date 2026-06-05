@@ -15,6 +15,7 @@ _FUND_REGISTRY = {
     "sequoia": "vc_crawler.crawlers.sequoia.crawler.SequoiaCrawler",
     "a16z": "vc_crawler.crawlers.a16z.crawler.A16ZCrawler",
     "a16z-speedrun": "vc_crawler.crawlers.a16z_speedrun.crawler.SpeedrunCrawler",
+    "owl-ventures": "vc_crawler.crawlers.owl_ventures.crawler.OwlCrawler",
 }
 
 
