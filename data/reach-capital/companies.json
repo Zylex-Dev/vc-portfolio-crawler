@@ -1,0 +1,2274 @@
+[
+  {
+    "id": 1,
+    "fund": "reach-capital",
+    "name": "Abl",
+    "slug": "abl",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://ablschools.com/",
+    "description": "Master scheduling tools and guidance for schools.",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Abl.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Adam Pisoni",
+      "Amy Filsinger",
+      "Chris Walsh"
+    ]
+  },
+  {
+    "id": 2,
+    "fund": "reach-capital",
+    "name": "Aprende Institute",
+    "slug": "aprende-institute",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://aprende.com/",
+    "description": "The leading online education platform for vocational skills training in the U.S. Hispanic market and Latin America.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2019,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Aprende-Institute-e1762811836547.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Martin Claure"
+    ]
+  },
+  {
+    "id": 3,
+    "fund": "reach-capital",
+    "name": "BookNook",
+    "slug": "booknook",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.booknooklearning.com/",
+    "description": "Expanding access to high-impact tutoring and small group instruction",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2016,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/BookNook.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Michael Lombardo",
+      "Kevin Rohling"
+    ]
+  },
+  {
+    "id": 4,
+    "fund": "reach-capital",
+    "name": "Breathe For Change",
+    "slug": "breathe-for-change",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.breatheforchange.com/",
+    "description": "Live and online wellness training for teachers",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Breathe-for-Change.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Ilana Nankin",
+      "Michael Fenchel"
+    ]
+  },
+  {
+    "id": 5,
+    "fund": "reach-capital",
+    "name": "Brilliant",
+    "slug": "brilliant",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://brilliant.org/",
+    "description": "Learn STEM interactively",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2023/02/Brilliant.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Sue Khim",
+      "Silas Hundt",
+      "Sam Solomon"
+    ]
+  },
+  {
+    "id": 6,
+    "fund": "reach-capital",
+    "name": "Campus",
+    "slug": "campus",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://campus.edu/",
+    "description": "A vertically integrated community college alternative, offering live, interactive online cohort-based classes with adjunct professors from top universities",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2018,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Campus.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Tade Oyerinde"
+    ]
+  },
+  {
+    "id": 7,
+    "fund": "reach-capital",
+    "name": "ClassDojo",
+    "slug": "classdojo",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.classdojo.com/",
+    "description": "Communication app that connects teachers, students and parents",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2011,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/ClassDojo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Liam Don",
+      "Sam Chaudhary"
+    ]
+  },
+  {
+    "id": 8,
+    "fund": "reach-capital",
+    "name": "Clayful",
+    "slug": "clayful",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.clayfulhealth.com/",
+    "description": "On-demand, text-based coaching for every kid.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2021,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Clayful-1.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Maria Barrera"
+    ]
+  },
+  {
+    "id": 9,
+    "fund": "reach-capital",
+    "name": "CoderHouse",
+    "slug": "coderhouse",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.coderhouse.com/",
+    "description": "Live, online courses to help Latin American professionals upskill",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2019,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Coderhouse.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Christian Patino",
+      "Nahuel Lema"
+    ]
+  },
+  {
+    "id": 10,
+    "fund": "reach-capital",
+    "name": "Cometa",
+    "slug": "cometa",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.getcometa.com/",
+    "description": "Operating system for private schools in Latin America",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2021,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2024/03/cometa.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Andrés Benavides",
+      "Gonzalo Gallardo",
+      "Mateo Creamer"
+    ]
+  },
+  {
+    "id": 11,
+    "fund": "reach-capital",
+    "name": "CommonTime Pathways",
+    "slug": "commontime-pathways",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.ctpathways.com/",
+    "description": "Where higher ed recruits creatives and creatives discover scholarships",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2025,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2026/04/Logo_MCR_CTP_Horizontal-2.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Eytan Wurman"
+    ]
+  },
+  {
+    "id": 12,
+    "fund": "reach-capital",
+    "name": "Curiosities",
+    "slug": "curiosities",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.curiosities.ai/",
+    "description": "AI for kids to build their critical thinking",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2025,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2026/04/CuriositiesAI_logo-no-tm.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Yi Ng"
+    ]
+  },
+  {
+    "id": 13,
+    "fund": "reach-capital",
+    "name": "Curipod",
+    "slug": "curipod",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://curipod.com/",
+    "description": "Sparking students’ curiosity through AI native interactive lessons",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2019,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Curipod-e1762812943186.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Eirik Hernes Berre",
+      "Frikk Fossan",
+      "Jens Aarre Seip"
+    ]
+  },
+  {
+    "id": 14,
+    "fund": "reach-capital",
+    "name": "Derivita",
+    "slug": "derivita",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.derivita.com/",
+    "description": "First of its kind STEM technology platform and complete computer algebra system.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Derivita-1.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Devlin Daley",
+      "Ryan Brown"
+    ]
+  },
+  {
+    "id": 15,
+    "fund": "reach-capital",
+    "name": "Desmos",
+    "slug": "desmos",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.desmos.com/",
+    "description": "Building a world where every student loves learning math.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2007,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Desmos-3.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Eli Luberoff",
+      "Eric Berger"
+    ]
+  },
+  {
+    "id": 16,
+    "fund": "reach-capital",
+    "name": "Doorman",
+    "slug": "doorman",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://doorman.school/",
+    "description": "Helping schools block high-dopamine apps, monitor compliance automatically, and build better digital habits in every classroom.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2025,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2025/12/doorman.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Brian Hawkins",
+      "Patrick Cui"
+    ]
+  },
+  {
+    "id": 17,
+    "fund": "reach-capital",
+    "name": "Doowii",
+    "slug": "doowii",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.doowii.io/",
+    "description": "AI Data Scientist co-pilot for education",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2023,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/doowii.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Ben Dodson",
+      "Ilho Ye",
+      "Matthew Young"
+    ]
+  },
+  {
+    "id": 18,
+    "fund": "reach-capital",
+    "name": "Dropback",
+    "slug": "dropback",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.dropback.com/",
+    "description": "Powering the financial infrastructure for teams in the new era of college sports",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2024,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2025/03/dropback.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Luke Bogus"
+    ]
+  },
+  {
+    "id": 19,
+    "fund": "reach-capital",
+    "name": "EdCast",
+    "slug": "edcast",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.edcast.com/",
+    "description": "AI-driven learning content management and delivery solution",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/EdCast.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Karl Mehta"
+    ]
+  },
+  {
+    "id": 20,
+    "fund": "reach-capital",
+    "name": "Ednition",
+    "slug": "ednition",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.ednition.com/",
+    "description": "Next-gen rostering, data integration and interoperability solutions for edtech companies",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2021,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/ednition.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Mick Hewitt",
+      "Doug Weber"
+    ]
+  },
+  {
+    "id": 21,
+    "fund": "reach-capital",
+    "name": "Elevify",
+    "slug": "elevify",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.apoia.com.br/",
+    "description": "AI platform to solve professional problems through courses and tools",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2023,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2023/12/elevify.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Rangel Barbosa",
+      "Paulo Henrique Silveira"
+    ]
+  },
+  {
+    "id": 22,
+    "fund": "reach-capital",
+    "name": "Ellevation",
+    "slug": "ellevation",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://ellevationeducation.com/home/default",
+    "description": "Program management and instructional tools for English Language Learners",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2006,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Ellevation-1.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jordan Meranus",
+      "Teddy Rice"
+    ]
+  },
+  {
+    "id": 23,
+    "fund": "reach-capital",
+    "name": "Ello",
+    "slug": "ello",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.helloello.com/",
+    "description": "Revolutionizing how children learn to read by combining real books with speech recognition tech and AI",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2019,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Ello-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Thomas Sayer"
+    ]
+  },
+  {
+    "id": 24,
+    "fund": "reach-capital",
+    "name": "Epic!",
+    "slug": "epic",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.getepic.com/",
+    "description": "Leading digital library for kids 12 and under",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Epic-1.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 25,
+    "fund": "reach-capital",
+    "name": "eSpark",
+    "slug": "espark",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.esparklearning.com/",
+    "description": "Online learning platform for differentiated instruction in math and ELA",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2010,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/eSpark.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "David Vinca",
+      "Maya Lopuch"
+    ]
+  },
+  {
+    "id": 26,
+    "fund": "reach-capital",
+    "name": "EveryDay Labs",
+    "slug": "everyday-labs",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.everydaylabs.com/",
+    "description": "Applying behavioral science and data analytics to reduce K-12 absenteeism and improve student outcomes",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/EveryDay-Labs.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Emily Bailard",
+      "Todd Rogers"
+    ]
+  },
+  {
+    "id": 27,
+    "fund": "reach-capital",
+    "name": "FourthRev",
+    "slug": "fourthrev",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://fourthrev.co/",
+    "description": "Combining the best of career-focused education built with leading companies, with the academic rigor of the world’s best universities.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2019,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/FourthRev.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jack Hylands",
+      "Omar de Silva"
+    ]
+  },
+  {
+    "id": 28,
+    "fund": "reach-capital",
+    "name": "GPTZero",
+    "slug": "gptzero",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://gptzero.me/",
+    "description": "The leading platform for AI detection and tools for responsible AI adoption",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2023,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/GPTZero.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Alex Cui",
+      "Edward Tian"
+    ]
+  },
+  {
+    "id": 29,
+    "fund": "reach-capital",
+    "name": "Gradescope",
+    "slug": "gradescope",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.gradescope.com/",
+    "description": "Streamlining grading by bringing paper-based processes online.",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Gradescope.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Arjun Singh",
+      "Sergey Karayev",
+      "Ibrahim Awwal"
+    ]
+  },
+  {
+    "id": 30,
+    "fund": "reach-capital",
+    "name": "Guardians Collective",
+    "slug": "guardians-collective",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://aboutgc.com/",
+    "description": "Expert-led parenting circles.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2020,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Guardians-Collective.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Saurabh Kamalapurkar"
+    ]
+  },
+  {
+    "id": 31,
+    "fund": "reach-capital",
+    "name": "Holberton",
+    "slug": "holberton",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.holbertonschool.com/",
+    "description": "Project-based higher education program to become a full-stack software engineer that requires no upfront tuition",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Holberton.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Sylvain Kalache",
+      "Julien Barbier"
+    ]
+  },
+  {
+    "id": 32,
+    "fund": "reach-capital",
+    "name": "Iago",
+    "slug": "iago",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://getiago.com/",
+    "description": "Learn languages by immersing in culture.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2022,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Iago.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Alex Lee",
+      "Zero Cho"
+    ]
+  },
+  {
+    "id": 33,
+    "fund": "reach-capital",
+    "name": "Immigo",
+    "slug": "immigo",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.immigo.io/",
+    "description": "Cohort-based English courses to help you speak with confidence.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2022,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/immigo.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Chelsea Yerin Jeon",
+      "Ryan Jeon"
+    ]
+  },
+  {
+    "id": 34,
+    "fund": "reach-capital",
+    "name": "Innovamat",
+    "slug": "innovamat",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.innovamat.com/en",
+    "description": "Competency-based math curriculum kids and teachers love.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/innovamat.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Alex Espinet Pérez-Muelas",
+      "Andreu Dotti Boada",
+      "Isaac Sayol Piedra"
+    ]
+  },
+  {
+    "id": 35,
+    "fund": "reach-capital",
+    "name": "InquirED",
+    "slug": "inquired",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.inquired.org/",
+    "description": "High-quality instructional materials that support rigorous, authentic, and unforgettable learning experiences",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2023/11/inquired.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Shanti Elangovan"
+    ]
+  },
+  {
+    "id": 36,
+    "fund": "reach-capital",
+    "name": "Journify Learning",
+    "slug": "journify-learning",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.journify-learning.com/",
+    "description": "AI co-pilot for special education",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2024,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/journify.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Mara Steiu",
+      "Sagar Manchanda"
+    ]
+  },
+  {
+    "id": 37,
+    "fund": "reach-capital",
+    "name": "KaiPod Learning",
+    "slug": "kaipod-learning",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.kaipodlearning.com/",
+    "description": "National network of microschools bringing school choice to every community in America",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2021,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Kaipod.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Amar Kumar"
+    ]
+  },
+  {
+    "id": 38,
+    "fund": "reach-capital",
+    "name": "Kanu",
+    "slug": "kanu",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://kanu.us/",
+    "description": "Peer-to-peer campus marketplace fueled by entrepreneurship education",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Kanu.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Andrew Bikash",
+      "Ben Grossman"
+    ]
+  },
+  {
+    "id": 39,
+    "fund": "reach-capital",
+    "name": "Kaymbu",
+    "slug": "kaymbu",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.kaymbu.com/",
+    "description": "Communication and portfolio assessment platform for preschools.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/kaymbu-1.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Kin Lo",
+      "Nicole Grubby"
+    ]
+  },
+  {
+    "id": 40,
+    "fund": "reach-capital",
+    "name": "Kerns",
+    "slug": "kerns",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.kerns.ai/",
+    "description": "Building a delightful knowledge consumption experience",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2025/05/kerns.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Ayush Kanodia",
+      "Keshav Agrawal"
+    ]
+  },
+  {
+    "id": 41,
+    "fund": "reach-capital",
+    "name": "KickUp",
+    "slug": "kickup",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://kickup.co/",
+    "description": "Data analytics platform for teacher professional development.",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/KickUp.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jeremy Rogoff",
+      "Victoria Kinzig"
+    ]
+  },
+  {
+    "id": 42,
+    "fund": "reach-capital",
+    "name": "Kollegio",
+    "slug": "kollegio",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://kollegio.ai/",
+    "description": "AI college counseling ecosystem for students, schools and colleges",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2023,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Kollegio.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Senan Khawaja",
+      "Saeed Naeem"
+    ]
+  },
+  {
+    "id": 43,
+    "fund": "reach-capital",
+    "name": "Lando",
+    "slug": "lando",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.findlando.com/",
+    "description": "Enriching after school programs at the price of care and through video game-like classes",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2020,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Lando.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Blake Kavanaugh",
+      "Felix Hu"
+    ]
+  },
+  {
+    "id": 44,
+    "fund": "reach-capital",
+    "name": "Lingokids",
+    "slug": "lingokids",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.lingokids.com/",
+    "description": "Mobile learning games for kids.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2016,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Lingokids.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Cristobal Viedma"
+    ]
+  },
+  {
+    "id": 45,
+    "fund": "reach-capital",
+    "name": "LitLab",
+    "slug": "litlab",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.litlab.ai/",
+    "description": "Making K-2 reading more differentiated and joyful",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2022,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/litlab.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Varun Gulati",
+      "Sebastian Belmar",
+      "Christie Chu"
+    ]
+  },
+  {
+    "id": 46,
+    "fund": "reach-capital",
+    "name": "Lovevery",
+    "slug": "lovevery",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://lovevery.com/",
+    "description": "Stage-based play and guidance designed by experts to support child development",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Lovevery-logo.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jessica Rolph",
+      "Roderick Morris"
+    ]
+  },
+  {
+    "id": 47,
+    "fund": "reach-capital",
+    "name": "Lynx",
+    "slug": "lynx",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.lynxeducate.com/",
+    "description": "An education-to-employer marketplace for workforce reskilling and upskilling.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2021,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/lynx.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Sylvie Milverton"
+    ]
+  },
+  {
+    "id": 48,
+    "fund": "reach-capital",
+    "name": "MagicSchool",
+    "slug": "magicschool",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.magicschool.ai/",
+    "description": "An AI assistant for every teacher in the world",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2023,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/magic-school.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Adeel Khan"
+    ]
+  },
+  {
+    "id": 49,
+    "fund": "reach-capital",
+    "name": "Mainstay",
+    "slug": "mainstay",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.mainstay.com/",
+    "description": "AI-driven mobile messaging solution that scales support for college students",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Mainstay.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Andrew Magliozzi",
+      "Kirk Daulerio"
+    ]
+  },
+  {
+    "id": 50,
+    "fund": "reach-capital",
+    "name": "Major League Hacking",
+    "slug": "major-league-hacking",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://mlh.io/",
+    "description": "Closing the skills gap by connecting employers with the next generation of amazing technical talent.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2013,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Major-League-Hacking.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Michael Swift",
+      "Jonathan Gottfried"
+    ]
+  },
+  {
+    "id": 51,
+    "fund": "reach-capital",
+    "name": "Marker Learning",
+    "slug": "marker-learning",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://markerlearning.com/",
+    "description": "Leading provider of remote learning and attention disability services for families and districts nationwide",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2021,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/marker_learning.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Stefan Bauer"
+    ]
+  },
+  {
+    "id": 52,
+    "fund": "reach-capital",
+    "name": "Mystery Science",
+    "slug": "mystery-science",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://mysteryscience.com/",
+    "description": "Easy-to-teach, hands-on science lessons and videos that nurture children’s innate curiosity and inspire a love of science.",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2013,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Mystery-Science.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Doug Peltz",
+      "Keith Schacht"
+    ]
+  },
+  {
+    "id": 53,
+    "fund": "reach-capital",
+    "name": "Nearpod",
+    "slug": "nearpod",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://nearpod.com/",
+    "description": "Learning platform that enables teachers to facilitate interactive lessons and engage all students on their own devices.",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Nearpod.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Guido Kovalskys",
+      "Felipe Sommer",
+      "Emiliano Abramzon"
+    ]
+  },
+  {
+    "id": 54,
+    "fund": "reach-capital",
+    "name": "Newsela",
+    "slug": "newsela",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://newsela.com/",
+    "description": "Instructional content platform that delivers engaging, non-fiction content across subjects at reading levels appropriate for each student.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Newsela.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Matthew Gross",
+      "Dan Cogan-Drew"
+    ]
+  },
+  {
+    "id": 55,
+    "fund": "reach-capital",
+    "name": "NoRedInk",
+    "slug": "noredink",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.noredink.com/",
+    "description": "NoRedInk builds stronger writers through interest-based curriculum, adaptive exercises and actionable data",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/NoRedInk.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jeff Scheur"
+    ]
+  },
+  {
+    "id": 56,
+    "fund": "reach-capital",
+    "name": "Nurture",
+    "slug": "nurture",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.nurture.is/",
+    "description": "Learn Foundational Life Skills Through Immersive Play",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2022,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2024/10/Nurture.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Danny Limanseta",
+      "Julie Deutsch Stewart",
+      "Rajesh Lingappa"
+    ]
+  },
+  {
+    "id": 57,
+    "fund": "reach-capital",
+    "name": "Outschool",
+    "slug": "outschool",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://outschool.com/",
+    "description": "Interactive online classes that help kids love learning",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Outschool.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Amir Nathoo",
+      "Nick Grandy",
+      "Mikhail Seregine"
+    ]
+  },
+  {
+    "id": 58,
+    "fund": "reach-capital",
+    "name": "Outsmart",
+    "slug": "outsmart",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://outsmartcollege.com/",
+    "description": "Designing higher education for the world today — AI-native, affordable, and aligned with how people actually learn and work",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2025,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Outsmart.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Daniel Falabella",
+      "Jorge Mazal",
+      "Gina Gotthilf"
+    ]
+  },
+  {
+    "id": 59,
+    "fund": "reach-capital",
+    "name": "Padlet",
+    "slug": "padlet",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://padlet.com",
+    "description": "A productivity and authoring tool optimized for visual storytelling and mobile collaboration.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Padlet.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Nitesh Goel"
+    ]
+  },
+  {
+    "id": 60,
+    "fund": "reach-capital",
+    "name": "Paloma",
+    "slug": "paloma",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": null,
+    "description": "Harnessing AI to unleash parents’ untapped teaching potential",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Paloma.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Alejandro Gibes de Gac"
+    ]
+  },
+  {
+    "id": 61,
+    "fund": "reach-capital",
+    "name": "Paper",
+    "slug": "paper",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://paper.co/",
+    "description": "Making 24/7 academic support accessible to all students",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Paper.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Phil Cutler",
+      "Roberto Cipriani"
+    ]
+  },
+  {
+    "id": 62,
+    "fund": "reach-capital",
+    "name": "Pathfinder",
+    "slug": "pathfinder",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://heypathfinder.com/",
+    "description": "The AI agent that manages the homeschooling experience for families",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2024,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2025/09/pathfinder.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Amaan Karim Ahmad",
+      "Sidharth Jain"
+    ]
+  },
+  {
+    "id": 63,
+    "fund": "reach-capital",
+    "name": "PeerTeach",
+    "slug": "peerteach",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.peerteach.org/",
+    "description": "Supercharging math classes with data-driven peer tutoring",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2021,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/peerteach-e1762818698873.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Soren Rosier",
+      "Kreg Moccia"
+    ]
+  },
+  {
+    "id": 64,
+    "fund": "reach-capital",
+    "name": "Pensieve",
+    "slug": "pensieve",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.pensieve.co/schools",
+    "description": "AI Grader & Tutor for higher ed: automate grading and give personalized learning experience to students",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2024,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/pensieve.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jack Liu",
+      "Minjune Kim",
+      "Yoonseok Yang"
+    ]
+  },
+  {
+    "id": 65,
+    "fund": "reach-capital",
+    "name": "PeopleGrove",
+    "slug": "peoplegrove",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.peoplegrove.com/",
+    "description": "Mentoring and advising platform that enables personalized support for college students.",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/PeopleGrove-e1762818763795.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Adam Saven",
+      "Reilly Davis"
+    ]
+  },
+  {
+    "id": 66,
+    "fund": "reach-capital",
+    "name": "Polygence",
+    "slug": "polygence",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.polygence.org/",
+    "description": "Mentorship program connecting curious students to leading academics around hands-on research projects.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2019,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/polygence-2.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jin Yun Chow",
+      "Janos Perczel"
+    ]
+  },
+  {
+    "id": 67,
+    "fund": "reach-capital",
+    "name": "Preply",
+    "slug": "preply",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://preply.com/",
+    "description": "Language learning marketplace featuring the best online tutors.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2023/07/preply.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Kirill Bigai",
+      "Dmytro Voloshyn"
+    ]
+  },
+  {
+    "id": 68,
+    "fund": "reach-capital",
+    "name": "Realworld",
+    "slug": "realworld",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.realworld.co/",
+    "description": "The one-stop-shop to navigate adulthood and big life moments.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2018,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/realworld-2.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Genevieve Bellaire"
+    ]
+  },
+  {
+    "id": 69,
+    "fund": "reach-capital",
+    "name": "Rhithm",
+    "slug": "rhithm",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://rhithm.app/",
+    "description": "Social-emotional learning and school-based mental health solution.",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2019,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Rhithm.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jake Gannon",
+      "Josh Knutson"
+    ]
+  },
+  {
+    "id": 70,
+    "fund": "reach-capital",
+    "name": "Riipen",
+    "slug": "riipen",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://riipen.com/",
+    "description": "Connecting students with companies to work on real projects, for course credit.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Riipen.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Dave Savory",
+      "Dana Stephenson"
+    ]
+  },
+  {
+    "id": 71,
+    "fund": "reach-capital",
+    "name": "SchoolMint",
+    "slug": "schoolmint",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.schoolmint.com/",
+    "description": "Student enrollment solution that enables school choice for families.",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2013,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/schoolmint.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jinal Jhaveri",
+      "Forum Desai"
+    ]
+  },
+  {
+    "id": 72,
+    "fund": "reach-capital",
+    "name": "Schoolzilla",
+    "slug": "schoolzilla",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://schoolzilla.com/",
+    "description": "Real-time data dashboards to power great schools.",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2013,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Schoolzilla.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Lynzi Ziegenhagen",
+      "Heidi Williamson"
+    ]
+  },
+  {
+    "id": 73,
+    "fund": "reach-capital",
+    "name": "Scout",
+    "slug": "scout",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.scoutftw.com/",
+    "description": "Making learning business and finance entertaining, engaging, and accessible.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/scout-padding.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Cindy Zeng",
+      "Michael Haddix"
+    ]
+  },
+  {
+    "id": 74,
+    "fund": "reach-capital",
+    "name": "Scout Edu",
+    "slug": "scout-edu",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.scoutforschools.com/",
+    "description": "The AI-native student information system for K-12 schools.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2024,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2025/05/scout-edu.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Max Bertfield",
+      "Noah Fichter"
+    ]
+  },
+  {
+    "id": 75,
+    "fund": "reach-capital",
+    "name": "Seesaw",
+    "slug": "seesaw",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://web.seesaw.me/",
+    "description": "Helping teachers, students, families, and school leaders work together to elevate learning",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2013,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/seesaw.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Carl Sjogreen",
+      "Adrian Graham"
+    ]
+  },
+  {
+    "id": 76,
+    "fund": "reach-capital",
+    "name": "SmartPass",
+    "slug": "smartpass",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.smartpass.app/",
+    "description": "A digital hall pass that increases time in class, curbs vandalism, and makes school safer",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2019,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2023/06/Smartpass.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Will Gulian",
+      "Peter Luba",
+      "Dhruv Sringari"
+    ]
+  },
+  {
+    "id": 77,
+    "fund": "reach-capital",
+    "name": "Snorkl",
+    "slug": "snorkl",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://snorkl.app/",
+    "description": "AI-powered feedback that understands student work in any format — voice, video, or drawing.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2025,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2025/12/logo-wide-1200x630-1.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jeff Plourd",
+      "Jon Laven"
+    ]
+  },
+  {
+    "id": 78,
+    "fund": "reach-capital",
+    "name": "Songscription",
+    "slug": "songscription",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://songscription.ai/",
+    "description": "Empowering musicians worldwide to play and share the songs they love",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2024,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Songscription.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Andrew Carlins",
+      "Alexander Alvarado-Barahona",
+      "Katie Baker"
+    ]
+  },
+  {
+    "id": 79,
+    "fund": "reach-capital",
+    "name": "Springboard",
+    "slug": "springboard",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.springboard.com",
+    "description": "Workforce training for in-demand digital skills.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2013,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Springboard-1.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Parul Gupta",
+      "Gautam Tambay"
+    ]
+  },
+  {
+    "id": 80,
+    "fund": "reach-capital",
+    "name": "Sprout Labs",
+    "slug": "sprout-labs",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.sproutlabs.com/",
+    "description": "Predicting reading difficulties for students and empowering teachers, parents and clinicians with customized action plans and resources.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2020,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Sprout-Labs-1.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Carla Small"
+    ]
+  },
+  {
+    "id": 81,
+    "fund": "reach-capital",
+    "name": "Stellic",
+    "slug": "stellic",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.stellic.com/",
+    "description": "Powering the path to graduation",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2016,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Stellic.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Sabih Bin Wasi",
+      "Rukhsar Neyaz"
+    ]
+  },
+  {
+    "id": 82,
+    "fund": "reach-capital",
+    "name": "Straia",
+    "slug": "straia",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.straia.io/",
+    "description": "AI-powered business intelligence for higher education.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2024,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2025/12/straia.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Ryan Lau",
+      "Alan Chan"
+    ]
+  },
+  {
+    "id": 83,
+    "fund": "reach-capital",
+    "name": "SuperHi",
+    "slug": "superhi",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.superhi.com/",
+    "description": "The education protocol of the internet, allowing people to learn and get paid for sharing high-quality, accessible skills content.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2016,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/superhi-1.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Rik Lomas"
+    ]
+  },
+  {
+    "id": 84,
+    "fund": "reach-capital",
+    "name": "Suraasa",
+    "slug": "suraasa",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.suraasa.com/",
+    "description": "Helping global teachers achieve greater professional and financial growth in their careers.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/suraasa.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Rishabh Khanna",
+      "Ankit Khanna"
+    ]
+  },
+  {
+    "id": 85,
+    "fund": "reach-capital",
+    "name": "TeachFX",
+    "slug": "teachfx",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://teachfx.com/",
+    "description": "Analyzing classroom dialogue to empower teachers with feedback on student engagement",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/TeachFX-e1762820441455.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jamie Poskin",
+      "Berk Coker"
+    ]
+  },
+  {
+    "id": 86,
+    "fund": "reach-capital",
+    "name": "TeachShare",
+    "slug": "teachshare",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.teachshare.com/",
+    "description": "The one-stop shop for adaptive education — create, differentiate, gamify, share, auto-grade, sell — all on one platform",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2024,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2024/11/TeachShare.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Adam Goldstein",
+      "Aryan Bhadouria"
+    ]
+  },
+  {
+    "id": 87,
+    "fund": "reach-capital",
+    "name": "Teachy",
+    "slug": "teachy",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.teachy.com.br/",
+    "description": "AI-powered workspace for teachers",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2022,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Teachy.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Pedro Siciliano",
+      "Fábio Baldissera"
+    ]
+  },
+  {
+    "id": 88,
+    "fund": "reach-capital",
+    "name": "The Disagreement",
+    "slug": "the-disagreement",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": null,
+    "description": "A media and learning company that models and celebrates healthy disagreement in all walks of life",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2023,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/The-Disagreement.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Alex Grodd",
+      "Catherine Cushenberry"
+    ]
+  },
+  {
+    "id": 89,
+    "fund": "reach-capital",
+    "name": "The Podcast App",
+    "slug": "the-podcast-app",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://podcast.app/",
+    "description": "Powerful, intuitive search platform for the world of podcasting",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/thepodcastapp.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Martín Siniawski",
+      "Juan Catalano"
+    ]
+  },
+  {
+    "id": 90,
+    "fund": "reach-capital",
+    "name": "Thinkverse",
+    "slug": "thinkverse",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.thinkverse.co/",
+    "description": "An AI math tutor for every K-12 student",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2023,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Thinkverse-e1762820749563.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Vincent Zhang",
+      "Qiyi Shan"
+    ]
+  },
+  {
+    "id": 91,
+    "fund": "reach-capital",
+    "name": "Twenty",
+    "slug": "twenty",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.twenty.team/",
+    "description": "Real-world career & life advice to help people crush their twenties",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2022,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/twenty.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Katie Kirsch"
+    ]
+  },
+  {
+    "id": 92,
+    "fund": "reach-capital",
+    "name": "Tynker",
+    "slug": "tynker",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.tynker.com/",
+    "description": "Self-paced coding courses for kids",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Tynker.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Srinivas Mandyam",
+      "Krishna Vedati",
+      "Kelvin Chong"
+    ]
+  },
+  {
+    "id": 93,
+    "fund": "reach-capital",
+    "name": "Wayfinder",
+    "slug": "wayfinder",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.projectwayfinder.com/",
+    "description": "Culturally responsive social-emotional learning and mental health curriculum designed to help students find meaning in today’s world.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/Wayfinder.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Patrick Cook-Deegan",
+      "Nathaniel Manning"
+    ]
+  },
+  {
+    "id": 94,
+    "fund": "reach-capital",
+    "name": "WriteLab",
+    "slug": "writelab",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": "https://www.writelab.com",
+    "description": "Immediate, automated writing feedback powered by artificial intelligence.",
+    "stage": "Exit",
+    "stage_year": null,
+    "founded_year": 2013,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/WriteLab-1-e1762820840648.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Matthew Ramirez",
+      "Donald Mcquade",
+      "Frank Yeary"
+    ]
+  },
+  {
+    "id": 95,
+    "fund": "reach-capital",
+    "name": "YourEDU",
+    "slug": "youredu",
+    "fund_url": "https://www.reachcapital.com/companies/?sector=learning",
+    "sectors": [
+      "Learning"
+    ],
+    "website": null,
+    "description": "All-in-One Homeschool Management Platform",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2024,
+    "invested_year": null,
+    "logo_url": "https://www.reachcapital.com/wp-content/uploads/2022/06/YourEDU-e1762820874297.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Henry Hill-Gorman",
+      "Colin Grant"
+    ]
+  }
+]
