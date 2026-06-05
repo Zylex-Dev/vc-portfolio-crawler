@@ -9,7 +9,7 @@ FUND_URL_BASE = "https://speedrun.a16z.com/companies/"
 
 def _founders(founder_set: list[dict]) -> Optional[list[str]]:
     names = [
-        f"{f['first_name']} {f['last_name']}".strip()
+        f"{f.get('first_name', '')} {f.get('last_name', '')}".strip()
         for f in founder_set
     ]
     return names if names else None
