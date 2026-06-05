@@ -29,7 +29,7 @@ def _parse_args(argv):
         description="Crawl VC fund portfolio companies to JSON/CSV.",
     )
     p.add_argument("--fund", choices=list(_FUND_REGISTRY), required=True)
-    p.add_argument("--out", type=Path, default=Path("output"))
+    p.add_argument("--out", type=Path, default=Path("data"))
     p.add_argument("--format", choices=["json", "csv", "both"], default="both")
     p.add_argument("--workers", type=int, default=5)
     p.add_argument("--delay", type=float, default=0.2)
@@ -54,14 +54,14 @@ def main(argv=None) -> int:
     )
     log.info("Done: %d companies from %s", len(companies), args.fund)
 
-    args.out.mkdir(parents=True, exist_ok=True)
-    stem = f"{args.fund}_companies"
+    fund_dir = args.out / args.fund
+    fund_dir.mkdir(parents=True, exist_ok=True)
     if args.format in ("json", "both"):
-        path = args.out / f"{stem}.json"
+        path = fund_dir / "companies.json"
         write_json(companies, path)
         log.info("Wrote %s", path)
     if args.format in ("csv", "both"):
-        path = args.out / f"{stem}.csv"
+        path = fund_dir / "companies.csv"
         write_csv(companies, path)
         log.info("Wrote %s", path)
 

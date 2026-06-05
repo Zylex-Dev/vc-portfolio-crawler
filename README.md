@@ -35,17 +35,17 @@ python3 -m venv .venv
 .venv/bin/python -m vc_crawler --fund sequoia --no-enrich
 ```
 
-Output files are written to `output/`:
-- `output/a16z_companies.json` / `output/a16z_companies.csv`
-- `output/sequoia_companies.json` / `output/sequoia_companies.csv`
-- `output/a16z-speedrun_companies.json` / `output/a16z-speedrun_companies.csv`
+Output files are written to `data/{fund}/`:
+- `data/a16z/companies.json` / `data/a16z/companies.csv`
+- `data/sequoia/companies.json` / `data/sequoia/companies.csv`
+- `data/a16z-speedrun/companies.json` / `data/a16z-speedrun/companies.csv`
 
 ### All Options
 
 | Flag | Default | Description |
 |------|---------|-------------|
 | `--fund {sequoia,a16z,a16z-speedrun}` | *(required)* | Which fund to crawl |
-| `--out DIR` | `output` | Output directory |
+| `--out DIR` | `data` | Output directory |
 | `--format {json,csv,both}` | `both` | Output format(s) |
 | `--workers N` | `5` | Enrichment threads (Sequoia only) |
 | `--delay SECONDS` | `0.2` | Min spacing between requests |

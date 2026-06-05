@@ -14,8 +14,8 @@ def test_main_writes_sequoia_outputs(tmp_path, monkeypatch):
     monkeypatch.setattr(seq_mod, "SequoiaCrawler", Fake)
     rc = cli.main(["--fund", "sequoia", "--out", str(tmp_path), "--no-enrich", "--format", "both"])
     assert rc == 0
-    assert (tmp_path / "sequoia_companies.json").exists()
-    assert (tmp_path / "sequoia_companies.csv").exists()
+    assert (tmp_path / "sequoia" / "companies.json").exists()
+    assert (tmp_path / "sequoia" / "companies.csv").exists()
 
 
 def test_main_writes_a16z_outputs(tmp_path, monkeypatch):
@@ -26,8 +26,8 @@ def test_main_writes_a16z_outputs(tmp_path, monkeypatch):
     monkeypatch.setattr(a16z_mod, "A16ZCrawler", Fake)
     rc = cli.main(["--fund", "a16z", "--out", str(tmp_path), "--no-enrich", "--format", "both"])
     assert rc == 0
-    assert (tmp_path / "a16z_companies.json").exists()
-    assert (tmp_path / "a16z_companies.csv").exists()
+    assert (tmp_path / "a16z" / "companies.json").exists()
+    assert (tmp_path / "a16z" / "companies.csv").exists()
 
 
 def test_limit_passed_to_crawler(tmp_path, monkeypatch):
@@ -126,5 +126,5 @@ def test_main_writes_speedrun_outputs(tmp_path, monkeypatch):
     monkeypatch.setattr(sr_mod, "SpeedrunCrawler", Fake)
     rc = cli.main(["--fund", "a16z-speedrun", "--out", str(tmp_path), "--format", "both"])
     assert rc == 0
-    assert (tmp_path / "a16z-speedrun_companies.json").exists()
-    assert (tmp_path / "a16z-speedrun_companies.csv").exists()
+    assert (tmp_path / "a16z-speedrun" / "companies.json").exists()
+    assert (tmp_path / "a16z-speedrun" / "companies.csv").exists()
