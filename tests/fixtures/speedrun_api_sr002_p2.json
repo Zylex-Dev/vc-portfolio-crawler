@@ -1,0 +1,33 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": "https://speedrun-be.a16z.com/api/companies/companies/?cohort=SR002&limit=50&ordering=name",
+  "results": [
+    {
+      "id": "dddd-4444",
+      "slug": "bolt",
+      "name": "Bolt",
+      "cover_image": null,
+      "company_list_image": null,
+      "logo": null,
+      "demo_day_video_url": null,
+      "cohort": "SR002",
+      "preamble": "Fintech for SMBs",
+      "description": "Bolt simplifies payments for small businesses.",
+      "industries": ["Fintech"],
+      "founded_year": null,
+      "team_size": 2,
+      "country": "United States of America",
+      "region": "America/Canada",
+      "state": "Texas",
+      "city": "Austin",
+      "website_url": "",
+      "github_url": "",
+      "x_url": "",
+      "linkedin_url": "",
+      "founder_set": [],
+      "galleryitem_set": [],
+      "show_last": false
+    }
+  ]
+}

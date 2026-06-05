@@ -1,0 +1,70 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": "aaaa-1111",
+      "slug": "cantor",
+      "name": "Cantor",
+      "cover_image": null,
+      "company_list_image": null,
+      "logo": "https://cdn.example.com/cantor.png",
+      "demo_day_video_url": null,
+      "cohort": "SR001",
+      "preamble": "AI for real estate (short pitch)",
+      "description": "Cantor builds AI tools for commercial real estate.",
+      "industries": ["AI", "Real Estate / Prop Tech"],
+      "founded_year": 2023,
+      "team_size": 3,
+      "country": "United States of America",
+      "region": "America/Canada",
+      "state": "California",
+      "city": "San Francisco",
+      "website_url": "https://cantoreality.com",
+      "github_url": "",
+      "x_url": "",
+      "linkedin_url": "",
+      "founder_set": [
+        {
+          "id": "f1",
+          "first_name": "Alice",
+          "last_name": "Smith",
+          "slug": "alice-smith",
+          "title": "CEO",
+          "introduction": "Experienced founder.",
+          "linkedin_url": "https://linkedin.com/in/alice",
+          "profile_pic": null
+        }
+      ],
+      "galleryitem_set": [],
+      "show_last": false
+    },
+    {
+      "id": "bbbb-2222",
+      "slug": "orbit",
+      "name": "Orbit",
+      "cover_image": null,
+      "company_list_image": null,
+      "logo": null,
+      "demo_day_video_url": null,
+      "cohort": "SR001",
+      "preamble": "Community platform pitch",
+      "description": "Community platform for developers.",
+      "industries": ["Dev Tools & DevOps"],
+      "founded_year": 2022,
+      "team_size": 5,
+      "country": "United States of America",
+      "region": "America/Canada",
+      "state": "New York",
+      "city": "New York",
+      "website_url": "https://orbit.love",
+      "github_url": "",
+      "x_url": "",
+      "linkedin_url": "",
+      "founder_set": [],
+      "galleryitem_set": [],
+      "show_last": false
+    }
+  ]
+}
