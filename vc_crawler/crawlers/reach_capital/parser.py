@@ -28,7 +28,7 @@ def _parse_card(card) -> dict:
 
     desc_el = card.find(class_="reach-portfolio-card__desc")
     p = desc_el.find("p") if desc_el else None
-    raw["description"] = p.get_text(strip=True) or None if p else None
+    raw["description"] = (p.get_text(strip=True) or None) if p else None
 
     spoiler = card.find(class_="reach-portfolio-card__spoiler")
     raw.update(_parse_spoiler(spoiler) if spoiler else _empty_spoiler())
