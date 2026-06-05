@@ -1,4 +1,3 @@
-import pytest
 from vc_crawler.crawlers.a16z_speedrun.normalizer import normalize
 from vc_crawler.models import Company
 
@@ -163,3 +162,7 @@ def test_founders_multiple():
 
 def test_founders_empty_becomes_none():
     assert normalize(_orbit(), 1).founders is None
+
+
+def test_source_modified_none():
+    assert normalize(_cantor(), 1).source_modified is None
