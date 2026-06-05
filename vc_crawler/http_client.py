@@ -67,3 +67,11 @@ class PoliteClient:
         resp = self.session.get(url, **kwargs)
         resp.raise_for_status()
         return resp
+
+    def post(self, url: str, **kwargs) -> requests.Response:
+        if self.delay:
+            self._throttle()
+        kwargs.setdefault("timeout", self.timeout)
+        resp = self.session.post(url, **kwargs)
+        resp.raise_for_status()
+        return resp
