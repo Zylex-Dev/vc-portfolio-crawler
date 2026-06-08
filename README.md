@@ -10,6 +10,7 @@ Crawls company portfolio data from venture capital fund websites and exports to 
 | [a16z Speedrun](https://speedrun.a16z.com/companies/) | Public REST API, cohorts SR001–SR006 | ~240 |
 | [Owl Ventures](https://www.owlvc.com/portfolio) | Webflow CMS HTML (single request) | ~92 |
 | [Reach Capital](https://www.reachcapital.com/companies/?sector=learning) | WordPress AJAX infinite-scroll (Learning sector) | ~95 |
+| [GSV Ventures](https://gsv.ventures/portfolio/) | Static HTML (single request) | ~87 |
 
 ## Setup
 
@@ -36,6 +37,9 @@ python3 -m venv .venv
 # Crawl Reach Capital Learning portfolio (~95 companies, AJAX pagination)
 .venv/bin/python -m vc_crawler --fund reach-capital
 
+# Crawl GSV Ventures portfolio (~87 companies, single static-HTML request)
+.venv/bin/python -m vc_crawler --fund gsv-ventures
+
 # Quick test: first 5 companies, JSON only, verbose logging
 .venv/bin/python -m vc_crawler --fund a16z --limit 5 --format json --verbose
 
@@ -49,12 +53,13 @@ Output files are written to `data/{fund}/`:
 - `data/a16z-speedrun/companies.json` / `data/a16z-speedrun/companies.csv`
 - `data/owl-ventures/companies.json` / `data/owl-ventures/companies.csv`
 - `data/reach-capital/companies.json` / `data/reach-capital/companies.csv`
+- `data/gsv-ventures/companies.json` / `data/gsv-ventures/companies.csv`
 
 ### All Options
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures,reach-capital}` | *(required)* | Which fund to crawl |
+| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures,reach-capital,gsv-ventures}` | *(required)* | Which fund to crawl |
 | `--out DIR` | `data` | Output directory |
 | `--format {json,csv,both}` | `both` | Output format(s) |
 | `--workers N` | `5` | Enrichment threads (Sequoia only) |
@@ -70,7 +75,7 @@ Both funds export a unified schema:
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | int | Sequential ID (1-based) |
-| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, `"owl-ventures"`, or `"reach-capital"` |
+| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, `"owl-ventures"`, `"reach-capital"`, or `"gsv-ventures"` |
 | `name` | str | Company name |
 | `slug` | str | URL-friendly identifier |
 | `fund_url` | str | Link to company page on fund site |
@@ -107,6 +112,9 @@ Two-step pipeline:
 2. Obtain a WordPress nonce via `admin-ajax.php?action=reach_get_nonce`, then POST to `admin-ajax.php` with action `reach_portfolio_filter` and PHP-array-encoded args, incrementing `offset` by 16 until the response is empty
 
 All company data (name, description, website, logo, founded year, leadership) is embedded in the HTML card markup. No detail-page requests needed.
+
+### GSV Ventures
+Single HTTP request to `https://gsv.ventures/portfolio/`. All ~87 portfolio companies are fully embedded in the static HTML as `div.c-grid--item` elements — no JS rendering required. Each card contains the company name, logo (`img.lazyload[data-src]`), tagline (`h2`), optional description (`p`), website ("Learn more" link), and a `ul.company-info` aside with investment round, year founded, segment, and founders/leadership.
 
 ### Sequoia
 Multi-stage pipeline:
