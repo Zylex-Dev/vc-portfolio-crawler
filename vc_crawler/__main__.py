@@ -18,6 +18,7 @@ _FUND_REGISTRY = {
     "owl-ventures": "vc_crawler.crawlers.owl_ventures.crawler.OwlCrawler",
     "reach-capital": "vc_crawler.crawlers.reach_capital.crawler.ReachCrawler",
     "gsv-ventures": "vc_crawler.crawlers.gsv_ventures.crawler.GSVCrawler",
+    "learn-capital": "vc_crawler.crawlers.learn_capital.crawler.LearnCrawler",
 }
 
 

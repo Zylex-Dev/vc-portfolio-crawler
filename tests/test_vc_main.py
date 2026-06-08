@@ -172,3 +172,18 @@ def test_main_writes_gsv_ventures_outputs(tmp_path, monkeypatch):
     assert rc == 0
     assert (tmp_path / "gsv-ventures" / "companies.json").exists()
     assert (tmp_path / "gsv-ventures" / "companies.csv").exists()
+
+
+def test_main_writes_learn_capital_outputs(tmp_path, monkeypatch):
+    import vc_crawler.crawlers.learn_capital.crawler as lc_mod
+    class Fake:
+        def __init__(self, client): pass
+        def run(self, **kw):
+            return [Company(id=1, fund="learn-capital", name="Edify Academy",
+                            slug="edify-academy",
+                            fund_url="https://learn.vc/ventures")]
+    monkeypatch.setattr(lc_mod, "LearnCrawler", Fake)
+    rc = cli.main(["--fund", "learn-capital", "--out", str(tmp_path), "--format", "both"])
+    assert rc == 0
+    assert (tmp_path / "learn-capital" / "companies.json").exists()
+    assert (tmp_path / "learn-capital" / "companies.csv").exists()
