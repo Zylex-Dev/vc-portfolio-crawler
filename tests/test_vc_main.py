@@ -157,3 +157,18 @@ def test_main_writes_reach_capital_outputs(tmp_path, monkeypatch):
     assert rc == 0
     assert (tmp_path / "reach-capital" / "companies.json").exists()
     assert (tmp_path / "reach-capital" / "companies.csv").exists()
+
+
+def test_main_writes_gsv_ventures_outputs(tmp_path, monkeypatch):
+    import vc_crawler.crawlers.gsv_ventures.crawler as gsv_mod
+    class Fake:
+        def __init__(self, client): pass
+        def run(self, **kw):
+            return [Company(id=1, fund="gsv-ventures", name="EduLearn Pro",
+                            slug="edulearn-pro",
+                            fund_url="https://gsv.ventures/portfolio/")]
+    monkeypatch.setattr(gsv_mod, "GSVCrawler", Fake)
+    rc = cli.main(["--fund", "gsv-ventures", "--out", str(tmp_path), "--format", "both"])
+    assert rc == 0
+    assert (tmp_path / "gsv-ventures" / "companies.json").exists()
+    assert (tmp_path / "gsv-ventures" / "companies.csv").exists()

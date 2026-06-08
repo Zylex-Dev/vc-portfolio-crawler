@@ -17,6 +17,7 @@ _FUND_REGISTRY = {
     "a16z-speedrun": "vc_crawler.crawlers.a16z_speedrun.crawler.SpeedrunCrawler",
     "owl-ventures": "vc_crawler.crawlers.owl_ventures.crawler.OwlCrawler",
     "reach-capital": "vc_crawler.crawlers.reach_capital.crawler.ReachCrawler",
+    "gsv-ventures": "vc_crawler.crawlers.gsv_ventures.crawler.GSVCrawler",
 }
 
 
