@@ -111,3 +111,20 @@ def test_company_c_tags():
 
 def test_company_c_founders_text():
     assert parse_ventures_page(FIXTURE)[2]["founders_text"] == "Carlos Ruiz"
+
+
+def test_website_none_when_link_type_not_web():
+    import json
+    html = (
+        '<script id="__NEXT_DATA__" type="application/json">'
+        + json.dumps({"props": {"pageProps": {"ventures": [{
+            "id": "x", "tags": [], "data": {
+                "name": [{"type": "heading1", "text": "X", "spans": []}],
+                "visit": {"link_type": "Media", "url": "https://example.com"},
+                "acquired": False, "public": False,
+            }
+        }]}}})
+        + "</script>"
+    )
+    result = parse_ventures_page(html)
+    assert result[0]["website"] is None
