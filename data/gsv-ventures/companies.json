@@ -1,0 +1,1980 @@
+[
+  {
+    "id": 1,
+    "fund": "gsv-ventures",
+    "name": "Abwaab",
+    "slug": "abwaab",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Pre-K-12"
+    ],
+    "website": "https://abwaab.me/en",
+    "description": "Abwaab is an online learning platform that allows students to learn at their own pace, test themselves, and get ahead with our expert tutors anytime and anywhere. Abwaab offers short, engaging video lessons, visualized learning journeys, continuous assessment, and performance analytics.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2019,
+    "invested_year": 2020,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/10/gsvventures-portfolio-abwaab-logo-small.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Hamdi Tabbaa",
+      "Hussein Al-Sarabi",
+      "Sabri Hakim"
+    ]
+  },
+  {
+    "id": 2,
+    "fund": "gsv-ventures",
+    "name": "AdmitKard",
+    "slug": "admitkard",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.admitkard.com/",
+    "description": "AdmitKard is was founded in 2016 by IIT-IIM Alumni (Piyush Bhartiya & Rachit Agrawal), with an aim to mentor students in the college application process. AdmitKard boasts of a robust technical platform to make the entire application process effortless and to enable you to apply from the comfort of your home, hostel, or wherever you are in the world, to make your dreams come true!",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/AdmitKard-Logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Rachit Agarwal",
+      "Co-Founder & Piyush Bhartiya",
+      "Co-Founder"
+    ]
+  },
+  {
+    "id": 3,
+    "fund": "gsv-ventures",
+    "name": "Amigo",
+    "slug": "amigo",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.amigo.ai/",
+    "description": "Amigo helps service businesses scale their reach & revenue using AI-powered digital clones that reason, think, and talk just like them.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2024/12/Amigo-Wordmark.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 4,
+    "fund": "gsv-ventures",
+    "name": "Amira Learning",
+    "slug": "amira-learning",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "K-12"
+    ],
+    "website": "https://www.amiralearning.com/",
+    "description": "Amira Learning is reinventing learning to read with AI. Leveraging AI innovation developed by and licensed from Carnegie Mellon University over 20+ years, Amira is an intelligent reading assistant able to assess, listen to and coach developmental readers. Just like a patient grandparent, Amira reads along with a child, helping to make reading practice productive. Just like the best teacher’s aide, Amira can assess oral fluency, tutor and generally make teacher’s life easier.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": 2019,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-amiralearning-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Mark Angel",
+      "CEO"
+    ]
+  },
+  {
+    "id": 5,
+    "fund": "gsv-ventures",
+    "name": "Andela",
+    "slug": "andela",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent@Work"
+    ],
+    "website": "https://andela.com/",
+    "description": "In the next ten years, there will be 1.3M software development jobs created and only 400,000 domestic computer science graduates to fill them. Africa, meanwhile, is home to the largest untapped talent pool and seven of the 10 fastest growing internet populations in the world.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": 2014,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/andela-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jeremy Johnson",
+      "CEO & Co-Founder; Christina Sass",
+      "COO & Co-Founder"
+    ]
+  },
+  {
+    "id": 6,
+    "fund": "gsv-ventures",
+    "name": "apna",
+    "slug": "apna",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://apna.co/",
+    "description": "apna is the leading professional app in India focused on blue and grey collar workers. It is a horizontal and vertical network for workers in different trades and cities, enabling them to get hired and upskilled.",
+    "stage": "Series C",
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2021/09/gsvventures-portfolio-apna-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Nirmit Parikh",
+      "Founder & CEO"
+    ]
+  },
+  {
+    "id": 7,
+    "fund": "gsv-ventures",
+    "name": "ASI",
+    "slug": "asi",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.asi.tech",
+    "description": "digest.ai is building AI to help people understand text.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2021,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/ASI.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Quddus Pativada",
+      "Founder"
+    ]
+  },
+  {
+    "id": 8,
+    "fund": "gsv-ventures",
+    "name": "Begin",
+    "slug": "begin",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://www.speakaboos.com/",
+    "description": "BEGiN, the parent company of the Speakaboos and Homer early childhood literacy and language learning program, is on a mission to provide children the best educational start possible. The platform produces the industry’s highest engagement by combining two award-winning programs supporting “Love to Read” and “Learn to Read, and is the only company with two top 10 subscription services in the Kids and Education categories in the App Store and Google Play.",
+    "stage": "Series B",
+    "stage_year": null,
+    "founded_year": 2009,
+    "invested_year": 2014,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-begin-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Neal Shenoy",
+      "Co-Founder & COO; Noelle Millholt"
+    ]
+  },
+  {
+    "id": 9,
+    "fund": "gsv-ventures",
+    "name": "Bookclub",
+    "slug": "bookclub",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Adult Consumer Learning"
+    ],
+    "website": "https://www.bookclub.com/",
+    "description": "Bookclub enables life changing conversations through virtual book clubs led by the authors themselves.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2020,
+    "invested_year": 2020,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-bookclub-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "David Blake & Eric Sharp"
+    ]
+  },
+  {
+    "id": 10,
+    "fund": "gsv-ventures",
+    "name": "BrightChamps",
+    "slug": "brightchamps",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://brightchamps.com/",
+    "description": "BrightChamps offers live one-on-one courses in technological skills for kids in grades 1 – 12. The startup provides courses on coding and mathematical thinking. BrightChamp’s vision is to ensure that its young students are prepared for what the future holds.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2021/11/gsvventures-portfolio-brightchamps-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Ravi Bhushan",
+      "Founder & CEO"
+    ]
+  },
+  {
+    "id": 11,
+    "fund": "gsv-ventures",
+    "name": "CampusLogic",
+    "slug": "campuslogic",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in Post-Secondary"
+    ],
+    "website": "https://campuslogic.com/",
+    "description": "CampusLogic transforms the way higher education delivers student financial services with a self-service SaaS platform for students, staff, and schools. CampusLogic’s innovative software means more students can access aid—and the education it pays for, make better decisions that reduce borrowing, and easily navigate student finance with less staff burden and cost. Today, 450+ colleges and universities serving 3 million students are on the platform, including ASU, Arizona, Georgia, Colorado State, Western Governors, and Morehouse.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2011,
+    "invested_year": 2015,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-campuslogic-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Gregg Scoresby"
+    ]
+  },
+  {
+    "id": 12,
+    "fund": "gsv-ventures",
+    "name": "Clasp",
+    "slug": "clasp",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.clasp.com/",
+    "description": "Clasp is a first-of-its-kind platform connecting education and employment through retention-driven recruitment. Since 2018, Clasp (formerly Stride Funding) has helped over 10,000 students access outcomes-based financing, career pathways, and student loan repayment. By enabling healthcare systems to sponsor loan repayment tied to early job commitments, Clasp addresses two major challenges: student debt and the clinical talent shortage. Clasp also publishes theSchool Deserts Index, a national report featuring state-by-state rankings of gaps in clinical training programs, offering actionable insights for workforce planners. Backed by up to$100Min funding capacity—with no co-signer required—Clasp supports students at the moment they need it most. Learn more at clasp.com.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2018,
+    "invested_year": 2019,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/Clasp_Logo.jpg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Tess Michaels",
+      "CEO"
+    ]
+  },
+  {
+    "id": 13,
+    "fund": "gsv-ventures",
+    "name": "ClassDojo",
+    "slug": "classdojo",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://www.classdojo.com/",
+    "description": "ClassDojo give teachers, parents, and students the power to transform education from the ground-up, in every classroom in the world by making it easy to share everything more openly, more positively and more often. It is one of the fastest-growing and widely used education technology companies of all time, with millions of teachers and tens of millions of parents and students using it in more than 180 countries.",
+    "stage": "Investment Series B",
+    "stage_year": null,
+    "founded_year": 2011,
+    "invested_year": 2015,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-classdojo-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Sam Chaudhary",
+      "Co-Founder & CEO; Liam Don"
+    ]
+  },
+  {
+    "id": 14,
+    "fund": "gsv-ventures",
+    "name": "Classplus",
+    "slug": "classplus",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "K12, Higher Ed"
+    ],
+    "website": "https://classplusapp.com/",
+    "description": "Classplus empowers educators to take their offline institutes online. The full-stack and mobile-first platform enables tutors to distribute their content, acquire students, and teach virtually. The vision behind Classplus is to be the leading provider of infrastructure SaaS for digital learning.",
+    "stage": "Series C",
+    "stage_year": null,
+    "founded_year": 2018,
+    "invested_year": 2021,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2021/08/gsvventures-portfolio-classplus-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Mukul Rustagi & Bhaswat Agarwal"
+    ]
+  },
+  {
+    "id": 15,
+    "fund": "gsv-ventures",
+    "name": "Class Technologies",
+    "slug": "class-technologies",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "PK-12"
+    ],
+    "website": "https://www.classedu.com/",
+    "description": "Class is building industry verticalized versions of the world’s leading video conference platform Zoom, starting with education. Its first product, Class for Zoom, is the world’s first custom Zoom experience fully optimized for K-12, Higher Education, and Corporate Learning. Class for Zoom is built on Zoom’s SDK.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2020,
+    "invested_year": 2020,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-classtechnologies-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Michael Chasen"
+    ]
+  },
+  {
+    "id": 16,
+    "fund": "gsv-ventures",
+    "name": "Clever",
+    "slug": "clever",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://clever.com/",
+    "description": "At the heart of the software and Big Data revolution underway in education, Clever makes using a school’s technology faster, safer, and simpler than ever before. With Clever, learning applications get a platform to easily connect with schools and school districts have a central location to manage their technology. Today, half of K-12 schools in the U.S. trust Clever to secure their student data as they adopt learning software in the classroom, and the company works with more digital products and companies than any other platform in education aside from Apple.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": 2012,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-clever-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Tyler Bosmeny",
+      "CEO & Co-Founder; Dan Carroll",
+      "COO & Co-Founder; Rafael Garcia",
+      "CTO & Co-Founder"
+    ]
+  },
+  {
+    "id": 17,
+    "fund": "gsv-ventures",
+    "name": "CLI Studios",
+    "slug": "cli-studios",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "K-12"
+    ],
+    "website": "https://www.clistudios.com/",
+    "description": "Led by an outstanding team of former and current professional dancers and choreographers (one of whom was also a Cooley lawyer), CLI Studios delivers synchronous and asynchronous arts instruction to schools and arts studios. K-12 schools today are starved for arts curriculum and CLI offers access to professional instruction that is fun and engaging but also very affordable for most school budgets.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": 2019,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-clistudios-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jonathan Arpino",
+      "CEO & Founder; Justin Rucker",
+      "COO"
+    ]
+  },
+  {
+    "id": 18,
+    "fund": "gsv-ventures",
+    "name": "CoLearn",
+    "slug": "colearn",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "K-12"
+    ],
+    "website": "https://colearn.id/",
+    "description": "CoLearn is an edtech platform that empowers tuition centers and tutors to create online learning experiences for their students.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2020,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-colearn-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Abhay Saboo",
+      "Co-Founder & CEO; Marc Irawan",
+      "Co-Founder & CTO; Sandeep Devaram",
+      "Co-Founder & CPO"
+    ]
+  },
+  {
+    "id": 19,
+    "fund": "gsv-ventures",
+    "name": "Course Hero",
+    "slug": "course-hero",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in Post-Secondary"
+    ],
+    "website": "https://www.coursehero.com/",
+    "description": "Harnessing marketplace network effects and the power of community crowdsourcing, Course Hero is an online learning platform that empowers students and educators to succeed through study tools and resources. Fueled by a passionate community of over 20 million students and educators who share their course-specific knowledge and educational resources, Course Hero offers the biggest and best library of study documents, expert tutors, customizable flashcards, and course advice.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2006,
+    "invested_year": 2014,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-coursehero-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Andrew Grauer",
+      "CEO & Co-Founder"
+    ]
+  },
+  {
+    "id": 20,
+    "fund": "gsv-ventures",
+    "name": "Coursera",
+    "slug": "coursera",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://www.coursera.org/",
+    "description": "A testament to the shift in learning & talent development towards “knowledge as a currency”, Coursera’s flexible platform empowers lifelong learners to skill up anytime, anywhere while building out a portfolio of stackable credentials. In just five years, the company has achieved massive scale – 31 million registered learners, 150 university partners — and launched disruptive programs that cross over to professional & corporate training, including partnerships with industry leaders such as AT&T, L’Oréal, Air France, PayPal, and The Boston Consulting Group, to name a few.",
+    "stage": "Series D",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": 2017,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-coursera-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jeff Maggioncalda",
+      "Co-Chair of the Board; Andrew Ng",
+      "Co-Founder & Co-Chair of the Board; Daphne Koller",
+      "Co-Founder"
+    ]
+  },
+  {
+    "id": 21,
+    "fund": "gsv-ventures",
+    "name": "CreativeLive",
+    "slug": "creativelive",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent@Work"
+    ],
+    "website": "https://www.creativelive.com/",
+    "description": "Founded by one of the most influential photographers of the last 20 years, CreativeLive is the go-to continuing education resource for creative professionals. A community of innovators and doers, CreativeLive is the world’s leading live, online classroom for creatives. Anyone can use the platform to take classes taught by the world’s most inspiring instructors. With over 2 billion minutes of content consumed to date, CreativeLive now has 10 million users and counting.",
+    "stage": "Series B",
+    "stage_year": null,
+    "founded_year": 2010,
+    "invested_year": 2016,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-creativelive-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Chase Jarvis",
+      "CEO & Co-Founder; Mak Azadi",
+      "President"
+    ]
+  },
+  {
+    "id": 22,
+    "fund": "gsv-ventures",
+    "name": "Degreed",
+    "slug": "degreed",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Workforce"
+    ],
+    "website": "https://degreed.com/",
+    "description": "Degreed exists to discover, empower, and recognize the next generation of the world’s expertise. Connecting all the resources people use to learn and grow, including corporate learning systems and millions of courses, videos, books, articles, podcasts, and subject experts from thousands of sources, Degreed provides people and businesses with the tools, analytics and feedback they need to stay ready for whatever’s next.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": 2013,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-degreed-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "David Blake",
+      "Co-Founder & Executive Chairman"
+    ]
+  },
+  {
+    "id": 23,
+    "fund": "gsv-ventures",
+    "name": "Doowii",
+    "slug": "doowii",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://https://www.doowii.io/",
+    "description": "Doowii is an AI data platform for K12 and Higher-Ed institutions, designed to help educators make better decisions with data. Doowii’s software aggregates educational data from a variety of sources, including student records, learning management systems, and MTSS systems to generate reports and insights using only natural language, enabling all educators to identify trends, track progress, and make better informed decisions.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2024/07/doowii-1.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 24,
+    "fund": "gsv-ventures",
+    "name": "DISCO",
+    "slug": "disco",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.disco.co",
+    "description": "DISCO is a platform for creators to build and scale their live learning empire easily in one place.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2022/02/DISCO_Logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Candice Faktor",
+      "Co-founder & Chris Sukornyk",
+      "Co-founder"
+    ]
+  },
+  {
+    "id": 25,
+    "fund": "gsv-ventures",
+    "name": "Domestika",
+    "slug": "domestika",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.domestika.org/en",
+    "description": "Domestika is the fastest-growing creative community where the best creative experts share their knowledge and skills through professionally produced online courses. It all started as an online forum and a small but dynamic showcase of creative professionals, designed to help them connect and learn from each other.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2022/02/image.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Julio G. Cotorruelo",
+      "Co-Founder & CEO & Tomy Pelluz",
+      "Co-Founder"
+    ]
+  },
+  {
+    "id": 26,
+    "fund": "gsv-ventures",
+    "name": "Dreamscape Learn",
+    "slug": "dreamscape-learn",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.dreamscapelearn.com/",
+    "description": "The promise of Dreamscape Learn was made in late 2019, when Michael Crow, President of Arizona State University, the nation’s largest and, for eight years running, “most innovative” university, visited a unique virtual reality entertainment center in Los Angeles, California called “Dreamscape Immersive.”.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2022,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/LOGO-Dreamscape-Learn.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Walter Parkes & Josh Reibel"
+    ]
+  },
+  {
+    "id": 27,
+    "fund": "gsv-ventures",
+    "name": "Ednition",
+    "slug": "ednition",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.ednition.com/",
+    "description": "Reclaim rostering.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2025/12/download-9.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 28,
+    "fund": "gsv-ventures",
+    "name": "Ethena",
+    "slug": "ethena",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.goethena.com/about-us",
+    "description": "Ethena provides sexual harassment training teams don’t hate. Compared to cringe-worthy, ineffective videos, Ethena’s evidence-based approach delivers personalized content in frequent, digestible doses via email and Slack nudges. Ethena handle details like reminders and compliance tracking, and keeps teams continually in compliance with evidence-based content that meets the newest regulations.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-ethena-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Roxanne Petraeus",
+      "Co-Founder & CEO; Anne Solmssen",
+      "Co-Founder & CTO"
+    ]
+  },
+  {
+    "id": 29,
+    "fund": "gsv-ventures",
+    "name": "Fairygodboss",
+    "slug": "fairygodboss",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent@Work"
+    ],
+    "website": "https://fairygodboss.com/",
+    "description": "In a market starved for disruption and transparency, Fairygodboss is an online community improving the workplace for women. Today, one million women are turning to Fairygodboss every month for job and company reviews, salary info, career advice, and job postings at companies women love.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": 2018,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-fairygodboss-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Georgene Huang",
+      "CEO & Co-Founder; Romy Newman",
+      "President & Co-Founder"
+    ]
+  },
+  {
+    "id": 30,
+    "fund": "gsv-ventures",
+    "name": "Filo",
+    "slug": "filo",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://askfilo.com/en-us",
+    "description": "Filo is the world’s only live instant tutoring app where students are connected with expert tutors in lessthan 60 seconds for 1-1, interactive video sessions.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2020,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/LOGO-filo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Imbesat Ahmad & Shadman Anwar"
+    ]
+  },
+  {
+    "id": 31,
+    "fund": "gsv-ventures",
+    "name": "FrontRow",
+    "slug": "frontrow",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://frontrow.co.in/",
+    "description": "FrontRow is building the leading online platform for passion learning in India. The startup offers asynchronous celebrity-led courses, live expert-led courses, and community activities like competitions. Instructors include cricketer Suresh Raina and singer Neha Kakkar.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2021/09/gsvventures-portfolio-frontrow-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Mikhil Raj",
+      "Co-Founder; Ishaan Preet Singh",
+      "Co-Founder; Shubhadit Sharma",
+      "Co-Founder"
+    ]
+  },
+  {
+    "id": 32,
+    "fund": "gsv-ventures",
+    "name": "Glimpse",
+    "slug": "glimpse",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://www.glimpsek12.com/",
+    "description": "Glimpse is trying to cut ineffective spending at schools. The company meshes education institutions’ accounting systems with student achievement data to help education institutions understand what they’re pumping money into and see where they’re getting the best return on investment when it comes to positive student outcomes.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": 2018,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-glimpse-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Co-Founders Nicole Pezent & Adam Pearson"
+    ]
+  },
+  {
+    "id": 33,
+    "fund": "gsv-ventures",
+    "name": "GoodTime",
+    "slug": "goodtime",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Enterprise & Workforce"
+    ],
+    "website": "https://www.goodtime.io/",
+    "description": "GoodTime is a scheduling automation software that helps enterprises streamline the interview process.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2018,
+    "invested_year": 2016,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/LOGO-Goodtime.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Ahryun Moon"
+    ]
+  },
+  {
+    "id": 34,
+    "fund": "gsv-ventures",
+    "name": "Gradescope",
+    "slug": "gradescope",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in Post-Secondary"
+    ],
+    "website": "https://www.gradescope.com/",
+    "description": "Run by a team of MS and PhD graduates from Stanford and UC-Berkeley, Gradescope has created a modern, concept-based assessment platform that leverages machine learning to turn grading into an automated, highly repetitive exercise. Having aggregated a dataset of 300K+ graded STEM questions alongside detailed rubrics and 37M+ graded answers for 300+ universities including UC-Berkeley, Stanford, Harvard, MIT, Duke, Brown, and the University of Michigan, Gradescope is becoming the “GitHub for higher education.”",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": 2018,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-gradescope-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Arjun Singh",
+      "Co-Founder & CEO; Sergey Karayev",
+      "Co-Founder; Pieter Abbeel",
+      "Co-Founder"
+    ]
+  },
+  {
+    "id": 35,
+    "fund": "gsv-ventures",
+    "name": "Guild",
+    "slug": "guild",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Enterprise & Workforce"
+    ],
+    "website": "https://www.guildeducation.com/",
+    "description": "Guild Education is a lifelong learning platform that offers classes, programs, and degrees for working adults.",
+    "stage": "Series D",
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": 2020,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/Guild_Logo_Charcoal-3.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Rachel Carlson"
+    ]
+  },
+  {
+    "id": 36,
+    "fund": "gsv-ventures",
+    "name": "Handshake",
+    "slug": "handshake",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://joinhandshake.com/",
+    "description": "Handshake is the best place to start, jumpstart or restart a career—no connections, experience, or luck required.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": 2016,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/Handshake.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Garrett Lord",
+      "CEO & Co-Founder; Scott Ringwelski",
+      "CTO & Co-Founder; Ben Christensen",
+      "Co-Founder"
+    ]
+  },
+  {
+    "id": 37,
+    "fund": "gsv-ventures",
+    "name": "Hellosaurus",
+    "slug": "hellosaurus",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "PK-12"
+    ],
+    "website": "https://www.hellosaurus.com/",
+    "description": "Hellosaurus is an e-learning platform that offers creative programs, fun activities, and video classes for kids.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2020,
+    "invested_year": 2020,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-hellosaurus-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "James Ruben"
+    ]
+  },
+  {
+    "id": 38,
+    "fund": "gsv-ventures",
+    "name": "Hireguide",
+    "slug": "hireguide",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.hireguide.com/",
+    "description": "Hireguide is an end-to-end interview management system that makes hiring decisions faster, fairer, and twice as predictive of on-the-job employee performance. Hiring a dream team is no easy task, but with cutting-edge AI and rigorously researched behavioural science, Hireguide can help you truly operationalize skill-based, structured interviews, enabling you to find those star candidates who will propel your business to new heights.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2025/12/Hireguide.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 39,
+    "fund": "gsv-ventures",
+    "name": "Hustle",
+    "slug": "hustle",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent@Work"
+    ],
+    "website": "https://www.hustle.com/",
+    "description": "Hustle is a one-to-one text messaging platform that scales and humanizes the way that organizations communicate with people. Founded in 2014 as a tool to help advocacy organizations conduct meaningful one-to-one texting conversations with their members, Hustle quickly saw success in the 2016 election cycle, where it helped more than 100 campaigns and political groups, scale and humanize their ability to communicate with millions of voters and volunteers. Since its founding, Hustle has helped clients — political groups, colleges and universities, workforce organzations — manage more than 38 million one-to-one conversations with more than 25 million people across the United States, Canada, and Australia.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": 2017,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-hustle-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Roddy Lindsay",
+      "CEO & Co-Founder"
+    ]
+  },
+  {
+    "id": 40,
+    "fund": "gsv-ventures",
+    "name": "Intellispark",
+    "slug": "intellispark",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "K-12"
+    ],
+    "website": "https://intellispark.com/",
+    "description": "Intellispark is redefining how schools, families, and communities work together to prepare successful, future-ready kids. Parents and educators agree that education is about much more than academic proficiency, yet today education data mostly means grades and test scores. It’s time to give schools, families, and communities the instrumentation they need to measure development of the whole child while ensuring every child gets the support she needs to succeed in school and in life.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": 2019,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-intellispark-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Stephen Smith",
+      "CEO"
+    ]
+  },
+  {
+    "id": 41,
+    "fund": "gsv-ventures",
+    "name": "Kyron Learning",
+    "slug": "kyron-learning",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.kyronlearning.com/",
+    "description": "Kyron Learning is built on the idea that great education starts with great teachers and that students succeed most when they have access to high-quality, one-on-one feedback.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2022,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/LOGO-Kyron-Learning.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Rajen Sheth CEO and Co-founder & Enis Konuk",
+      "CTO and Co-founder"
+    ]
+  },
+  {
+    "id": 42,
+    "fund": "gsv-ventures",
+    "name": "Learneo",
+    "slug": "learneo",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.learneo.com",
+    "description": "Learneois pioneering a platform of productivity and learning businesses. The platform of businesses includesCliffsNotes, the original and iconic study guide company;Course Hero, an online learning platform of academic resources;LitCharts, a creator of literature resources;QuillBot, an AI-powered writing companion helping anyone improve their writing skills;Scribbr, a multilingual academic proofreading service, andSymbolab, an AI-based mathematics resource.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/Learneo_Wordmark_FullColor.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 43,
+    "fund": "gsv-ventures",
+    "name": "LEAD",
+    "slug": "lead",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "K-12"
+    ],
+    "website": "https://leadschool.in/",
+    "description": "LEAD is a major K-12 EdTech player that transforms affordable private schools via its Integrated System. It combines technology, curriculum and pedagogy into an integrated system of teaching and learning, thus improving student learning and teacher performance in schools across the country. LEAD partners with 2000+ schools with an estimated 8 lakh+ students in more than 400 cities, including tier 2 to tier 4 cities, in 20 States.",
+    "stage": "Series D",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2021/04/LOGO-Lead.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Smita Deorah",
+      "Co-Founder & COO; Sumeet Mehta",
+      "Co-Founder & CEO"
+    ]
+  },
+  {
+    "id": 44,
+    "fund": "gsv-ventures",
+    "name": "Learn In",
+    "slug": "learn-in",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.learnin.com/",
+    "description": "Learn In is an upskilling-as-a-service platform helping companies with their large-scale, internal upskilling initiatives by helping them manage the financing, time, program selection, and candidate selection considerations across the organization. The Learn In team found the biggest impediment to companies upskilling their people was time, so the company is building a SaaS platform for enterprise that helps companies appropriate time to employees for bootcamps and other upskilling programs.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-learnin-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "David Blake",
+      "Co-Founder & CEO; Yael Kauffman",
+      "Co-Founder & COO; Taylor Blake",
+      "Co-Founder & CPO"
+    ]
+  },
+  {
+    "id": 45,
+    "fund": "gsv-ventures",
+    "name": "Leland",
+    "slug": "leland",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.joinleland.com/",
+    "description": "Access coaching, courses, and content powered by thousands of career and admissions experts.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2024/11/Leland.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 46,
+    "fund": "gsv-ventures",
+    "name": "Lightneer",
+    "slug": "lightneer",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://lightneer.com/",
+    "description": "Bringing together seasoned gaming veterans from Rovio and Digital Chocolate responsible for 50 published titles, 3 billion downloads, 5 billion YouTube views, and revenues of nearly $1 billion, Lightneer is a learning game studio focused on creating and developing next-generation “invisible learning” games.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": 2016,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-lightneer-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Mark Cochrane",
+      "CEO; Lauri Järvilehto & Niklas Hed",
+      "Co-Founders; Peter Vesterbacka",
+      "Brand Breaker & Co-Founder"
+    ]
+  },
+  {
+    "id": 47,
+    "fund": "gsv-ventures",
+    "name": "MagicSchool",
+    "slug": "magicschool",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.magicschool.ai/",
+    "description": "The most loved, secure, and trusted AI platform for educators and students.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2025/11/675021da4d781be205266a6b_6526f4f8a0ab0271982b08bf_Group-108-p-500.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Adeel Khan"
+    ]
+  },
+  {
+    "id": 48,
+    "fund": "gsv-ventures",
+    "name": "Mattilda",
+    "slug": "mattilda",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.mattilda.io/",
+    "description": "mattilda solves your finances so that you can focus on what really maters, educating.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2020,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/LOGO-mattilda.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jesus Lanza & José Agote"
+    ]
+  },
+  {
+    "id": 49,
+    "fund": "gsv-ventures",
+    "name": "MasterClass",
+    "slug": "masterclass",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent@Work"
+    ],
+    "website": "https://www.masterclass.com/",
+    "description": "MasterClass is the premier online education platform redefining the digital learning experience by bringing world-class experts and renowned instructors to students globally. A cutting-edge technology platform meant to distill knowledge and create meaningful experiences through online video, MasterClass uses deep analytics to build a content library that caters to modern lifelong learners.",
+    "stage": "Series C",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": 2017,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-masterclass-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "David Rogier",
+      "Co-Founder & CEO; Aaron Rasmussen",
+      "Co-Founder & CTO/Creative Director"
+    ]
+  },
+  {
+    "id": 50,
+    "fund": "gsv-ventures",
+    "name": "MasteryConnect",
+    "slug": "masteryconnect",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://www.masteryconnect.com/",
+    "description": "MasteryConnect is an innovative assessment and curriculum platform that provides innovative tools to over 2.5 million educators and 21 million students worldwide. The cloud-based assessment and data analytics platform enables teachers to track student mastery of skills, target students for intervention, personalize learning, and incorporate data to evaluate their own practices.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2009,
+    "invested_year": 2013,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-masteryconnect-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Mick Hewitt",
+      "CEO & Co-Founder"
+    ]
+  },
+  {
+    "id": 51,
+    "fund": "gsv-ventures",
+    "name": "Mighty",
+    "slug": "mighty",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://mightylabs.com/",
+    "description": "Mighty helps companies bring together execution and employee development by connecting goals, work, people, and skills to the most important initiatives inside of an organization. Its solution helps people maximize their impact and development by aligning the needs of employees with the needs of the organization, resulting in better innovation, productivity, and collaboration across the company.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2018,
+    "invested_year": 2018,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-mighty-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Brent Alvord",
+      "CEO & Co-Founder"
+    ]
+  },
+  {
+    "id": 52,
+    "fund": "gsv-ventures",
+    "name": "Motimatic",
+    "slug": "motimatic",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in Post-Secondary"
+    ],
+    "website": "https://motimatic.com/",
+    "description": "Motimatic is an automatic motivation system for educational institutions seeking to improve student retention and completion. The company blends the latest advances in advertising technology and behavioral science to deliver motivating messages to students in place of commercial messages that they’d typically encounter on social media networks like Facebook, Instagram and Twitter, as well as SMS and email.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": 2015,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-motimatic-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Alan Tripp",
+      "CEO & Co-Founder; Greg Gibson",
+      "CTO & Co-Founder"
+    ]
+  },
+  {
+    "id": 53,
+    "fund": "gsv-ventures",
+    "name": "Nearpod",
+    "slug": "nearpod",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://nearpod.com/",
+    "description": "Nearpod empowers teachers to create learning experiences that engage and inspire students. The company is positioned at the intersection of technology-enabled classrooms and BYOD (Bring Your Own Device), formative assessment, and VR / AR in the classroom. By combining access to digital lessons, interactive features (e.g., Virtual Field Trips and 3D objects), and real-time assessments, the Nearpod platform has become a leader (and teacher favorite!) in teaching and learning with technology.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": 2014,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-nearpod-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Guido Kovalskys",
+      "CEO & Co-Founder; Felipe Sommer",
+      "President & Co-Founder; Emiliano Abramzon",
+      "Head of Customer Success & Co-Founder"
+    ]
+  },
+  {
+    "id": 54,
+    "fund": "gsv-ventures",
+    "name": "NoRedInk",
+    "slug": "noredink",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://www.noredink.com/",
+    "description": "NoRedInk is a web-based learning platform that helps students improve their grammar and writing skills. The platform incorporates each person’s favorite celebrities, personal interests, and Facebook networks to generate grammar questions and enable teachers to give quizzes, assignments, and practice exercises to help students work through misconceptions.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": 2012,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-noredink-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jeff Scheur",
+      "CEO & Founder"
+    ]
+  },
+  {
+    "id": 55,
+    "fund": "gsv-ventures",
+    "name": "Openhouse",
+    "slug": "openhouse",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://openhouse.study/",
+    "description": "Designed to be complementary to schools, the Openhouse learning hub is a holistic afterschool learning space for children aged 4 to 18 years with classes on academic and extra curricular topics of interest, located in the comfort of their neighborhood.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2018,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/LOGO-Openhouse.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Yash Poddar & Akshay Rampuria"
+    ]
+  },
+  {
+    "id": 56,
+    "fund": "gsv-ventures",
+    "name": "Pace AI",
+    "slug": "pace-ai",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.paceapp.ai/",
+    "description": "AI-native English language learning platform that transforms any content into personalized, interactive lessons tailored to different student levels. With Pace AI, teachers and learners can upload any content (e.g., news articles, PDF training manuals, and more) and our AI will create adaptive skills-based exercises, with real-time feedback and on-demand support—just like a human tutor would!",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2022,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2024/01/Pace-AI-logo-blue-on-transparent.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Victoria Pu",
+      "Co-founder & CEO"
+    ]
+  },
+  {
+    "id": 57,
+    "fund": "gsv-ventures",
+    "name": "PAC",
+    "slug": "pac",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://proathletecommunity.com/",
+    "description": "ProAthleteCommunity (PAC) supports and empowersprofessionalathletes to relentlessly pursue what’s next. Byproviding exclusive access to education, mentorship, and a powerful peer network, PAC helpsathletes build successful, purpose-driven lives after sports.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2025/08/PAC_Logo_Justified_Black.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 58,
+    "fund": "gsv-ventures",
+    "name": "PairAI",
+    "slug": "pairai",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://pairai.com/",
+    "description": "Say goodbye to LeetCode interviews and hello to practical coding competition based hiring",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2025/12/download-8.jpg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 59,
+    "fund": "gsv-ventures",
+    "name": "PeopleGrove",
+    "slug": "peoplegrove",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in Post-Secondary"
+    ],
+    "website": "https://www.peoplegrove.com/",
+    "description": "PeopleGrove is a SaaS platform for companies and schools to foster professional networks in their communities, enhance career outcomes and create a culture of giving back.  Schools such as Stanford and USC work with PeopleGrove to match students with alumni mentors. Meanwhile, companies like Intuit license PeopleGrove software to drive powerful connections and mentorship to catalyze collaboration and inclusion in their organizations, particularly among Millennial hires.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2014,
+    "invested_year": 2017,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-peoplegrove-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Adam Saven",
+      "CEO & Co-Founder"
+    ]
+  },
+  {
+    "id": 60,
+    "fund": "gsv-ventures",
+    "name": "Photomath",
+    "slug": "photomath",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://photomath.app/en/",
+    "description": "Photomath is the world’s most used math education app with over 100-million learners globally. Powered by advanced AI technology, the app uses the camera on your mobile device to instantly scan, accurately solve, and intuitively explain math problems using step-by-step explanations that promote comprehension of fundamental concepts.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-photomath-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Damir Sabol"
+    ]
+  },
+  {
+    "id": 61,
+    "fund": "gsv-ventures",
+    "name": "Physics Wallah",
+    "slug": "physics-wallah",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.pw.live",
+    "description": "PW(Physics Wallah) is student’s lifelong learning partner that is democratizing education at scale in India, with a presence spanning online, offline, and hybrid modes, reaching 98% of India`s pin codes. PW has more than 10 million paid students on the PW App. PW also provides quality education to more than 36 million students through its 80 YouTube channels in 8 vernacular languages.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2022/06/PhysicsWallah.jpeg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Alakh Pandey"
+    ]
+  },
+  {
+    "id": 62,
+    "fund": "gsv-ventures",
+    "name": "Pluralsight",
+    "slug": "pluralsight",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent @Work"
+    ],
+    "website": "https://www.pluralsight.com/",
+    "description": "Pluralsight provides the only learning platform dedicated to accelerating the technology skills and capabilities of today’s tech workforce. Thousands of companies, government organizations and individuals around the world rely on Pluralsight Skills to support critical technology skill development in areas that are crucial to innovation including artificial intelligence, cloud computing, cybersecurity, software development, and machine learning. Pluralsight Skills provides highly curated content developed by vetted technology experts, industry leading skill assessments, and hands on, immersive learning experiences designed to help individuals skill-up faster. The company is headquartered in Draper, Utah with worldwide offices in India, Ireland, and Australia.",
+    "stage": "Series B",
+    "stage_year": null,
+    "founded_year": 2004,
+    "invested_year": 2014,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/1024px-Pluralsight_Logo.svg_-696x151-1.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "CEO and Co-Founder Aaron Skonnard Culture Coach and Co-Founder Keith Sparkjoy"
+    ]
+  },
+  {
+    "id": 63,
+    "fund": "gsv-ventures",
+    "name": "QuillBot",
+    "slug": "quillbot",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://quillbot.com/",
+    "description": "QuillBot is developing state-of-the-art AI technology to make writing painless. Quillbot was founded under the belief that learning and applying knowledge is more rewarding than the mundane aspects of writing. The QuillBot team seeks to continue that mission, automating those tasks and allowing you to focus on what you write, not how you should write it.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-quillbot-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Rohan Gupta",
+      "Co-Founder & CEO"
+    ]
+  },
+  {
+    "id": 64,
+    "fund": "gsv-ventures",
+    "name": "Quizizz",
+    "slug": "quizizz",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://quizizz.com/",
+    "description": "Quizizz is a learning platform designed to motivate every student. The Quizizz platform is used in over 65% of U.S. schools and more than 100 countries around the world. Quizizz helps teachers find and create gamified quizzes, interactive lessons, and engaging study materials.",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2015,
+    "invested_year": 2021,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2021/03/gsvventures-portfolio-quizizz-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Ankit Gupta",
+      "CEO & Co-Founder; Deepak Cheenath",
+      "Co-Founder"
+    ]
+  },
+  {
+    "id": 65,
+    "fund": "gsv-ventures",
+    "name": "RaiseMe",
+    "slug": "raiseme",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in Post-Secondary"
+    ],
+    "website": "https://www.raise.me/",
+    "description": "RaiseMe is reinventing educational pathways and changing the way students access billions of dollars each year in financial aid for college. Rather than waiting until the end of high school to award financial aid, Raise.me enables students to automatically earn “Micro-Scholarships” throughout high school based on their individual achievements in and outside of the classroom.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": 2013,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-raiseme-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Preston Silverman",
+      "Co-Founder & CEO; Dave Schuman",
+      "Co-Founder & CTO; George Kirkland",
+      "Co-Founder & VP of Business Development"
+    ]
+  },
+  {
+    "id": 66,
+    "fund": "gsv-ventures",
+    "name": "Remind",
+    "slug": "remind",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://www.remind.com/",
+    "description": "Remind is a real-time school messaging platform that helps teachers, students, and parents communicate quickly and efficiently, because “school communication shouldn’t be so hard”. The Remind mobile messaging platform is rapidly emerging as a vital service that enables communication and collaboration across all K-12 stakeholders who share the company’s vision to give every student an opportunity to succeed.",
+    "stage": "Series D",
+    "stage_year": null,
+    "founded_year": 2011,
+    "invested_year": 2017,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/6261701796a47804f133000d_6260d833469b626a30a7342c_Wordmark-primary-mascot.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "CEO Brian Grey"
+    ]
+  },
+  {
+    "id": 67,
+    "fund": "gsv-ventures",
+    "name": "Ropes",
+    "slug": "ropes",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.ropes.ai/",
+    "description": "Prove your submissions’ abilities with 50+ talent signals. Win more interviews, and drive more placements.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2025/12/Ropes.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 68,
+    "fund": "gsv-ventures",
+    "name": "Simplilearn",
+    "slug": "simplilearn",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.simplilearn.com/",
+    "description": "Simplilearn programs and certifications empower learners to achieve their career goals faster.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2010,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/LOGO-simplilearn.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Krishna Kumar & Kashyap Dalal"
+    ]
+  },
+  {
+    "id": 69,
+    "fund": "gsv-ventures",
+    "name": "ScholarMe",
+    "slug": "scholarme",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://scholarme.com/",
+    "description": "ScholarMe Co. is a centralized college-financing platform that helps students pay their tuition as efficiently as possible. ScholarMe consists of a simple, two-step process: First, students apply for hundreds of scholarships at once using the Universal Scholarship Application™, which hundreds of scholarship donors mutually agree upon accepting. Then, students apply for the lowest interest rate student loan possible using the ScholarMe Loan Comparison Tool. ScholarMe is a 100% free platform for high school and college students.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2018,
+    "invested_year": 2019,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-scholarme-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Femi Adebogun",
+      "CEO"
+    ]
+  },
+  {
+    "id": 70,
+    "fund": "gsv-ventures",
+    "name": "Speak",
+    "slug": "speak",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.speak.com/",
+    "description": "Talk out loud, get instant feedback, and become fluent with the world’s most advanced AI language tutor.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2025/12/Speak.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 71,
+    "fund": "gsv-ventures",
+    "name": "Tango",
+    "slug": "tango",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Enterprise & Workforce"
+    ],
+    "website": "https://tango.us/",
+    "description": "Tango delivers supercharged training for remote operations teams.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2020,
+    "invested_year": 2020,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/New-Project.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Ken Babcock",
+      "Brian Shultz & Dan Giovacchini"
+    ]
+  },
+  {
+    "id": 72,
+    "fund": "gsv-ventures",
+    "name": "Tara",
+    "slug": "tara",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent@Work"
+    ],
+    "website": "https://tara.ai/",
+    "description": "Tara.ai is an intelligent product builder platform to help manage outsourced, on-demand programming projects. True to its name Tara —which stands for Talent Acquisition and Recruiting Automation— has developed a platform that is built for growth and that delivers clear ROI to SMB and enterprise customers. Tara’s pre-screening algorithm integrates with GitHub to hire and assign contractors, and the platform stages a development environment, facilitates workflow, and manages contractors through machine learning, including inline QA/QC methods.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2016,
+    "invested_year": 2016,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-tara-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Iba Masood",
+      "CEO & Co-Founder; Syed Ahmed",
+      "CTO & Co-Founder"
+    ]
+  },
+  {
+    "id": 73,
+    "fund": "gsv-ventures",
+    "name": "TAP",
+    "slug": "tap",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.tap3d.com/",
+    "description": "Next-generation technician training.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2021,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/LOGO-TAP.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Jason Spyres & Tim Raftis"
+    ]
+  },
+  {
+    "id": 74,
+    "fund": "gsv-ventures",
+    "name": "Tekie",
+    "slug": "tekie",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "K-12"
+    ],
+    "website": "https://blog.tekie.in/",
+    "description": "Tekie is the only kids coding company in India focused on teaching syntax coding. Prioritizing Return on Education, the platform teaches Python so that students acquire tangible skills. Users, mostly middle and high school students, learn by watching animated episodes that embed coding concepts as well as by playing games in order to progress through a story. Tekie distributes both through schools and direct-to-consumer.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2017,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2021/05/gsvventures-portfolio-tekie-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Anand Verma; Naman Mukund"
+    ]
+  },
+  {
+    "id": 75,
+    "fund": "gsv-ventures",
+    "name": "Think Through Math",
+    "slug": "think-through-math",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://www.imaginelearning.com/math/3-plus",
+    "description": "Imagine Learning, a leader in elementary language and literacy software solutions, acquired Pittsburgh-based Think Through Learning Inc., provider of the Think Through Math (TTM) supplemental online math program. Through this acquisition, Imagine Learning is poised to fill a critical need for innovative and adaptive language, literacy, and math solutions in the K–12 space.",
+    "stage": "Series B",
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": 2011,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-thinkthroughmath-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 76,
+    "fund": "gsv-ventures",
+    "name": "Toddle",
+    "slug": "toddle",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.toddleapp.com/",
+    "description": "Plan, teach, assess, report, and communicate – all in one place. Powered by the most advanced AI for education –so you can work faster, teach better, and personalize learning like never before.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2025/12/Toddle_black_logo.svg",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 77,
+    "fund": "gsv-ventures",
+    "name": "Toko",
+    "slug": "toko",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://tokotutor.com",
+    "description": "Toko is an AI-powered, voice-based platform that helps you improve your English conversation skills.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2022/02/Toko.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 78,
+    "fund": "gsv-ventures",
+    "name": "Tract",
+    "slug": "tract",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://tract.app/",
+    "description": "Tract is a peer-to-peer community where kids discover new interests, fuel their creativity, and develop college-ready skills. Tract’s outstanding student leaders inspire, mentor, and guide children’s learning, driven by a passion for sharing knowledge.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-tract-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Ari Memar",
+      "Co-Founder & CEO; Esther Wojcicki",
+      "Co-Founder & Chief Learning Officer"
+    ]
+  },
+  {
+    "id": 79,
+    "fund": "gsv-ventures",
+    "name": "Tutored by Teachers",
+    "slug": "tutored-by-teachers",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "http://www.tutored.live",
+    "description": "Tutored by Teachers is a public benefit company that seeks to close the opportunity gap and advance equity in education by supporting high needs students. In the process, we empower our nation’s teachers to express their full potential by tutoring students and supporting their peers in the classroom.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": null,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2022/04/Tutored-by-Teachers-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": null
+  },
+  {
+    "id": 80,
+    "fund": "gsv-ventures",
+    "name": "Turnitin",
+    "slug": "turnitin",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in Post-Secondary"
+    ],
+    "website": "https://www.turnitin.com/",
+    "description": "Turnitin is the global leader in evaluating and improving student learning. The company’s cloud-based service for originality checking, online grading, and peer review saves instructors time and provides rich feedback to students. Turnitin also offers a plagiarism detection service for commercial markets and a suite of formative tools for writers.",
+    "stage": "2014 (via Acquisition)",
+    "stage_year": null,
+    "founded_year": 2000,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/turnitin.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Chris Caren",
+      "CEO"
+    ]
+  },
+  {
+    "id": 81,
+    "fund": "gsv-ventures",
+    "name": "Tynker",
+    "slug": "tynker",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Future of Talent in PreK-12"
+    ],
+    "website": "https://www.tynker.com/",
+    "description": "Tynker is a creative computing company empowering millions of kids to learn to program by building games, apps, and more. Tynker’s platform enables kids to master foundational coding skills via an intuitive, visual programming environment. Its universal programming language translates to HTML, iOS, Android, and Linux, and through the platform kids learn to code for fun things like games, apps, class projects, or how to program drones and robots.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2012,
+    "invested_year": 2012,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-tynker-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Krishna Vedati",
+      "Co-Founder & CEO"
+    ]
+  },
+  {
+    "id": 82,
+    "fund": "gsv-ventures",
+    "name": "uDocz",
+    "slug": "udocz",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.udocz.com/",
+    "description": "uDocz is a peer-to-peer learning platform comprised of a course note marketplace generated by college students for college students and an AI tutor chatbot.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2018,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/LOGO-uDocz.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Carlos Effio & Carolina Valenzuela Cabrera"
+    ]
+  },
+  {
+    "id": 83,
+    "fund": "gsv-ventures",
+    "name": "Uplimit",
+    "slug": "uplimit",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://uplimit.com/",
+    "description": "Live courses taught by industry experts, powered by AI.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2022,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/LOGO-Uplimit.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Julia Stiglitz",
+      "Chief Executive Officer",
+      "Sourabh Bajaj",
+      "Chief Technology Officer",
+      "& Jacob Samuelson",
+      "Chief Product Officer"
+    ]
+  },
+  {
+    "id": 84,
+    "fund": "gsv-ventures",
+    "name": "UpSmith",
+    "slug": "upsmith",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [],
+    "website": "https://www.upsmith.com",
+    "description": "UpSmith helps you source, screen, train, deploy, and retain skilled labor with technology-backed services and workforce analytics.",
+    "stage": null,
+    "stage_year": null,
+    "founded_year": 2021,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2023/08/LOGO-UpSmith.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Wyatt Smith"
+    ]
+  },
+  {
+    "id": 85,
+    "fund": "gsv-ventures",
+    "name": "Valenture Institute",
+    "slug": "valenture-institute",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "PreK-12"
+    ],
+    "website": "https://www.valentureinstitute.com/",
+    "description": "Global private online high school offering a curriculum recognized by the world’s leading universities",
+    "stage": "Series A",
+    "stage_year": null,
+    "founded_year": 2019,
+    "invested_year": 2020,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-valenture-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Robert Paddock"
+    ]
+  },
+  {
+    "id": 86,
+    "fund": "gsv-ventures",
+    "name": "Verto Education",
+    "slug": "verto-education",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Higher Education"
+    ],
+    "website": "https://vertoeducation.org/",
+    "description": "Verto Education is reshaping the pathway to college as well as the experience of your first year. By putting choice in the hands of students and providing a program that helps students identify purpose and direction for themselves, Verto empowers students as they choose and enter college. Verto is where students own their first year of their learning, find purpose, and empower their mindset for a fulfilling college and professional career.",
+    "stage": "Seed",
+    "stage_year": null,
+    "founded_year": 2018,
+    "invested_year": 2019,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-vertoeducation-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Mitch Gordon",
+      "CEO & Co-Founder; Ben Welbourn",
+      "COO & Co-Founder; Mallory Meiser",
+      "CPO & Co-Founder"
+    ]
+  },
+  {
+    "id": 87,
+    "fund": "gsv-ventures",
+    "name": "Voxy",
+    "slug": "voxy",
+    "fund_url": "https://gsv.ventures/portfolio/",
+    "sectors": [
+      "Enterprise & Professional Learning & Talent"
+    ],
+    "website": "https://voxy.com/",
+    "description": "Personalized, Cloud-Based Language Learning Platform Changing the Way the World Learns EnglishVoxy is changing the way the world learns English. As a language learning platform offering personalized, adaptive, and career-aligned courses, Voxy provides truly personalized English language instruction to corporations, educational institutions, and governments across the globe. Based on more than 30 years of academic research, Voxy’s solution meets the needs of every user by combining patented technology that adapts lessons in real time with personalized live instruction—all delivered in a fully mobile experience.",
+    "stage": "2013",
+    "stage_year": null,
+    "founded_year": 2010,
+    "invested_year": null,
+    "logo_url": "https://gsv.ventures/wp-content/uploads/2020/11/gsvventures-portfolio-voxy-logo.png",
+    "source_modified": null,
+    "ticker_symbol": null,
+    "acquirer": null,
+    "founders": [
+      "Paul Gollash",
+      "Founder & CEO"
+    ]
+  }
+]
