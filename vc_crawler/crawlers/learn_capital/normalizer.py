@@ -19,7 +19,7 @@ def normalize(raw: dict, company_id: int) -> Company:
         name=raw.get("name", ""),
         slug=_slugify(raw.get("name", "")),
         fund_url=PORTFOLIO_URL,
-        sectors=raw.get("tags", []),
+        sectors=raw.get("tags") or [],
         website=raw.get("website") or None,
         description=raw.get("description") or raw.get("headline") or None,
         stage=stage,
