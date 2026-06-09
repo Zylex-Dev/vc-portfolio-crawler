@@ -207,3 +207,23 @@ def test_main_writes_brighteye_outputs(tmp_path, monkeypatch):
     assert rc == 0
     assert (tmp_path / "brighteye" / "companies.json").exists()
     assert (tmp_path / "brighteye" / "companies.csv").exists()
+
+
+def test_fund_registry_contains_y_combinator():
+    from vc_crawler.__main__ import _FUND_REGISTRY
+    assert "y-combinator" in _FUND_REGISTRY
+
+
+def test_main_writes_y_combinator_outputs(tmp_path, monkeypatch):
+    import vc_crawler.crawlers.y_combinator.crawler as yc_mod
+    class Fake:
+        def __init__(self, client): pass
+        def run(self, **kw):
+            return [Company(id=1, fund="y-combinator", name="Codecademy",
+                            slug="codecademy",
+                            fund_url="https://www.ycombinator.com/companies/codecademy")]
+    monkeypatch.setattr(yc_mod, "YCCrawler", Fake)
+    rc = cli.main(["--fund", "y-combinator", "--out", str(tmp_path), "--format", "both"])
+    assert rc == 0
+    assert (tmp_path / "y-combinator" / "companies.json").exists()
+    assert (tmp_path / "y-combinator" / "companies.csv").exists()
