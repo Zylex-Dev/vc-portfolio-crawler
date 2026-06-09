@@ -12,6 +12,7 @@ Crawls company portfolio data from venture capital fund websites and exports to 
 | [Reach Capital](https://www.reachcapital.com/companies/?sector=learning) | WordPress AJAX infinite-scroll (Learning sector) | ~95 |
 | [GSV Ventures](https://gsv.ventures/portfolio/) | Static HTML (single request) | ~87 |
 | [Learn Capital](https://learn.vc/ventures) | Next.js `__NEXT_DATA__` JSON (single request) | ~78 |
+| [BrightEye Ventures](https://www.brighteyevc.com/portfolio) | Webflow CMS HTML (single request) | ~51 |
 
 ## Setup
 
@@ -44,6 +45,9 @@ python3 -m venv .venv
 # Crawl Learn Capital portfolio (~78 companies, single Next.js page request)
 .venv/bin/python -m vc_crawler --fund learn-capital
 
+# Crawl BrightEye Ventures portfolio (~51 companies, single Webflow request)
+.venv/bin/python -m vc_crawler --fund brighteye
+
 # Quick test: first 5 companies, JSON only, verbose logging
 .venv/bin/python -m vc_crawler --fund a16z --limit 5 --format json --verbose
 
@@ -59,12 +63,13 @@ Output files are written to `data/{fund}/`:
 - `data/reach-capital/companies.json` / `data/reach-capital/companies.csv`
 - `data/gsv-ventures/companies.json` / `data/gsv-ventures/companies.csv`
 - `data/learn-capital/companies.json` / `data/learn-capital/companies.csv`
+- `data/brighteye/companies.json` / `data/brighteye/companies.csv`
 
 ### All Options
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures,reach-capital,gsv-ventures,learn-capital}` | *(required)* | Which fund to crawl |
+| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures,reach-capital,gsv-ventures,learn-capital,brighteye}` | *(required)* | Which fund to crawl |
 | `--out DIR` | `data` | Output directory |
 | `--format {json,csv,both}` | `both` | Output format(s) |
 | `--workers N` | `5` | Enrichment threads (Sequoia only) |
@@ -80,7 +85,7 @@ Both funds export a unified schema:
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | int | Sequential ID (1-based) |
-| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, `"owl-ventures"`, `"reach-capital"`, `"gsv-ventures"`, or `"learn-capital"` |
+| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, `"owl-ventures"`, `"reach-capital"`, `"gsv-ventures"`, `"learn-capital"`, or `"brighteye"` |
 | `name` | str | Company name |
 | `slug` | str | URL-friendly identifier |
 | `fund_url` | str | Link to company page on fund site |
@@ -123,6 +128,11 @@ Single HTTP request to `https://gsv.ventures/portfolio/`. All ~87 portfolio comp
 
 ### Learn Capital
 Single HTTP request to `https://learn.vc/ventures`. The site is built with Next.js + Prismic CMS — all ~78 portfolio companies are embedded in the page as `props.pageProps.ventures` inside a `<script id="__NEXT_DATA__">` JSON blob. No JS rendering required. Each venture record contains name, logo URL (`color_logo.url`), description, headline, website (`visit.url`), sector tags, founder names, and acquisition/IPO status flags.
+
+### BrightEye Ventures
+Single HTTP request to `https://www.brighteyevc.com/portfolio`. The site is built on Webflow CMS — all ~51 portfolio companies are embedded in the static HTML as `.portfolio-companies-collection-item` elements. No JS rendering required.
+
+The page has two tiers of data: 4 featured companies (with modals containing full name, description, and sector tags) and a full grid of all 51 companies (with slug, logo, location, website, and exit status). The parser merges featured data into the grid by matching on website URL. Company names for non-featured cards are derived from the URL slug (Title Case, with Webflow `-copy` suffixes stripped).
 
 ### Sequoia
 Multi-stage pipeline:
