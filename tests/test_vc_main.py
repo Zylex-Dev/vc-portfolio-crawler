@@ -187,3 +187,23 @@ def test_main_writes_learn_capital_outputs(tmp_path, monkeypatch):
     assert rc == 0
     assert (tmp_path / "learn-capital" / "companies.json").exists()
     assert (tmp_path / "learn-capital" / "companies.csv").exists()
+
+
+def test_fund_registry_contains_brighteye():
+    from vc_crawler.__main__ import _FUND_REGISTRY
+    assert "brighteye" in _FUND_REGISTRY
+
+
+def test_main_writes_brighteye_outputs(tmp_path, monkeypatch):
+    import vc_crawler.crawlers.brighteye.crawler as be_mod
+    class Fake:
+        def __init__(self, client): pass
+        def run(self, **kw):
+            return [Company(id=1, fund="brighteye", name="Zen Educate",
+                            slug="zen-educate",
+                            fund_url="https://www.brighteyevc.com/portfolio")]
+    monkeypatch.setattr(be_mod, "BrighteyeCrawler", Fake)
+    rc = cli.main(["--fund", "brighteye", "--out", str(tmp_path), "--format", "both"])
+    assert rc == 0
+    assert (tmp_path / "brighteye" / "companies.json").exists()
+    assert (tmp_path / "brighteye" / "companies.csv").exists()
