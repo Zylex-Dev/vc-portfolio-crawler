@@ -15,6 +15,7 @@ Crawls company portfolio data from venture capital fund websites and exports to 
 | [BrightEye Ventures](https://www.brighteyevc.com/portfolio) | Webflow CMS HTML (single request) | ~51 |
 | [EduCapital](https://www.educapitalvc.com/portfolio) | Webflow CMS HTML (single request) | ~41 |
 | [NewSchools Venture Fund](https://www.newschools.org/ventures/) | WordPress + Elementor paginated HTML + detail pages | ~300 |
+| [Y Combinator](https://www.ycombinator.com/companies?industry=Education) | Algolia REST API (public, single request) | ~125 |
 
 ## Setup
 
@@ -56,6 +57,9 @@ python3 -m venv .venv
 # Crawl NewSchools Venture Fund portfolio (~300 companies, paginated HTML + detail enrichment)
 .venv/bin/python -m vc_crawler --fund new-schools
 
+# Crawl Y Combinator Education portfolio (~125 companies, single Algolia API request)
+.venv/bin/python -m vc_crawler --fund y-combinator
+
 # Quick test: first 5 companies, JSON only, verbose logging
 .venv/bin/python -m vc_crawler --fund a16z --limit 5 --format json --verbose
 
@@ -74,12 +78,13 @@ Output files are written to `data/{fund}/`:
 - `data/brighteye/companies.json` / `data/brighteye/companies.csv`
 - `data/edu-capital/companies.json` / `data/edu-capital/companies.csv`
 - `data/new-schools/companies.json` / `data/new-schools/companies.csv`
+- `data/y-combinator/companies.json` / `data/y-combinator/companies.csv`
 
 ### All Options
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures,reach-capital,gsv-ventures,learn-capital,brighteye,edu-capital,new-schools}` | *(required)* | Which fund to crawl |
+| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures,reach-capital,gsv-ventures,learn-capital,brighteye,edu-capital,new-schools,y-combinator}` | *(required)* | Which fund to crawl |
 | `--out DIR` | `data` | Output directory |
 | `--format {json,csv,both}` | `both` | Output format(s) |
 | `--workers N` | `5` | Enrichment threads (Sequoia, NewSchools) |
@@ -95,7 +100,7 @@ Both funds export a unified schema:
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | int | Sequential ID (1-based) |
-| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, `"owl-ventures"`, `"reach-capital"`, `"gsv-ventures"`, `"learn-capital"`, `"brighteye"`, `"edu-capital"`, or `"new-schools"` |
+| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, `"owl-ventures"`, `"reach-capital"`, `"gsv-ventures"`, `"learn-capital"`, `"brighteye"`, `"edu-capital"`, `"new-schools"`, or `"y-combinator"` |
 | `name` | str | Company name |
 | `slug` | str | URL-friendly identifier |
 | `fund_url` | str | Link to company page on fund site |
@@ -162,6 +167,9 @@ Multi-stage pipeline:
 3. Fetch the listing page to get Current Stage values
 4. Enrich each company from its detail page (website, description, years, logo) — concurrent with configurable workers
 5. Validate against the company sitemap
+
+### Y Combinator
+Single HTTP POST to the Algolia REST API (`https://45bwzj1sgc-dsn.algolia.net/1/indexes/YCCompany_production/query`) with filter `industries:Education` and `hitsPerPage=1000`. The public Algolia key is embedded in the YC companies page HTML (`window.AlgoliaOpts`). All ~125 EdTech company records are returned inline — no pagination or detail-page requests needed.
 
 ## Extending: Adding a New Fund
 
