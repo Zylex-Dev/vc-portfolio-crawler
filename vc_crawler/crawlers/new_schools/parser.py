@@ -70,4 +70,14 @@ def parse_detail_page(html: str) -> dict:
                 website = href
                 break
 
-    return {"description": description, "website": website}
+    founded_year = None
+    for h in soup.select("h2.elementor-heading-title"):
+        text = h.get_text(strip=True)
+        if text.startswith("Founded:"):
+            try:
+                founded_year = int(text.split(":")[-1].strip())
+            except ValueError:
+                pass
+            break
+
+    return {"description": description, "website": website, "founded_year": founded_year}

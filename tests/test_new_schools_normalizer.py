@@ -20,6 +20,7 @@ def _acme_detail():
     return {
         "description": "Acme Edu designs engaging projects for students.",
         "website": "https://acmeedu.com",
+        "founded_year": 2015,
     }
 
 
@@ -111,13 +112,18 @@ def test_website_from_detail():
 def test_website_none_when_no_detail():
     assert normalize(_acme_listing(), {}, _INIT_MAP, 1).website is None
 
+# ── founded_year ──────────────────────────────────────────────────────────────
+
+def test_founded_year_from_detail():
+    assert normalize(_acme_listing(), _acme_detail(), _INIT_MAP, 1).founded_year == 2015
+
+def test_founded_year_none_when_absent():
+    assert normalize(_acme_listing(), {}, _INIT_MAP, 1).founded_year is None
+
 # ── always-None fields ────────────────────────────────────────────────────────
 
 def test_stage_year_none():
     assert normalize(_acme_listing(), {}, _INIT_MAP, 1).stage_year is None
-
-def test_founded_year_none():
-    assert normalize(_acme_listing(), {}, _INIT_MAP, 1).founded_year is None
 
 def test_ticker_symbol_none():
     assert normalize(_acme_listing(), {}, _INIT_MAP, 1).ticker_symbol is None

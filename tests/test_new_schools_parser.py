@@ -153,3 +153,11 @@ def test_detail_ignores_non_website_links():
     <a href="https://twitter.com/foo">Twitter</a>
     </body></html>"""
     assert parse_detail_page(html)["website"] is None
+
+def test_detail_founded_year():
+    result = parse_detail_page(DETAIL_FIXTURE)
+    assert result["founded_year"] == 2015
+
+def test_detail_founded_year_none_when_absent():
+    html = "<html><body><p>No founded year here.</p></body></html>"
+    assert parse_detail_page(html)["founded_year"] is None

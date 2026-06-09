@@ -23,7 +23,7 @@ def normalize(
         description=detail.get("description"),
         stage="Past" if listing.get("is_past") else None,
         stage_year=None,
-        founded_year=None,
+        founded_year=detail.get("founded_year"),
         invested_year=invested_year,
         logo_url=listing.get("logo_url"),
         source_modified=None,
