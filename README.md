@@ -82,10 +82,10 @@ Output files are written to `data/{fund}/`:
 | `--fund {sequoia,a16z,a16z-speedrun,owl-ventures,reach-capital,gsv-ventures,learn-capital,brighteye,edu-capital,new-schools}` | *(required)* | Which fund to crawl |
 | `--out DIR` | `data` | Output directory |
 | `--format {json,csv,both}` | `both` | Output format(s) |
-| `--workers N` | `5` | Enrichment threads (Sequoia only) |
+| `--workers N` | `5` | Enrichment threads (Sequoia, NewSchools) |
 | `--delay SECONDS` | `0.2` | Min spacing between requests |
 | `--limit N` | — | Process only the first N companies |
-| `--no-enrich` | off | Skip detail page enrichment (Sequoia only) |
+| `--no-enrich` | off | Skip detail page enrichment (Sequoia, NewSchools) |
 | `--verbose` | off | Debug logging |
 
 ## Output Schema
@@ -95,7 +95,7 @@ Both funds export a unified schema:
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | int | Sequential ID (1-based) |
-| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, `"owl-ventures"`, `"reach-capital"`, `"gsv-ventures"`, `"learn-capital"`, `"brighteye"`, or `"edu-capital"` |
+| `fund` | str | `"sequoia"`, `"a16z"`, `"a16z-speedrun"`, `"owl-ventures"`, `"reach-capital"`, `"gsv-ventures"`, `"learn-capital"`, `"brighteye"`, `"edu-capital"`, or `"new-schools"` |
 | `name` | str | Company name |
 | `slug` | str | URL-friendly identifier |
 | `fund_url` | str | Link to company page on fund site |
