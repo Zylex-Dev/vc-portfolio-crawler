@@ -6,7 +6,6 @@ from vc_crawler.models import Company
 def normalize(
     listing: dict,
     detail: dict,
-    inv_map: dict[int, int],
     init_map: dict[int, int],
     company_id: int,
 ) -> Company:

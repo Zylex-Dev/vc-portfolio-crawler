@@ -2,14 +2,13 @@ from pathlib import Path
 
 from vc_crawler.crawlers.new_schools.crawler import NewSchoolsCrawler
 from vc_crawler.crawlers.new_schools.parser import (
-    PORTFOLIO_URL, INV_YEAR_API, INIT_YEAR_API,
+    PORTFOLIO_URL, INIT_YEAR_API,
 )
 from vc_crawler.models import Company
 
 LISTING_HTML = (Path(__file__).parent / "fixtures" / "newschools_listing.html").read_text(encoding="utf-8")
 DETAIL_HTML  = (Path(__file__).parent / "fixtures" / "newschools_detail.html").read_text(encoding="utf-8")
 
-INV_YEAR_JSON  = '[{"id": 709, "name": "2024"}, {"id": 574, "name": "2023"}]'
 INIT_YEAR_JSON = '[{"id": 714, "name": "2024"}, {"id": 720, "name": "2023"}]'
 
 
@@ -30,7 +29,6 @@ class _FakeClient:
 
 def _make_client(extra_listing: dict[str, str] | None = None) -> _FakeClient:
     responses = {
-        INV_YEAR_API:  INV_YEAR_JSON,
         INIT_YEAR_API: INIT_YEAR_JSON,
         PORTFOLIO_URL: LISTING_HTML,
         "https://www.newschools.org/venture/acme-edu/":   DETAIL_HTML,
@@ -68,11 +66,6 @@ def test_limit_preserves_sequential_ids():
     assert ids == [1]
 
 # ── URL calls ─────────────────────────────────────────────────────────────────
-
-def test_fetches_inv_year_api():
-    client = _make_client()
-    NewSchoolsCrawler(client).run()
-    assert INV_YEAR_API in client.calls
 
 def test_fetches_init_year_api():
     client = _make_client()

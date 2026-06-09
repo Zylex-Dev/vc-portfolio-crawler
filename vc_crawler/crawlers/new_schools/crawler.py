@@ -9,7 +9,6 @@ from vc_crawler.models import Company
 from .normalizer import normalize
 from .parser import (
     INIT_YEAR_API,
-    INV_YEAR_API,
     PORTFOLIO_URL,
     parse_detail_page,
     parse_listing_page,
@@ -27,9 +26,8 @@ class NewSchoolsCrawler(BaseCrawler):
         workers: int = 5,
         enrich: bool = True,
     ) -> list[Company]:
-        inv_map  = parse_term_map(self.client.get(INV_YEAR_API).text)
         init_map = parse_term_map(self.client.get(INIT_YEAR_API).text)
-        log.info("Loaded year maps: %d inv, %d init terms", len(inv_map), len(init_map))
+        log.info("Loaded init year map: %d terms", len(init_map))
 
         records, max_page = parse_listing_page(self.client.get(PORTFOLIO_URL).text)
         log.info("Page 1/%d: %d companies", max_page, len(records))
@@ -48,7 +46,7 @@ class NewSchoolsCrawler(BaseCrawler):
         detail_list = self._enrich_all(records, workers) if enrich else [{} for _ in records]
 
         return [
-            normalize(rec, det, inv_map, init_map, i)
+            normalize(rec, det, init_map, i)
             for i, (rec, det) in enumerate(zip(records, detail_list), 1)
         ]
 

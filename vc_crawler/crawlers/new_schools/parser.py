@@ -6,7 +6,6 @@ from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 
 PORTFOLIO_URL = "https://www.newschools.org/ventures/"
-INV_YEAR_API  = "https://www.newschools.org/wp-json/wp/v2/investment-year?per_page=100"
 INIT_YEAR_API = "https://www.newschools.org/wp-json/wp/v2/initial-investment-year?per_page=100"
 
 
@@ -41,10 +40,6 @@ def _parse_card(card) -> dict:
         int(c.replace("initial-investment-year-", ""))
         for c in classes if c.startswith("initial-investment-year-")
     ]
-    inv_year_ids = [
-        int(c.replace("investment-year-", ""))
-        for c in classes if c.startswith("investment-year-")
-    ]
 
     return {
         "name": name,
@@ -52,7 +47,6 @@ def _parse_card(card) -> dict:
         "slug": slug,
         "logo_url": logo_url,
         "sectors": sectors,
-        "inv_year_ids": inv_year_ids,
         "init_year_ids": init_year_ids,
         "is_past": "status-past-venture" in classes,
     }

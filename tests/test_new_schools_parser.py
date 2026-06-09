@@ -3,7 +3,6 @@ import pytest
 
 from vc_crawler.crawlers.new_schools.parser import (
     PORTFOLIO_URL,
-    INV_YEAR_API,
     INIT_YEAR_API,
     parse_term_map,
     parse_listing_page,
@@ -18,10 +17,6 @@ DETAIL_FIXTURE  = (Path(__file__).parent / "fixtures" / "newschools_detail.html"
 
 def test_portfolio_url():
     assert PORTFOLIO_URL == "https://www.newschools.org/ventures/"
-
-def test_inv_year_api():
-    assert "investment-year" in INV_YEAR_API
-    assert "wp-json/wp/v2" in INV_YEAR_API
 
 def test_init_year_api():
     assert "initial-investment-year" in INIT_YEAR_API
@@ -92,10 +87,6 @@ def test_listing_card1_init_year_ids():
     records, _ = parse_listing_page(LISTING_FIXTURE)
     assert records[0]["init_year_ids"] == [714]
 
-def test_listing_card1_inv_year_ids():
-    records, _ = parse_listing_page(LISTING_FIXTURE)
-    assert records[0]["inv_year_ids"] == [709]
-
 def test_listing_card1_is_past_true():
     records, _ = parse_listing_page(LISTING_FIXTURE)
     assert records[0]["is_past"] is True
@@ -123,11 +114,6 @@ def test_listing_card2_init_year_ids():
 def test_listing_card2_is_past_false():
     records, _ = parse_listing_page(LISTING_FIXTURE)
     assert records[1]["is_past"] is False
-
-def test_listing_init_ids_do_not_bleed_into_inv_ids():
-    """initial-investment-year-714 must NOT appear in inv_year_ids."""
-    records, _ = parse_listing_page(LISTING_FIXTURE)
-    assert 714 not in records[0]["inv_year_ids"]
 
 
 # ── parse_detail_page ─────────────────────────────────────────────────────────

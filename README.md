@@ -150,8 +150,8 @@ Single HTTP request to `https://www.educapitalvc.com/portfolio`. The site is bui
 Each card contains a logo, tagline, category (`Future of education` or `Future of work`), company website link, and an acquisition status tag. The HTML contains no text company name — names are derived from the website domain (`360learning.com` → `"360learning"`, `buddy.ai` → `"buddy"`). For Apple App Store links the app slug is used (`/app/emma-parler-anglais/…` → `"emma"`).
 
 ### NewSchools Venture Fund
-Two-stage pipeline:
-1. Fetch taxonomy year maps from the public WP REST API (`/wp-json/wp/v2/investment-year` and `/wp-json/wp/v2/initial-investment-year`) — maps WordPress term IDs to calendar years
+Multi-stage pipeline:
+1. Fetch the initial-investment-year taxonomy from the public WP REST API (`/wp-json/wp/v2/initial-investment-year`) — maps WordPress term IDs to calendar years
 2. Paginate all listing pages at `/ventures/`, `/ventures/2/`, … — the total page count is read dynamically from the `.e-load-more-anchor[data-max-page]` attribute on page 1, so new pages are picked up automatically. Each page is static HTML with `.e-loop-item` cards containing company name, logo, investment area, and investment/initial-year term IDs in CSS classes
 3. Concurrently fetch each venture's detail page (`/venture/{slug}/`) for description and website URL (skipped with `--no-enrich`)
 
