@@ -44,3 +44,87 @@ def test_term_map_returns_int_keys_and_values():
 
 def test_term_map_empty_list():
     assert parse_term_map("[]") == {}
+
+
+# ── parse_listing_page ────────────────────────────────────────────────────────
+
+def test_listing_returns_tuple():
+    result = parse_listing_page(LISTING_FIXTURE)
+    assert isinstance(result, tuple) and len(result) == 2
+
+def test_listing_returns_two_records():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert len(records) == 2
+
+def test_listing_max_page():
+    _, max_page = parse_listing_page(LISTING_FIXTURE)
+    assert max_page == 1
+
+def test_listing_max_page_default_when_no_anchor():
+    _, max_page = parse_listing_page("<html><body></body></html>")
+    assert max_page == 1
+
+def test_listing_empty_page():
+    records, _ = parse_listing_page("<html><body></body></html>")
+    assert records == []
+
+def test_listing_card1_name():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[0]["name"] == "Acme Edu"
+
+def test_listing_card1_fund_url():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[0]["fund_url"] == "https://www.newschools.org/venture/acme-edu/"
+
+def test_listing_card1_slug():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[0]["slug"] == "acme-edu"
+
+def test_listing_card1_logo_url():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[0]["logo_url"] == "https://www.newschools.org/wp-content/uploads/acme-logo.png"
+
+def test_listing_card1_sectors():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[0]["sectors"] == ["Learning Solutions"]
+
+def test_listing_card1_init_year_ids():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[0]["init_year_ids"] == [714]
+
+def test_listing_card1_inv_year_ids():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[0]["inv_year_ids"] == [709]
+
+def test_listing_card1_is_past_true():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[0]["is_past"] is True
+
+def test_listing_card2_name():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[1]["name"] == "Beta Learn"
+
+def test_listing_card2_slug():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[1]["slug"] == "beta-learn"
+
+def test_listing_card2_logo_url_none():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[1]["logo_url"] is None
+
+def test_listing_card2_sectors():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[1]["sectors"] == ["Diverse Leaders"]
+
+def test_listing_card2_init_year_ids():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[1]["init_year_ids"] == [720]
+
+def test_listing_card2_is_past_false():
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert records[1]["is_past"] is False
+
+def test_listing_init_ids_do_not_bleed_into_inv_ids():
+    """initial-investment-year-714 must NOT appear in inv_year_ids."""
+    records, _ = parse_listing_page(LISTING_FIXTURE)
+    assert 714 not in records[0]["inv_year_ids"]
