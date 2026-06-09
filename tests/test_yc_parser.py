@@ -79,6 +79,15 @@ def test_request_filters_education():
     assert body.get("filters") == "industries:Education"
 
 
+def test_request_body_hits_per_page():
+    client = _make_client()
+    fetch_education_companies(client)
+    _, kwargs = client.calls[0]
+    body = kwargs.get("json", {})
+    assert body.get("hitsPerPage") == 1000
+    assert body.get("query") == ""
+
+
 def test_constants_non_empty():
     assert ALGOLIA_URL
     assert ALGOLIA_APP_ID
