@@ -14,6 +14,7 @@ Crawls company portfolio data from venture capital fund websites and exports to 
 | [Learn Capital](https://learn.vc/ventures) | Next.js `__NEXT_DATA__` JSON (single request) | ~78 |
 | [BrightEye Ventures](https://www.brighteyevc.com/portfolio) | Webflow CMS HTML (single request) | ~51 |
 | [EduCapital](https://www.educapitalvc.com/portfolio) | Webflow CMS HTML (single request) | ~41 |
+| [NewSchools Venture Fund](https://www.newschools.org/ventures/) | WordPress + Elementor paginated HTML + detail pages | ~300 |
 
 ## Setup
 
@@ -52,6 +53,9 @@ python3 -m venv .venv
 # Crawl EduCapital portfolio (~41 companies, single Webflow request)
 .venv/bin/python -m vc_crawler --fund edu-capital
 
+# Crawl NewSchools Venture Fund portfolio (~300 companies, paginated HTML + detail enrichment)
+.venv/bin/python -m vc_crawler --fund new-schools
+
 # Quick test: first 5 companies, JSON only, verbose logging
 .venv/bin/python -m vc_crawler --fund a16z --limit 5 --format json --verbose
 
@@ -69,12 +73,13 @@ Output files are written to `data/{fund}/`:
 - `data/learn-capital/companies.json` / `data/learn-capital/companies.csv`
 - `data/brighteye/companies.json` / `data/brighteye/companies.csv`
 - `data/edu-capital/companies.json` / `data/edu-capital/companies.csv`
+- `data/new-schools/companies.json` / `data/new-schools/companies.csv`
 
 ### All Options
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures,reach-capital,gsv-ventures,learn-capital,brighteye,edu-capital}` | *(required)* | Which fund to crawl |
+| `--fund {sequoia,a16z,a16z-speedrun,owl-ventures,reach-capital,gsv-ventures,learn-capital,brighteye,edu-capital,new-schools}` | *(required)* | Which fund to crawl |
 | `--out DIR` | `data` | Output directory |
 | `--format {json,csv,both}` | `both` | Output format(s) |
 | `--workers N` | `5` | Enrichment threads (Sequoia only) |
@@ -143,6 +148,12 @@ The page has two tiers of data: 4 featured companies (with modals containing ful
 Single HTTP request to `https://www.educapitalvc.com/portfolio`. The site is built on Webflow CMS — all 41 portfolio companies are embedded in the static HTML as `.portfolio_content.w-dyn-item` elements. No JS rendering required.
 
 Each card contains a logo, tagline, category (`Future of education` or `Future of work`), company website link, and an acquisition status tag. The HTML contains no text company name — names are derived from the website domain (`360learning.com` → `"360learning"`, `buddy.ai` → `"buddy"`). For Apple App Store links the app slug is used (`/app/emma-parler-anglais/…` → `"emma"`).
+
+### NewSchools Venture Fund
+Two-stage pipeline:
+1. Fetch taxonomy year maps from the public WP REST API (`/wp-json/wp/v2/investment-year` and `/wp-json/wp/v2/initial-investment-year`) — maps WordPress term IDs to calendar years
+2. Paginate 15 listing pages at `/ventures/`, `/ventures/2/`, …, `/ventures/15/` — each page is static HTML with 20 `.e-loop-item` cards containing company name, logo, investment area, and investment/initial-year term IDs in CSS classes
+3. Concurrently fetch each venture's detail page (`/venture/{slug}/`) for description and website URL (skipped with `--no-enrich`)
 
 ### Sequoia
 Multi-stage pipeline:

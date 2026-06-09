@@ -21,6 +21,7 @@ _FUND_REGISTRY = {
     "learn-capital": "vc_crawler.crawlers.learn_capital.crawler.LearnCrawler",
     "brighteye": "vc_crawler.crawlers.brighteye.crawler.BrighteyeCrawler",
     "edu-capital": "vc_crawler.crawlers.edu_capital.crawler.EduCapitalCrawler",
+    "new-schools": "vc_crawler.crawlers.new_schools.crawler.NewSchoolsCrawler",
 }
 
 
