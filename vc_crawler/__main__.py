@@ -20,6 +20,7 @@ _FUND_REGISTRY = {
     "gsv-ventures": "vc_crawler.crawlers.gsv_ventures.crawler.GSVCrawler",
     "learn-capital": "vc_crawler.crawlers.learn_capital.crawler.LearnCrawler",
     "brighteye": "vc_crawler.crawlers.brighteye.crawler.BrighteyeCrawler",
+    "edu-capital": "vc_crawler.crawlers.edu_capital.crawler.EduCapitalCrawler",
 }
 
 
