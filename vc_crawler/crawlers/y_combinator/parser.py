@@ -26,8 +26,10 @@ def fetch_education_companies(client) -> list[dict]:
         },
     )
     data = resp.json()
-    assert len(data["hits"]) < data.get("hitsPerPage", 1000), (
-        "Algolia returned a full page; results may be truncated. "
-        "Increase hitsPerPage or add pagination."
-    )
-    return data["hits"]
+    hits = data["hits"]
+    if len(hits) >= data.get("hitsPerPage", 1000):
+        raise RuntimeError(
+            "Algolia returned a full page; results may be truncated. "
+            "Increase hitsPerPage or add pagination."
+        )
+    return hits

@@ -18,6 +18,7 @@ class YCCrawler(BaseCrawler):
         workers: int = 5,
         enrich: bool = True,
     ) -> list[Company]:
+        # enrich and workers unused — Algolia returns full records in a single request
         log.info("Fetching Y Combinator Education portfolio via Algolia ...")
         raw_records = fetch_education_companies(self.client)
         log.info("Parsed %d companies", len(raw_records))
