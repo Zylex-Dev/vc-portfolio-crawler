@@ -152,7 +152,7 @@ Each card contains a logo, tagline, category (`Future of education` or `Future o
 ### NewSchools Venture Fund
 Two-stage pipeline:
 1. Fetch taxonomy year maps from the public WP REST API (`/wp-json/wp/v2/investment-year` and `/wp-json/wp/v2/initial-investment-year`) — maps WordPress term IDs to calendar years
-2. Paginate 15 listing pages at `/ventures/`, `/ventures/2/`, …, `/ventures/15/` — each page is static HTML with 20 `.e-loop-item` cards containing company name, logo, investment area, and investment/initial-year term IDs in CSS classes
+2. Paginate all listing pages at `/ventures/`, `/ventures/2/`, … — the total page count is read dynamically from the `.e-load-more-anchor[data-max-page]` attribute on page 1, so new pages are picked up automatically. Each page is static HTML with `.e-loop-item` cards containing company name, logo, investment area, and investment/initial-year term IDs in CSS classes
 3. Concurrently fetch each venture's detail page (`/venture/{slug}/`) for description and website URL (skipped with `--no-enrich`)
 
 ### Sequoia
