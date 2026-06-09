@@ -128,3 +128,42 @@ def test_listing_init_ids_do_not_bleed_into_inv_ids():
     """initial-investment-year-714 must NOT appear in inv_year_ids."""
     records, _ = parse_listing_page(LISTING_FIXTURE)
     assert 714 not in records[0]["inv_year_ids"]
+
+
+# ── parse_detail_page ─────────────────────────────────────────────────────────
+
+def test_detail_returns_dict():
+    assert isinstance(parse_detail_page(DETAIL_FIXTURE), dict)
+
+def test_detail_description():
+    result = parse_detail_page(DETAIL_FIXTURE)
+    assert result["description"] == (
+        "Acme Edu designs engaging, hands-on learning projects for grades K-8, "
+        "transforming the classroom into a space for connection and growth."
+    )
+
+def test_detail_skips_short_blocks():
+    """'Our Vision' (9 chars) must not be the description."""
+    result = parse_detail_page(DETAIL_FIXTURE)
+    assert result["description"] != "Our Vision"
+
+def test_detail_website():
+    result = parse_detail_page(DETAIL_FIXTURE)
+    assert result["website"] == "https://acmeedu.com"
+
+def test_detail_no_description():
+    html = "<html><body><div class='elementor-widget-text-editor'><p>Hi</p></div></body></html>"
+    assert parse_detail_page(html)["description"] is None
+
+def test_detail_no_website():
+    html = "<html><body><p>Some text about the company and its work in education.</p></body></html>"
+    assert parse_detail_page(html)["website"] is None
+
+def test_detail_ignores_non_website_links():
+    html = """<html><body>
+    <div class="elementor-widget-text-editor">
+      <p>Company description that is longer than fifty characters for sure.</p>
+    </div>
+    <a href="https://twitter.com/foo">Twitter</a>
+    </body></html>"""
+    assert parse_detail_page(html)["website"] is None

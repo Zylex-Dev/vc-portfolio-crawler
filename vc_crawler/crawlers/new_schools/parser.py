@@ -59,4 +59,21 @@ def _parse_card(card) -> dict:
 
 
 def parse_detail_page(html: str) -> dict:
-    raise NotImplementedError
+    soup = BeautifulSoup(html, "lxml")
+
+    description = None
+    for block in soup.select(".elementor-widget-text-editor"):
+        text = block.get_text(strip=True)
+        if len(text) >= 50:
+            description = text
+            break
+
+    website = None
+    for a in soup.select("a[href]"):
+        if "website" in a.get_text(strip=True).lower():
+            href = a.get("href", "")
+            if href.startswith("http"):
+                website = href
+                break
+
+    return {"description": description, "website": website}
