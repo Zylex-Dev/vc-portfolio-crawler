@@ -92,3 +92,17 @@ def test_constants_non_empty():
     assert ALGOLIA_URL
     assert ALGOLIA_APP_ID
     assert ALGOLIA_API_KEY
+
+
+def test_raises_when_algolia_paginates():
+    data = json.loads(FIXTURE.read_text())
+    data["nbPages"] = 2  # simulate paginated response
+    client = _FakeClient(data)
+    with pytest.raises(RuntimeError, match="multiple pages"):
+        fetch_education_companies(client)
+
+
+def test_raises_when_hits_key_missing():
+    client = _FakeClient({"message": "Invalid API key", "status": 403})
+    with pytest.raises(RuntimeError, match="missing 'hits'"):
+        fetch_education_companies(client)

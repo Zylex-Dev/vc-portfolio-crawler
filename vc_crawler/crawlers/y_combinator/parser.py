@@ -26,10 +26,12 @@ def fetch_education_companies(client) -> list[dict]:
         },
     )
     data = resp.json()
-    hits = data["hits"]
-    if len(hits) >= data.get("hitsPerPage", 1000):
+    hits = data.get("hits")
+    if hits is None:
+        raise RuntimeError(f"Algolia response missing 'hits'; body: {data}")
+    if data.get("nbPages", 1) > 1:
         raise RuntimeError(
-            "Algolia returned a full page; results may be truncated. "
+            "Algolia returned multiple pages; results may be truncated. "
             "Increase hitsPerPage or add pagination."
         )
     return hits
