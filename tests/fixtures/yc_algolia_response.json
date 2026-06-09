@@ -1,0 +1,62 @@
+{
+  "hits": [
+    {
+      "id": 86,
+      "name": "Codecademy",
+      "slug": "codecademy",
+      "small_logo_thumb_url": "https://bookface-images.s3.amazonaws.com/small_logos/codecademy.png",
+      "website": "http://codecademy.com",
+      "all_locations": "New York, NY, USA",
+      "long_description": "Codecademy is the leading online learning platform for technical skills.",
+      "one_liner": "The leading online learning platform for technical skills.",
+      "team_size": 225,
+      "industry": "Education",
+      "subindustry": "Education",
+      "batch": "Summer 2011",
+      "status": "Acquired",
+      "stage": "Growth",
+      "industries": ["Education"],
+      "objectID": "86"
+    },
+    {
+      "id": 999,
+      "name": "Outschool",
+      "slug": "outschool",
+      "small_logo_thumb_url": "https://bookface-images.s3.amazonaws.com/small_logos/outschool.png",
+      "website": "https://outschool.com",
+      "all_locations": "San Francisco, CA, USA",
+      "long_description": null,
+      "one_liner": "A live online learning platform that empowers kids ages 3-18.",
+      "team_size": 50,
+      "industry": "Education",
+      "subindustry": "Education",
+      "batch": "Winter 2016",
+      "status": "Active",
+      "stage": "Growth",
+      "industries": ["Education"],
+      "objectID": "999"
+    },
+    {
+      "id": 777,
+      "name": "DropSchool",
+      "slug": "dropschool",
+      "small_logo_thumb_url": null,
+      "website": null,
+      "all_locations": "",
+      "long_description": null,
+      "one_liner": null,
+      "team_size": 0,
+      "industry": "Education",
+      "subindustry": "Education",
+      "batch": "Summer 2020",
+      "status": "Inactive",
+      "stage": null,
+      "industries": ["Education"],
+      "objectID": "777"
+    }
+  ],
+  "nbHits": 3,
+  "page": 0,
+  "nbPages": 1,
+  "hitsPerPage": 1000
+}
