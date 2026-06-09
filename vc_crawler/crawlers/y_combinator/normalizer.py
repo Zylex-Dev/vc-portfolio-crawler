@@ -22,7 +22,7 @@ def normalize(raw: dict, company_id: int) -> Company:
 
     return Company(
         id=company_id,
-        fund="ycombinator",
+        fund="y-combinator",
         name=raw.get("name", ""),
         slug=slug,
         fund_url=f"{FUND_URL_BASE}/{slug}",

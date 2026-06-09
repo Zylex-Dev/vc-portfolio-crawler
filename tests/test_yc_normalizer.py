@@ -1,4 +1,3 @@
-import pytest
 from vc_crawler.crawlers.y_combinator.normalizer import normalize
 from vc_crawler.models import Company
 
@@ -55,8 +54,8 @@ def test_returns_company_instance():
     assert isinstance(normalize(_codecademy(), 1), Company)
 
 
-def test_fund_is_ycombinator():
-    assert normalize(_codecademy(), 1).fund == "ycombinator"
+def test_fund_is_y_combinator():
+    assert normalize(_codecademy(), 1).fund == "y-combinator"
 
 
 def test_id_assigned():
@@ -121,6 +120,13 @@ def test_stage_active_none_when_stage_field_none():
     assert normalize(raw, 1).stage is None
 
 
+def test_stage_unknown_status_uses_stage_field():
+    raw = _outschool()
+    raw["status"] = "Public"
+    raw["stage"] = "Growth"
+    assert normalize(raw, 1).stage == "Growth"
+
+
 def test_stage_year_none():
     assert normalize(_codecademy(), 1).stage_year is None
 
@@ -139,6 +145,12 @@ def test_invested_year_winter_batch():
 
 def test_invested_year_summer_2020():
     assert normalize(_dropschool(), 1).invested_year == 2020
+
+
+def test_invested_year_none_when_batch_null():
+    raw = _dropschool()
+    raw["batch"] = None
+    assert normalize(raw, 1).invested_year is None
 
 
 def test_logo_url():
