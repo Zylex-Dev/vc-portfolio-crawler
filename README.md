@@ -179,6 +179,50 @@ Single HTTP POST to the Algolia REST API (`https://45bwzj1sgc-dsn.algolia.net/1/
 
 See `vc_crawler/crawlers/owl_ventures/` or `vc_crawler/crawlers/a16z_speedrun/` for a minimal single-stage example, or `vc_crawler/crawlers/sequoia/` for a multi-stage enrichment example.
 
+## PMO Analyzer
+
+Scores all startups in `data/all_companies.csv` against the **PMO (Персонализированная Модель Образования)** framework using DeepSeek API. Each startup gets a `pmo_score` (0–10) and sub-scores for 5 instruments: trajectory, materials, collaboration, gamification, feedback.
+
+**Cost:** ~$2 (deepseek-v4-flash, 3535 startups, 20 concurrent requests)
+
+### Prerequisites
+
+```bash
+export DEEPSEEK_API_KEY="sk-..."
+```
+
+Получить ключ: [platform.deepseek.com](https://platform.deepseek.com) → API Keys.
+
+### Step 1 — Scrape startup websites (~30 min)
+
+```bash
+.venv/bin/python -m pmo_analyzer.scraper
+```
+
+Reads `data/all_companies.csv`, async-scrapes up to 3000 chars from each startup's website, saves to `data/scraped.json`. Idempotent — safe to restart if interrupted.
+
+### Step 2 — Score all startups (~20 min)
+
+```bash
+.venv/bin/python -m pmo_analyzer.scorer
+```
+
+Sends one prompt per startup (description + sectors + stage + scraped text) to DeepSeek concurrently, merges scores into the original CSV, saves `data/all_companies_pmo.csv`.
+
+### Output columns added
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `pmo_score` | float | Average of 5 sub-scores (0–10) |
+| `pmo_traj` | int | Персонализированная Траектория |
+| `pmo_mat` | int | Учебные Материалы |
+| `pmo_collab` | int | Совместная Деятельность |
+| `pmo_game` | int | Геймификация и Визуализация |
+| `pmo_feedback` | int | Обратная Связь |
+| `pmo_notes` | str | One-sentence reasoning (Russian) |
+
+Rows with `pmo_score == -1` are batch errors — retry or review manually.
+
 ## Tests
 
 ```bash
