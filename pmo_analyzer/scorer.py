@@ -54,6 +54,7 @@ async def score_one(row: dict, scraped_text: str, client: AsyncOpenAI, system: s
                 {"role": "system", "content": system},
                 {"role": "user", "content": build_user_prompt(row, scraped_text)},
             ],
+            extra_body={"thinking": {"type": "disabled"}},
         )
         return _parse_text(response.choices[0].message.content)
     except Exception:
