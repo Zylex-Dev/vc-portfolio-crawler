@@ -34,3 +34,8 @@ def test_user_prompt_shows_na_when_scraped_text_is_empty():
 def test_user_prompt_shows_na_when_scraped_text_is_none():
     row = {"name": "Co", "sectors": "EdTech", "stage": "Series A", "description": "desc"}
     assert "N/A" in build_user_prompt(row, None)
+
+
+def test_user_prompt_shows_na_for_missing_row_keys():
+    result = build_user_prompt({}, None)
+    assert result.count("N/A") >= 4
