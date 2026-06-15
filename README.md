@@ -226,6 +226,27 @@ Sends one prompt per startup (description + sectors + stage + scraped text) to D
 
 Rows with `pmo_score == -1` are batch errors — retry or review manually.
 
+## Agent Matcher
+
+Сопоставляет EdTech-стартапы из `data/edu_companies_pmo.csv` с каталогом из **44 наших ИИ-агентов** (`data/agents.json`, сгруппированы по 5 средствам ПМО). Каждому стартапу назначается один наиболее подходящий агент (жёсткий матч — `relevance ≥ 7`), либо он попадает в группу `unmatched` («новые идеи / решения, которых у нас пока нет»). Использует `deepseek-v4-pro` с включённым thinking-режимом, один вызов на стартап.
+
+**Prerequisites:** тот же `.env` с `DEEPSEEK_API_KEY`, что и для PMO Analyzer (см. выше). Каталог агентов уже лежит в `data/agents.json` — отдельной сборки не требуется.
+
+### Запуск
+
+```bash
+.venv/bin/python -m agent_matcher.matcher
+```
+
+Читает `data/edu_companies_pmo.csv` (698 стартапов) и `data/agents.json`, классифицирует каждый стартап параллельно (concurrency 10), затем пишет два файла:
+
+| Файл | Содержание |
+|------|------------|
+| `data/startup_agent_assignment.csv` | 1 строка = 1 стартап: `assigned_agent`, `agent_sredstvo`, `agent_status`, `relevance`, `rationale` (либо `unmatched` / `error`) |
+| `data/agent_startups.csv` | агент-центричный пивот: все 44 агента + строки `unmatched` и `error`, с колонкой `startups` («Имя (relevance); …» по убыванию релевантности) |
+
+Порог `relevance` задаётся константой `THRESHOLD` в `agent_matcher/assemble.py` — его можно изменить и пересобрать CSV без повторных вызовов API. Строки с `assigned_agent == "error"` — это сбои API/парсинга, перезапускаемы.
+
 ## Tests
 
 ```bash

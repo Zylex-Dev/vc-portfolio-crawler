@@ -2,7 +2,7 @@ from agent_matcher.agents_loader import load_agents
 
 
 def test_loads_exactly_44_agents():
-    agents = load_agents(force_rebuild=True)
+    agents = load_agents()
     assert len(agents) == 44
 
 
