@@ -183,7 +183,7 @@ See `vc_crawler/crawlers/owl_ventures/` or `vc_crawler/crawlers/a16z_speedrun/` 
 
 Scores all startups in `data/all_companies.csv` against the **PMO (Персонализированная Модель Образования)** framework using DeepSeek API. Each startup gets a `pmo_score` (0–10) and sub-scores for 5 instruments: trajectory, materials, collaboration, gamification, feedback.
 
-**Cost:** ~$2 (deepseek-v4-flash, 3535 startups, 20 concurrent requests)
+**Cost:** ~2348 startups via `deepseek-v4-pro` (reasoning enabled), concurrency 10. Reasoning mode costs more per call than the earlier flash run.
 
 ### Prerequisites
 
