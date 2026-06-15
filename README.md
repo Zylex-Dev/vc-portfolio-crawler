@@ -196,21 +196,13 @@ cp .env.example .env
 
 Получить ключ: [platform.deepseek.com](https://platform.deepseek.com) → API Keys.
 
-### Step 1 — Scrape startup websites (~30 min)
-
-```bash
-.venv/bin/python -m pmo_analyzer.scraper
-```
-
-Reads `data/all_companies.csv`, async-scrapes up to 3000 chars from each startup's website, saves to `data/scraped.json`. Idempotent — safe to restart if interrupted.
-
-### Step 2 — Score all startups (~20 min)
+### Score all startups
 
 ```bash
 .venv/bin/python -m pmo_analyzer.scorer
 ```
 
-Sends one prompt per startup (description + sectors + stage + scraped text) to DeepSeek concurrently, merges scores into the original CSV, saves `data/all_companies_pmo.csv`.
+Reads `data/all_companies.csv` and sends one prompt per startup (name + sectors + stage + description) to `deepseek-v4-pro` (reasoning enabled) concurrently, merges the scores into the source rows, and writes **only** `data/all_companies_pmo.csv`.
 
 ### Output columns added
 
@@ -224,7 +216,7 @@ Sends one prompt per startup (description + sectors + stage + scraped text) to D
 | `pmo_feedback` | int | Обратная Связь |
 | `pmo_notes` | str | One-sentence reasoning (Russian) |
 
-Rows with `pmo_score == -1` are batch errors — retry or review manually.
+Rows with `pmo_score == -1` are API/parse errors — re-run or review manually.
 
 ## Agent Matcher
 
