@@ -18,24 +18,18 @@ def test_user_prompt_includes_name_sectors_stage_description():
         "stage": "Seed",
         "description": "Adaptive tutoring for kids.",
     }
-    result = build_user_prompt(row, "Homepage: AI-powered learning")
+    result = build_user_prompt(row)
     assert "LearnAI" in result
     assert "AI;EdTech" in result
     assert "Seed" in result
     assert "Adaptive tutoring for kids." in result
-    assert "AI-powered learning" in result
 
 
-def test_user_prompt_shows_na_when_scraped_text_is_empty():
-    row = {"name": "Co", "sectors": "EdTech", "stage": "Series A", "description": "desc"}
-    assert "N/A" in build_user_prompt(row, "")
-
-
-def test_user_prompt_shows_na_when_scraped_text_is_none():
-    row = {"name": "Co", "sectors": "EdTech", "stage": "Series A", "description": "desc"}
-    assert "N/A" in build_user_prompt(row, None)
+def test_user_prompt_has_no_website_content_line():
+    row = {"name": "Co", "sectors": "EdTech", "stage": "Seed", "description": "desc"}
+    assert "Website content" not in build_user_prompt(row)
 
 
 def test_user_prompt_shows_na_for_missing_row_keys():
-    result = build_user_prompt({}, None)
+    result = build_user_prompt({})
     assert result.count("N/A") >= 4

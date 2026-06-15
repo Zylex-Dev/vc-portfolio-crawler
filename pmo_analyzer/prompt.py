@@ -44,12 +44,10 @@ Respond ONLY with valid JSON and no markdown fences:
 "feedback": <int 0-10>, "notes": "<one sentence in Russian summarizing the main finding>"}"""
 
 
-def build_user_prompt(row: dict, scraped_text: str | None) -> str:
-    website_content = scraped_text if scraped_text else "N/A"
+def build_user_prompt(row: dict) -> str:
     return (
         f"Name: {row.get('name', 'N/A')}\n"
         f"Sectors: {row.get('sectors', 'N/A')}\n"
         f"Stage: {row.get('stage', 'N/A')}\n"
-        f"Description: {row.get('description', 'N/A')}\n"
-        f"Website content: {website_content}"
+        f"Description: {row.get('description', 'N/A')}"
     )
