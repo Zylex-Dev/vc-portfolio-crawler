@@ -35,3 +35,13 @@ def test_user_prompt_includes_startup_fields_and_pmo_scores():
 
 def test_user_prompt_shows_na_for_missing_fields():
     assert "N/A" in build_user_prompt({})
+
+
+def test_user_prompt_renders_zero_score_as_zero():
+    row = {
+        "name": "Co", "sectors": "EdTech", "description": "desc",
+        "pmo_traj": 0, "pmo_mat": 0, "pmo_collab": 0, "pmo_game": 0, "pmo_feedback": 0,
+    }
+    result = build_user_prompt(row)
+    assert "0" in result
+    assert "N/A" not in result
