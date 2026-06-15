@@ -1,7 +1,6 @@
 import asyncio
 import json
 import os
-from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -11,11 +10,12 @@ import pandas as pd
 from openai import AsyncOpenAI
 from tqdm import tqdm
 
-from pmo_analyzer.batch_collect import merge_results
+from pmo_analyzer.assemble import merge_results
 from pmo_analyzer.prompt import build_system_prompt, build_user_prompt
 
-MODEL = "deepseek-v4-flash"
-CONCURRENCY = 20
+MODEL = "deepseek-v4-pro"
+CONCURRENCY = 10
+MAX_TOKENS = 4096
 
 _SENTINEL: dict = {
     "pmo_score": -1.0,
@@ -45,23 +45,23 @@ def _parse_text(text: str) -> dict:
         return {**_SENTINEL.copy(), "pmo_notes": "parse_error"}
 
 
-async def score_one(row: dict, scraped_text: str, client: AsyncOpenAI, system: str) -> dict:
+async def score_one(row: dict, client: AsyncOpenAI, system: str) -> dict:
     try:
         response = await client.chat.completions.create(
             model=MODEL,
-            max_tokens=256,
+            max_tokens=MAX_TOKENS,
             messages=[
                 {"role": "system", "content": system},
-                {"role": "user", "content": build_user_prompt(row, scraped_text)},
+                {"role": "user", "content": build_user_prompt(row)},
             ],
-            extra_body={"thinking": {"type": "disabled"}},
+            extra_body={"thinking": {"type": "enabled"}},
         )
         return _parse_text(response.choices[0].message.content)
     except Exception:
         return _SENTINEL.copy()
 
 
-async def score_all(df: pd.DataFrame, scraped: dict[str, str]) -> dict[str, dict]:
+async def score_all(df: pd.DataFrame) -> dict[str, dict]:
     sem = asyncio.Semaphore(CONCURRENCY)
     results: dict[str, dict] = {}
     system = build_system_prompt()
@@ -71,9 +71,8 @@ async def score_all(df: pd.DataFrame, scraped: dict[str, str]) -> dict[str, dict
     )
 
     async def score_row(row: dict) -> None:
-        scraped_text = scraped.get(str(row["slug"]), "")
         async with sem:
-            results[str(row["id"])] = await score_one(row, scraped_text, client, system)
+            results[str(row["id"])] = await score_one(row, client, system)
 
     tasks = [score_row(row.to_dict()) for _, row in df.iterrows()]
     for coro in tqdm(asyncio.as_completed(tasks), total=len(tasks), desc="Scoring"):
@@ -85,14 +84,8 @@ async def score_all(df: pd.DataFrame, scraped: dict[str, str]) -> dict[str, dict
 if __name__ == "__main__":
     df = pd.read_csv("data/all_companies.csv")
 
-    scraped: dict[str, str] = {}
-    scraped_path = Path("data/scraped.json")
-    if scraped_path.exists():
-        with open(scraped_path) as f:
-            scraped = json.load(f)
-
     print(f"Scoring {len(df)} startups with DeepSeek {MODEL} (concurrency={CONCURRENCY})...")
-    results = asyncio.run(score_all(df, scraped))
+    results = asyncio.run(score_all(df))
 
     merged = merge_results(df, results)
     merged.to_csv("data/all_companies_pmo.csv", index=False, encoding="utf-8")

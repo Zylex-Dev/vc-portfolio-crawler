@@ -1,6 +1,6 @@
 from unittest.mock import AsyncMock, MagicMock
 
-from pmo_analyzer.scorer import _parse_text, score_one
+from pmo_analyzer.scorer import MAX_TOKENS, MODEL, _parse_text, score_one
 
 
 def test_parse_text_extracts_all_five_sub_scores():
@@ -31,6 +31,11 @@ def test_parse_text_returns_sentinel_on_missing_score_key():
     assert _parse_text('{"traj":8,"mat":7,"notes":"incomplete"}')["pmo_score"] == -1.0
 
 
+def test_model_is_deepseek_v4_pro():
+    assert MODEL == "deepseek-v4-pro"
+    assert MAX_TOKENS == 4096
+
+
 async def test_score_one_returns_parsed_dict_on_success():
     mock_client = AsyncMock()
     mock_response = MagicMock()
@@ -41,7 +46,6 @@ async def test_score_one_returns_parsed_dict_on_success():
 
     result = await score_one(
         {"name": "TestCo", "sectors": "EdTech", "stage": "Seed", "description": "test"},
-        "website text",
         mock_client,
         "system prompt",
     )
@@ -49,11 +53,27 @@ async def test_score_one_returns_parsed_dict_on_success():
     assert result["pmo_score"] == 7.0
 
 
+async def test_score_one_enables_thinking_and_uses_max_tokens():
+    mock_client = AsyncMock()
+    mock_response = MagicMock()
+    mock_response.choices[0].message.content = (
+        '{"traj":1,"mat":1,"collab":1,"game":1,"feedback":1,"notes":"x"}'
+    )
+    mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
+
+    await score_one({"name": "X"}, mock_client, "system")
+
+    _, kwargs = mock_client.chat.completions.create.call_args
+    assert kwargs["model"] == "deepseek-v4-pro"
+    assert kwargs["max_tokens"] == 4096
+    assert kwargs["extra_body"] == {"thinking": {"type": "enabled"}}
+
+
 async def test_score_one_returns_sentinel_on_api_error():
     mock_client = AsyncMock()
     mock_client.chat.completions.create = AsyncMock(side_effect=Exception("API error"))
 
-    result = await score_one({}, "", mock_client, "system")
+    result = await score_one({}, mock_client, "system")
     assert result["pmo_score"] == -1.0
 
 
@@ -63,5 +83,5 @@ async def test_score_one_returns_sentinel_on_invalid_response_json():
     mock_response.choices[0].message.content = "I cannot score this startup."
     mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
 
-    result = await score_one({}, "", mock_client, "system")
+    result = await score_one({}, mock_client, "system")
     assert result["pmo_score"] == -1.0
