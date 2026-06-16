@@ -5,3 +5,9 @@ __pycache__/
 *.pyc
 data/*.log
 tests/fixtures/*_real.html
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/
+.jupyter_ystore.db
+*-checkpoint.ipynb
