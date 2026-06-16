@@ -11,6 +11,20 @@ def test_system_prompt_requests_json_output():
     assert "JSON" in build_system_prompt()
 
 
+def test_system_prompt_has_education_gate():
+    prompt = build_system_prompt().lower()
+    # Must instruct that non-educational products score 0-2 on every instrument.
+    assert "0-2" in prompt
+    assert "educational" in prompt
+    assert "all" in prompt
+
+
+def test_system_prompt_game_excludes_entertainment_games():
+    # GAME must mean gamification of learning, not building entertainment games.
+    prompt = build_system_prompt().lower()
+    assert "entertainment" in prompt
+
+
 def test_user_prompt_includes_name_sectors_stage_description():
     row = {
         "name": "LearnAI",
