@@ -179,6 +179,66 @@ Single HTTP POST to the Algolia REST API (`https://45bwzj1sgc-dsn.algolia.net/1/
 
 See `vc_crawler/crawlers/owl_ventures/` or `vc_crawler/crawlers/a16z_speedrun/` for a minimal single-stage example, or `vc_crawler/crawlers/sequoia/` for a multi-stage enrichment example.
 
+## PMO Analyzer
+
+Scores all startups in `data/all_companies.csv` against the **PMO (Персонализированная Модель Образования)** framework using DeepSeek API. Each startup gets a `pmo_score` (0–10) and sub-scores for 5 instruments: trajectory, materials, collaboration, gamification, feedback.
+
+**Cost:** ~2348 startups via `deepseek-v4-pro` (reasoning enabled), concurrency 10. Reasoning mode costs more per call than the earlier flash run.
+
+### Prerequisites
+
+Скопируй `.env.example` в `.env` и вставь свой ключ:
+
+```bash
+cp .env.example .env
+# открой .env и заполни DEEPSEEK_API_KEY=sk-...
+```
+
+Получить ключ: [platform.deepseek.com](https://platform.deepseek.com) → API Keys.
+
+### Score all startups
+
+```bash
+.venv/bin/python -m pmo_analyzer.scorer
+```
+
+Reads `data/all_companies.csv` and sends one prompt per startup (name + sectors + stage + description) to `deepseek-v4-pro` (reasoning enabled) concurrently, merges the scores into the source rows, and writes **only** `data/all_companies_pmo.csv`.
+
+### Output columns added
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `pmo_score` | float | Average of 5 sub-scores (0–10) |
+| `pmo_traj` | int | Персонализированная Траектория |
+| `pmo_mat` | int | Учебные Материалы |
+| `pmo_collab` | int | Совместная Деятельность |
+| `pmo_game` | int | Геймификация и Визуализация |
+| `pmo_feedback` | int | Обратная Связь |
+| `pmo_notes` | str | One-sentence reasoning (Russian) |
+
+Rows with `pmo_score == -1` are API/parse errors — re-run or review manually.
+
+## Agent Matcher
+
+Сопоставляет EdTech-стартапы из `data/edu_companies_pmo.csv` с каталогом из **44 наших ИИ-агентов** (`data/agents.json`, сгруппированы по 5 средствам ПМО). Каждому стартапу назначается один наиболее подходящий агент (жёсткий матч — `relevance ≥ 7`), либо он попадает в группу `unmatched` («новые идеи / решения, которых у нас пока нет»). Использует `deepseek-v4-pro` с включённым thinking-режимом, один вызов на стартап.
+
+**Prerequisites:** тот же `.env` с `DEEPSEEK_API_KEY`, что и для PMO Analyzer (см. выше). Каталог агентов уже лежит в `data/agents.json` — отдельной сборки не требуется.
+
+### Запуск
+
+```bash
+.venv/bin/python -m agent_matcher.matcher
+```
+
+Читает `data/edu_companies_pmo.csv` (698 стартапов) и `data/agents.json`, классифицирует каждый стартап параллельно (concurrency 10), затем пишет два файла:
+
+| Файл | Содержание |
+|------|------------|
+| `data/startup_agent_assignment.csv` | 1 строка = 1 стартап: `assigned_agent`, `agent_sredstvo`, `agent_status`, `relevance`, `rationale` (либо `unmatched` / `error`) |
+| `data/agent_startups.csv` | агент-центричный пивот: все 44 агента + строки `unmatched` и `error`, с колонкой `startups` («Имя (relevance); …» по убыванию релевантности) |
+
+Порог `relevance` задаётся константой `THRESHOLD` в `agent_matcher/assemble.py` — его можно изменить и пересобрать CSV без повторных вызовов API. Строки с `assigned_agent == "error"` — это сбои API/парсинга, перезапускаемы.
+
 ## Tests
 
 ```bash
