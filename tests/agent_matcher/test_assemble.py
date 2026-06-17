@@ -33,9 +33,34 @@ def test_assignment_threshold_and_groups():
     byid = {int(r["id"]): r for _, r in a.iterrows()}
     assert byid[10]["assigned_agent"] == "Метаучебник"
     assert byid[10]["agent_sredstvo"] == "Геймификация"
+    assert byid[10]["sectors"] == "EdTech"
+    assert byid[10]["rationale"] == "strong"
     assert byid[11]["assigned_agent"] == "unmatched"
     assert byid[12]["assigned_agent"] == "unmatched"
     assert byid[13]["assigned_agent"] == "error"
+
+
+def test_assignment_has_full_column_schema():
+    df = pd.DataFrame([{
+        "id": 10, "fund": "f", "name": "A", "sectors": "EdTech",
+        "website": "a.com", "description": "desc", "stage": "Seed",
+        "stage_year": 2021, "founded_year": 2019, "invested_year": 2020,
+        "pmo_score": 5.0, "pmo_traj": 5, "pmo_mat": 6, "pmo_collab": 4,
+        "pmo_game": 3, "pmo_feedback": 7, "pmo_notes": "ok",
+    }])
+    res = {"10": {"agent_id": 1, "relevance": 9, "rationale": "strong"}}
+    a = build_assignment_df(df, res, AGENTS, threshold=7)
+    assert list(a.columns) == [
+        "id", "fund", "name", "sectors", "website", "description",
+        "stage", "stage_year", "founded_year", "invested_year",
+        "pmo_score", "pmo_traj", "pmo_mat", "pmo_collab", "pmo_game",
+        "pmo_feedback", "pmo_notes",
+        "assigned_agent", "agent_sredstvo", "agent_status",
+        "relevance", "rationale",
+    ]
+    r = a.iloc[0]
+    assert r["website"] == "a.com" and r["pmo_notes"] == "ok"
+    assert r["stage"] == "Seed" and r["founded_year"] == 2019
 
 
 def test_assignment_invalid_agent_id_is_unmatched():

@@ -3,6 +3,15 @@ import pandas as pd
 THRESHOLD = 7
 
 
+# Колонки из входного датасета
+_PASSTHROUGH = [
+    "fund", "name", "sectors", "website", "description",
+    "stage", "stage_year", "founded_year", "invested_year",
+    "pmo_score", "pmo_traj", "pmo_mat", "pmo_collab", "pmo_game",
+    "pmo_feedback", "pmo_notes",
+]
+
+
 def build_assignment_df(
     df: pd.DataFrame,
     results: dict[str, dict],
@@ -28,19 +37,24 @@ def build_assignment_df(
             sredstvo = agent["sredstvo"]
             status = agent.get("developmentStatus", "")
 
-        rows.append({
-            "id": int(r["id"]),
-            "name": r.get("name"),
-            "fund": r.get("fund"),
-            "sectors": r.get("sectors"),
-            "pmo_score": r.get("pmo_score"),
-            "assigned_agent": assigned,
-            "agent_sredstvo": sredstvo,
-            "agent_status": status,
-            "relevance": rel,
-            "rationale": res.get("rationale", ""),
-        })
-    return pd.DataFrame(rows)
+        row = {col: r.get(col) for col in _PASSTHROUGH}
+        row["id"] = int(r["id"])
+        row["assigned_agent"] = assigned
+        row["agent_sredstvo"] = sredstvo
+        row["agent_status"] = status
+        row["relevance"] = rel
+        row["rationale"] = res.get("rationale", "")
+        rows.append(row)
+
+    columns = [
+        "id", "fund", "name", "sectors", "website", "description",
+        "stage", "stage_year", "founded_year", "invested_year",
+        "pmo_score", "pmo_traj", "pmo_mat", "pmo_collab", "pmo_game",
+        "pmo_feedback", "pmo_notes",
+        "assigned_agent", "agent_sredstvo", "agent_status",
+        "relevance", "rationale",
+    ]
+    return pd.DataFrame(rows, columns=columns)
 
 
 def _format_startups(sub: pd.DataFrame) -> str:
