@@ -1,0 +1,9 @@
+node_modules
+dist
+*.local
+.DS_Store
+
+# tsc -b artifacts (redirected to node_modules/.tmp, listed as a safety net)
+*.tsbuildinfo
+/vite.config.js
+/vite.config.d.ts
