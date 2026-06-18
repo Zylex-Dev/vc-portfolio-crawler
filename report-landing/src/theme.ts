@@ -18,7 +18,6 @@ export const C = {
 } as const;
 
 export const FONT_SERIF = "'Newsreader',serif";
-export const FONT_SANS = "'Hanken Grotesk',system-ui,sans-serif";
 
 export interface StatusMeta {
   label: string;
