@@ -34,6 +34,7 @@ export default function Drawer({
   dsort,
   onDsort,
   onClose,
+  onOpenInfo,
 }: {
   open: boolean;
   selection: DrawerSelection | null;
@@ -41,6 +42,7 @@ export default function Drawer({
   dsort: DsortKey;
   onDsort: (v: DsortKey) => void;
   onClose: () => void;
+  onOpenInfo: (agent: Agent) => void;
 }) {
   const startups = useMemo(() => {
     if (!selection) return [];
@@ -122,7 +124,18 @@ export default function Drawer({
                 </button>
               </div>
               <h2 style={{ fontFamily: FONT_SERIF, fontWeight: 400, fontSize: 30, letterSpacing: "-.015em", margin: "0 0 8px", lineHeight: 1.08 }}>
-                {selection.name}
+                {selection.kind === "agent" && selection.agent ? (
+                  <button
+                    className="agent-title-link"
+                    onClick={() => onOpenInfo(selection.agent!)}
+                    title="Открыть подробную информацию об агенте"
+                    style={{ fontFamily: "inherit", fontSize: "inherit", fontWeight: "inherit", letterSpacing: "inherit", lineHeight: "inherit", color: C.ink }}
+                  >
+                    {selection.name}
+                  </button>
+                ) : (
+                  selection.name
+                )}
               </h2>
               <p style={{ margin: 0, fontSize: 14, lineHeight: 1.5, color: "#6B5E4D", maxWidth: "64ch" }}>{selection.description}</p>
               {selection.kind === "agent" && selection.agent?.resourceLink && (

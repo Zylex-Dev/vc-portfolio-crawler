@@ -6,11 +6,16 @@ Reads from ../data (repo-level) and writes src/data/report.json:
     {
       meta:     { totalStartups, totalAgents, matched, unmatched, totalFunds },
       agents:   [ { id, name, category, sredstvo, status, role, userStory,
-                    resourceLink, functionalRequirements } ],
+                    resourceLink, comment, functionalRequirements[],
+                    expectedBehavior, inputs, outputs,
+                    cjmClassroom, cjmPlatform } ],
       startups: [ { id, fund, name, sectors[], website, description, stage,
                     foundedYear, pmoScore, pmoSub{...}, relevance, rationale,
                     assignedAgent } ]
     }
+
+The agent objects carry the full detail set so the landing's per-agent
+modal can render everything without a second data source.
 
 Metrics stay on their native 0-10 scale; the UI scales bars at render time.
 Run: python3 scripts/build_data.py
@@ -75,7 +80,13 @@ def main():
             "role": a.get("role", ""),
             "userStory": a.get("userStory", ""),
             "resourceLink": a.get("resourceLink", ""),
-            "functionalRequirements": a.get("functionalRequirements", [])[:4],
+            "comment": (a.get("comment") or "").strip(),
+            "functionalRequirements": [r for r in a.get("functionalRequirements", []) if r],
+            "expectedBehavior": (a.get("expectedBehavior") or "").strip(),
+            "inputs": (a.get("inputs") or "").strip(),
+            "outputs": (a.get("outputs") or "").strip(),
+            "cjmClassroom": (a.get("cjmClassroom") or "").strip(),
+            "cjmPlatform": (a.get("cjmPlatform") or "").strip(),
         })
 
     startups = []

@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import reportData from "./data/report.json";
-import type { AgentGroup, Report, Startup } from "./types";
+import type { Agent, AgentGroup, Report, Startup } from "./types";
 import { enrich } from "./lib/report";
 import { C, FONT_SERIF, barW, fmt1, fmtInt, statusMeta } from "./theme";
 import { StatusBadge, metaLine } from "./components/shared";
 import Drawer, { type DrawerSelection, type DsortKey } from "./components/Drawer";
+import AgentModal from "./components/AgentModal";
 
 const report = reportData as Report;
 
@@ -36,6 +37,7 @@ export default function App() {
   const [selected, setSelected] = useState<number | "unmatched" | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [dsort, setDsort] = useState<DsortKey>("relevance");
+  const [infoAgent, setInfoAgent] = useState<Agent | null>(null);
 
   useEffect(() => {
     document.body.style.overflow = drawerOpen ? "hidden" : "";
@@ -46,11 +48,12 @@ export default function App() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setDrawerOpen(false);
+      // The modal handles its own Escape; don't close the drawer underneath it.
+      if (e.key === "Escape" && !infoAgent) setDrawerOpen(false);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [infoAgent]);
 
   const openAgent = (id: number) => {
     setSelected(id);
@@ -287,7 +290,8 @@ export default function App() {
         <UnmatchedSection unmatched={unmatched} onOpen={openUnmatched} />
       </main>
 
-      <Drawer open={drawerOpen} selection={selection} minRel={minRel} dsort={dsort} onDsort={setDsort} onClose={() => setDrawerOpen(false)} />
+      <Drawer open={drawerOpen} selection={selection} minRel={minRel} dsort={dsort} onDsort={setDsort} onClose={() => setDrawerOpen(false)} onOpenInfo={setInfoAgent} />
+      <AgentModal agent={infoAgent} onClose={() => setInfoAgent(null)} />
     </div>
   );
 }

@@ -31,6 +31,8 @@ button{font-family:inherit}
 .agent-tile:hover,.agent-tile:focus-visible{transform:scale(1.04);outline:none}
 .startup-link{transition:color .14s}
 .startup-link:hover,.startup-link:focus-visible{color:#C2603C !important;text-decoration:underline;text-underline-offset:3px;outline:none}
+.agent-title-link{cursor:pointer;background:none;border:none;padding:0;text-align:left;transition:color .14s}
+.agent-title-link:hover,.agent-title-link:focus-visible{color:#C2603C !important;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px;outline:none}
 :focus-visible{outline:2px solid #C2603C;outline-offset:2px}
 
 @media (prefers-reduced-motion: reduce){

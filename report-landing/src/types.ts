@@ -17,7 +17,13 @@ export interface Agent {
   role: string;
   userStory: string;
   resourceLink: string;
+  comment: string;
   functionalRequirements: string[];
+  expectedBehavior: string;
+  inputs: string;
+  outputs: string;
+  cjmClassroom: string;
+  cjmPlatform: string;
 }
 
 export interface Startup {
