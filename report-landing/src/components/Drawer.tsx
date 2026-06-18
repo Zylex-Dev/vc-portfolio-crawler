@@ -1,7 +1,8 @@
 import { useMemo } from "react";
 import type { Agent, PmoSub, Startup } from "../types";
-import { C, FONT_SERIF, fmt1 } from "../theme";
+import { FONT_SERIF, fmt1 } from "../theme";
 import { StatusBadge, metaLine } from "./shared";
+import { clamp } from "../lib/text";
 
 export interface DrawerSelection {
   kind: "agent" | "unmatched";
@@ -62,43 +63,23 @@ export default function Drawer({
       <div
         onClick={onClose}
         aria-hidden
-        style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: 90,
-          background: "rgba(40,28,18,.34)",
-          backdropFilter: "blur(2px)",
-          transition: "opacity .28s",
-          opacity: open ? 1 : 0,
-          pointerEvents: open ? "auto" : "none",
-        }}
+        className="fixed inset-0 z-[90] bg-[rgba(40,28,18,.34)] [backdrop-filter:blur(2px)] transition-opacity duration-[280ms]"
+        style={{ opacity: open ? 1 : 0, pointerEvents: open ? "auto" : "none" }}
       />
       <aside
         role="dialog"
         aria-modal="true"
         aria-label={selection?.name ?? "Группа"}
-        style={{
-          position: "fixed",
-          top: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 91,
-          width: "min(760px,94vw)",
-          background: C.cardAlt,
-          boxShadow: "-24px 0 60px -30px rgba(60,40,20,.5)",
-          transition: "transform .32s cubic-bezier(.22,1,.36,1)",
-          transform: open ? "translateX(0)" : "translateX(100%)",
-          display: "flex",
-          flexDirection: "column",
-        }}
+        className="fixed inset-y-0 right-0 z-[91] flex w-[min(760px,94vw)] flex-col bg-card-alt [box-shadow:-24px_0_60px_-30px_rgba(60,40,20,.5)] [transition:transform_.32s_cubic-bezier(.22,1,.36,1)]"
+        style={{ transform: open ? "translateX(0)" : "translateX(100%)" }}
       >
         {selection && (
           <>
             {/* header */}
-            <div style={{ padding: "22px 28px 18px", borderBottom: `1px solid ${C.border}`, background: C.card }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 14 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
-                  <span style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".03em", color: C.faint }}>
+            <div className="border-b border-border bg-card px-[28px] pb-[18px] pt-[22px]">
+              <div className="flex items-center justify-between gap-[12px] mb-[14px]">
+                <div className="flex items-center gap-[9px]">
+                  <span className="text-[11px] font-bold uppercase tracking-[.03em] text-faint">
                     {selection.category}
                   </span>
                   <StatusBadge label={selection.status.label} color={selection.status.color} bg={selection.status.bg} small />
@@ -106,30 +87,21 @@ export default function Drawer({
                 <button
                   onClick={onClose}
                   aria-label="Закрыть"
-                  style={{
-                    cursor: "pointer",
-                    border: `1px solid ${C.border}`,
-                    background: "#fff",
-                    borderRadius: "50%",
-                    width: 34,
-                    height: 34,
-                    fontSize: 17,
-                    color: C.muted,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
+                  className="flex h-[34px] w-[34px] cursor-pointer items-center justify-center rounded-full border border-border bg-white text-[17px] text-muted"
                 >
                   ✕
                 </button>
               </div>
-              <h2 style={{ fontFamily: FONT_SERIF, fontWeight: 400, fontSize: 30, letterSpacing: "-.015em", margin: "0 0 8px", lineHeight: 1.08 }}>
+              <h2
+                className="m-0 mb-[8px] text-[30px] font-normal leading-[1.08] tracking-[-.015em]"
+                style={{ fontFamily: FONT_SERIF }}
+              >
                 {selection.kind === "agent" && selection.agent ? (
                   <button
-                    className="agent-title-link"
                     onClick={() => onOpenInfo(selection.agent!)}
                     title="Открыть подробную информацию об агенте"
-                    style={{ fontFamily: "inherit", fontSize: "inherit", fontWeight: "inherit", letterSpacing: "inherit", lineHeight: "inherit", color: C.ink }}
+                    className="cursor-pointer border-none bg-transparent p-0 text-left text-ink transition-colors duration-150 hover:text-clay hover:underline hover:[text-underline-offset:4px] hover:[text-decoration-thickness:1.5px] focus-visible:text-clay focus-visible:underline focus-visible:outline-none"
+                    style={{ fontFamily: "inherit", fontSize: "inherit", fontWeight: "inherit", letterSpacing: "inherit", lineHeight: "inherit" }}
                   >
                     {selection.name}
                   </button>
@@ -137,13 +109,13 @@ export default function Drawer({
                   selection.name
                 )}
               </h2>
-              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.5, color: "#6B5E4D", maxWidth: "64ch" }}>{selection.description}</p>
+              <p className="m-0 text-[14px] leading-[1.5] text-prose max-w-[64ch]">{selection.description}</p>
               {selection.kind === "agent" && selection.agent?.resourceLink && (
                 <a
                   href={selection.agent.resourceLink}
                   target="_blank"
                   rel="noreferrer"
-                  style={{ display: "inline-block", marginTop: 12, fontSize: 12.5, fontWeight: 700, color: C.clay, textDecoration: "none" }}
+                  className="inline-block mt-[12px] text-[12.5px] font-bold text-clay no-underline"
                 >
                   Открыть прототип агента →
                 </a>
@@ -151,26 +123,26 @@ export default function Drawer({
             </div>
 
             {/* how to read the metrics */}
-            <div style={{ padding: "18px 28px", borderBottom: `1px solid ${C.border}` }}>
-              <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".03em", color: C.faint, marginBottom: 12 }}>
+            <div className="border-b border-border px-[28px] py-[18px]">
+              <div className="text-[11px] font-bold uppercase tracking-[.03em] text-faint mb-[12px]">
                 О метриках
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                <div style={{ display: "flex", gap: 11 }}>
-                  <span style={{ width: 9, height: 9, borderRadius: 2, background: C.clay, marginTop: 5, flex: "none" }} />
+              <div className="flex flex-col gap-[12px]">
+                <div className="flex gap-[11px]">
+                  <span className="mt-[5px] h-[9px] w-[9px] shrink-0 rounded-[2px] bg-clay" />
                   <div>
-                    <div style={{ fontSize: 13.5, fontWeight: 700, color: C.ink, marginBottom: 2 }}>Релевантность</div>
-                    <div style={{ fontSize: 13, lineHeight: 1.5, color: "#6B5E4D" }}>
+                    <div className="text-[13.5px] font-bold text-ink mb-[2px]">Релевантность</div>
+                    <div className="text-[13px] leading-[1.5] text-prose">
                       Насколько продукт стартапа близок к задаче этого агента — то есть к тому, что строим мы.
                       Шкала 0–10: чем выше, тем сильнее пересечение с нашим направлением.
                     </div>
                   </div>
                 </div>
-                <div style={{ display: "flex", gap: 11 }}>
-                  <span style={{ width: 9, height: 9, borderRadius: 2, background: C.teal, marginTop: 5, flex: "none" }} />
+                <div className="flex gap-[11px]">
+                  <span className="mt-[5px] h-[9px] w-[9px] shrink-0 rounded-[2px] bg-teal" />
                   <div>
-                    <div style={{ fontSize: 13.5, fontWeight: 700, color: C.ink, marginBottom: 2 }}>Соответствие ПМО 2.0</div>
-                    <div style={{ fontSize: 13, lineHeight: 1.5, color: "#6B5E4D" }}>
+                    <div className="text-[13.5px] font-bold text-ink mb-[2px]">Соответствие ПМО 2.0</div>
+                    <div className="text-[13px] leading-[1.5] text-prose">
                       Насколько решение опирается на принципы персонализированной модели образования:
                       траекторию, материалы, коллаборацию, геймификацию и обратную связь.
                       Шкала 0–10: чем выше, тем зрелее продукт с точки зрения ПМО.
@@ -181,16 +153,16 @@ export default function Drawer({
             </div>
 
             {/* list toolbar */}
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, padding: "14px 28px 10px" }}>
-              <div style={{ fontSize: 13, fontWeight: 600, color: C.muted }}>
-                Стартапы группы · <b style={{ color: C.ink }}>{startups.length}</b>
+            <div className="flex items-center justify-between gap-[12px] px-[28px] pt-[14px] pb-[10px]">
+              <div className="text-[13px] font-semibold text-muted">
+                Стартапы группы · <b className="text-ink">{startups.length}</b>
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
-                <span style={{ fontSize: 12, color: C.faint, fontWeight: 600 }}>Сортировка</span>
+              <div className="flex items-center gap-[7px]">
+                <span className="text-[12px] font-semibold text-faint">Сортировка</span>
                 <select
                   value={dsort}
                   onChange={(e) => onDsort(e.target.value as DsortKey)}
-                  style={{ border: `1px solid ${C.border}`, background: "#fff", borderRadius: 99, padding: "7px 12px", fontSize: 12.5, fontWeight: 600, color: "#4A4339", cursor: "pointer", outline: "none" }}
+                  className="border border-border bg-white rounded-full px-[12px] py-[7px] text-[12.5px] font-semibold text-[#4A4339] cursor-pointer outline-none"
                 >
                   <option value="relevance">релевантность</option>
                   <option value="pmo">соответствие ПМО 2.0</option>
@@ -201,12 +173,12 @@ export default function Drawer({
             </div>
 
             {/* startup cards */}
-            <div style={{ flex: 1, overflowY: "auto", padding: "6px 28px 32px" }}>
+            <div className="flex-1 overflow-y-auto px-[28px] pb-[32px] pt-[6px]">
               {startups.map((s) => (
                 <StartupCard key={s.id} s={s} />
               ))}
               {startups.length === 0 && (
-                <div style={{ textAlign: "center", padding: "40px 20px", color: C.faint, fontWeight: 500 }}>
+                <div className="text-center px-[20px] py-[40px] text-faint font-medium">
                   Нет данных по стартапам
                 </div>
               )}
@@ -220,36 +192,41 @@ export default function Drawer({
 
 function StartupCard({ s }: { s: Startup }) {
   return (
-    <div style={{ background: "#fff", border: `1px solid ${C.borderWarm}`, borderRadius: 15, padding: "16px 17px", marginBottom: 11 }}>
-      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16 }}>
-        <div style={{ minWidth: 0 }}>
-          <div style={{ fontSize: 16, fontWeight: 700, letterSpacing: "-.01em" }}>
+    <div className="mb-[11px] rounded-[15px] border border-border-warm bg-white px-[17px] py-[16px]">
+      <div className="flex items-start justify-between gap-[16px]">
+        <div className="min-w-0">
+          <div className="text-[16px] font-bold tracking-[-.01em]">
             {s.website ? (
-              <a className="startup-link" href={s.website} target="_blank" rel="noreferrer" style={{ color: C.ink, textDecoration: "none" }}>
+              <a
+                href={s.website}
+                target="_blank"
+                rel="noreferrer"
+                className="text-ink no-underline transition-colors duration-150 hover:text-clay hover:underline hover:[text-underline-offset:3px] focus-visible:text-clay focus-visible:underline focus-visible:outline-none"
+              >
                 {s.name}
               </a>
             ) : (
               s.name
             )}
           </div>
-          <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 6, marginTop: 6 }}>
-            <span style={{ fontSize: 12, color: C.faint, fontWeight: 600 }}>{metaLine(s)}</span>
+          <div className="flex items-center flex-wrap gap-[6px] mt-[6px]">
+            <span className="text-[12px] font-semibold text-faint">{metaLine(s)}</span>
             {s.sectors.map((t) => (
-              <span key={t} style={{ fontSize: 11, fontWeight: 600, color: "#7A6E5B", background: "#F4EEE2", border: "1px solid #EBE0CE", borderRadius: 7, padding: "3px 8px" }}>
+              <span key={t} className="rounded-[7px] border border-[#EBE0CE] bg-[#F4EEE2] px-[8px] py-[3px] text-[11px] font-semibold text-[#7A6E5B]">
                 {t}
               </span>
             ))}
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "flex-start", gap: 18, flex: "none" }}>
-          <ScoreBlock label="Релевантность" value={s.relevance} color={C.clay} />
-          <ScoreBlock label="ПМО" value={s.pmoScore} color={C.teal} />
+        <div className="flex items-start gap-[18px] shrink-0">
+          <ScoreBlock label="Релевантность" value={s.relevance} color="#C2603C" />
+          <ScoreBlock label="ПМО" value={s.pmoScore} color="#3F8A78" />
         </div>
       </div>
 
-      {s.description && <div style={{ fontSize: 13, color: C.inkSoft, lineHeight: 1.5, marginTop: 11 }}>{clamp(s.description, 320)}</div>}
+      {s.description && <div className="text-[13px] text-ink-soft leading-[1.5] mt-[11px]">{clamp(s.description, 320)}</div>}
       {s.rationale && (
-        <div style={{ fontSize: 12.5, color: "#9A8F7C", lineHeight: 1.5, fontStyle: "italic", borderLeft: "2px solid #E6CDB8", paddingLeft: 11, marginTop: 10 }}>
+        <div className="mt-[10px] border-l-2 border-[#E6CDB8] pl-[11px] text-[12.5px] italic leading-[1.5] text-[#9A8F7C]">
           {s.rationale}
         </div>
       )}
@@ -259,14 +236,19 @@ function StartupCard({ s }: { s: Startup }) {
 
 function ScoreBlock({ label, value, color }: { label: string; value: number; color: string }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 2 }}>
-      <span style={{ fontFamily: FONT_SERIF, fontSize: 23, lineHeight: 1, color, fontVariantNumeric: "tabular-nums" }}>{fmt1(value)}</span>
-      <span style={{ fontSize: 9.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".03em", color, whiteSpace: "nowrap" }}>{label}</span>
+    <div className="flex flex-col items-start gap-[2px]">
+      <span
+        className="text-[23px] leading-none [font-variant-numeric:tabular-nums]"
+        style={{ fontFamily: FONT_SERIF, color }}
+      >
+        {fmt1(value)}
+      </span>
+      <span
+        className="text-[9.5px] font-bold uppercase tracking-[.03em] whitespace-nowrap"
+        style={{ color }}
+      >
+        {label}
+      </span>
     </div>
   );
-}
-
-function clamp(text: string, max: number): string {
-  if (text.length <= max) return text;
-  return text.slice(0, max).trimEnd() + "…";
 }

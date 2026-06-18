@@ -87,13 +87,6 @@ input[type="range"]::-moz-range-thumb {
   to { opacity: 1; }
 }
 
-/* hover/focus hook classes — removed per-component as elements are tailwindized */
-.startup-link { transition: color 0.14s; }
-.startup-link:hover,
-.startup-link:focus-visible { color: #C2603C !important; text-decoration: underline; text-underline-offset: 3px; outline: none; }
-.agent-title-link { cursor: pointer; background: none; border: none; padding: 0; text-align: left; transition: color 0.14s; }
-.agent-title-link:hover,
-.agent-title-link:focus-visible { color: #C2603C !important; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; outline: none; }
 :focus-visible { outline: 2px solid #C2603C; outline-offset: 2px; }
 
 @media (prefers-reduced-motion: reduce) {
