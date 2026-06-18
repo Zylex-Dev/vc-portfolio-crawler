@@ -27,12 +27,12 @@ export interface StatusMeta {
 }
 
 /**
- * Real research data only has two agent statuses (no prod/idea tiers):
- *   «Протестировать» — agent built & ready to test  → green
- *   «В разработке»   — still under construction      → amber
+ * Real research data only has two agent statuses:
+ *   «Протестировать» (data value) — agent built & ready, shown as «В проде» → green
+ *   «В разработке»                — still under construction                → amber
  */
 export function statusMeta(s: AgentStatus | string): StatusMeta {
-  if (s === "Протестировать") return { label: "Протестировать", color: "#3F7D55", bg: "#E7F0E8" };
+  if (s === "Протестировать") return { label: "В проде", color: "#3F7D55", bg: "#E7F0E8" };
   if (s === "В разработке") return { label: "В разработке", color: "#A9781F", bg: "#F4EAD4" };
   return { label: s || "—", color: "#8A7461", bg: "#EEE6DB" };
 }

@@ -3,7 +3,7 @@ import reportData from "./data/report.json";
 import type { AgentGroup, Report, Startup } from "./types";
 import { enrich } from "./lib/report";
 import { C, FONT_SERIF, barW, fmt1, fmtInt, statusMeta } from "./theme";
-import { Bar, StatusBadge, metaLine } from "./components/shared";
+import { StatusBadge, metaLine } from "./components/shared";
 import Drawer, { type DrawerSelection, type DsortKey } from "./components/Drawer";
 
 const report = reportData as Report;
@@ -19,7 +19,7 @@ const VIEW_MODES: { v: View; label: string }[] = [
 
 const STATUS_CHIPS: { v: string; label: string; dot: string }[] = [
   { v: "all", label: "Все", dot: "transparent" },
-  { v: "Протестировать", label: "Протестировать", dot: "#3F7D55" },
+  { v: "Протестировать", label: "В проде", dot: "#3F7D55" },
   { v: "В разработке", label: "В разработке", dot: "#A9781F" },
 ];
 
@@ -67,10 +67,17 @@ export default function App() {
     const needle = q.trim().toLowerCase();
     let list = agents.filter((a) => {
       if (status !== "all" && a.status !== status) return false;
-      if (a.avgRel < minRel) return false;
       if (needle && !(a.name.toLowerCase().includes(needle) || a.category.toLowerCase().includes(needle))) return false;
       return true;
     });
+    // Relevance threshold no longer removes agent cards — it narrows each group
+    // down to startups whose own relevance clears the bar (count reflects this).
+    if (minRel > 0) {
+      list = list.map((a) => {
+        const group = a.group.filter((s) => s.relevance >= minRel);
+        return { ...a, group, count: group.length };
+      });
+    }
     const d = dir === "asc" ? 1 : -1;
     const keyFns: Record<SortKey, (a: AgentGroup) => number | string> = {
       count: (a) => a.count,
@@ -163,10 +170,10 @@ export default function App() {
         <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto", padding: "64px 28px 40px", animation: "fadeUp .5s both" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", border: `1px solid ${C.border}`, borderRadius: 99, padding: "6px 14px", fontSize: 12.5, fontWeight: 600, color: "#9A6A4A", marginBottom: 24 }}>
             <span style={{ width: 7, height: 7, borderRadius: "50%", background: C.clay }} />
-            Исследование венчурных портфелей · 2026
+            Исследование венчурных портфелей 2026
           </div>
-          <h1 style={{ fontFamily: FONT_SERIF, fontWeight: 400, fontSize: 54, lineHeight: 1.04, letterSpacing: "-.015em", margin: "0 0 18px", maxWidth: "18ch" }}>
-            Где рынок уже строит то,&nbsp;что строим мы
+          <h1 style={{ fontFamily: FONT_SERIF, fontWeight: 400, fontSize: 54, lineHeight: 1.04, letterSpacing: "-.015em", margin: "0 0 18px" }}>
+            Лучшие мировые практики EdTech&nbsp;стартапов для воплощения ПМО на практике
           </h1>
           <p style={{ fontSize: 18, lineHeight: 1.55, color: C.inkSoft, maxWidth: "62ch", margin: "0 0 40px", fontWeight: 450 }}>
             Мы собрали <b style={{ color: C.ink, fontWeight: 700 }}>{fmtInt(meta.totalCollected)}</b> стартапов из портфелей крупных венчурных фондов,
@@ -253,21 +260,21 @@ export default function App() {
       {/* MAIN */}
       <main style={{ maxWidth: 1240, margin: "0 auto", padding: "30px 28px 70px" }}>
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 16, marginBottom: 20 }}>
-          <h2 style={{ fontFamily: FONT_SERIF, fontWeight: 400, fontSize: 24, letterSpacing: "-.01em", margin: 0 }}>{meta.totalAgents} агента · покрытие рынка</h2>
+          <h2 style={{ fontFamily: FONT_SERIF, fontWeight: 400, fontSize: 24, letterSpacing: "-.01em", margin: 0 }}><span style={{ fontWeight: 700 }}>{meta.totalAgents}</span> Агента персонализированной модели образования</h2>
           <div style={{ fontSize: 13, color: C.muted, fontWeight: 500 }}>
-            Показано <b style={{ color: C.ink }}>{shown.length}</b> из {meta.totalAgents} · клик открывает группу
+            Показано <b style={{ color: C.ink }}>{shown.length}</b> из {meta.totalAgents}
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 22, fontSize: 12, color: "#9A8F7C", fontWeight: 600, flexWrap: "wrap" }}>
           <LegendItem square color={C.clay} text="релевантность" />
           <LegendItem square color={C.teal} text="соответствие ПМО 2.0" />
-          <LegendItem color="#3F7D55" text="протестировать" />
+          <LegendItem color="#3F7D55" text="в проде" />
           <LegendItem color="#A9781F" text="в разработке" />
         </div>
 
         {shown.length === 0 ? (
           <div style={{ textAlign: "center", padding: "60px 20px", color: C.faint, fontWeight: 500 }}>
-            Нет агентов под текущие фильтры. Сбросьте релевантность или статус.
+            Нет агентов под текущие фильтры
           </div>
         ) : view === "grid" ? (
           <GridView agents={shown} onOpen={openAgent} />
@@ -306,18 +313,12 @@ function GridView({ agents, onOpen }: { agents: AgentGroup[]; onOpen: (id: numbe
               <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: ".02em", textTransform: "uppercase", color: C.faint }}>{a.category}</span>
               <StatusBadge label={sm.label} color={sm.color} bg={sm.bg} small />
             </div>
-            <div>
-              <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-                <span style={{ fontFamily: FONT_SERIF, fontSize: 30, lineHeight: 1, letterSpacing: "-.02em", fontVariantNumeric: "tabular-nums", color: C.ink }}>{fmtInt(a.count)}</span>
+            <div style={{ fontSize: 19, fontWeight: 700, letterSpacing: "-.01em", lineHeight: 1.25, color: C.ink, minHeight: "3.75em", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }} title={a.name}>{a.name}</div>
+            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 8, borderTop: "1px solid #EFE6D6", paddingTop: 11, marginTop: "auto" }}>
+              <span style={{ display: "flex", alignItems: "baseline", gap: 7 }}>
+                <span style={{ fontFamily: FONT_SERIF, fontSize: 32, lineHeight: 1, letterSpacing: "-.02em", fontVariantNumeric: "tabular-nums", color: C.ink }}>{fmtInt(a.count)}</span>
                 <span style={{ fontSize: 12.5, color: C.muted, fontWeight: 500 }}>стартапов</span>
-              </div>
-              <div style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.01em", marginTop: 7, lineHeight: 1.25 }}>{a.name}</div>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
-              <Bar value={a.avgRel} fill={C.clay} label={fmt1(a.avgRel)} labelColor={C.clay} caption="Релевантность" />
-              <Bar value={a.avgPmo} fill={C.teal} label={fmt1(a.avgPmo)} labelColor={C.teal} caption="Соответствие ПМО 2.0" />
-            </div>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", borderTop: "1px solid #EFE6D6", paddingTop: 11, marginTop: 1 }}>
+              </span>
               <span style={{ fontSize: 12.5, fontWeight: 700, color: C.clay }}>Открыть →</span>
             </div>
           </button>
@@ -436,10 +437,7 @@ function UnmatchedSection({ unmatched, onOpen }: { unmatched: ReturnType<typeof 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(250px,1fr))", gap: 12 }}>
           {samples.map((s) => (
             <div key={s.id} style={{ background: "#fff", border: "1px solid #EBDCC9", borderRadius: 15, padding: 16 }}>
-              <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10 }}>
-                <div style={{ fontSize: 15.5, fontWeight: 700, letterSpacing: "-.01em" }}>{s.name}</div>
-                <span style={{ fontSize: 12, fontWeight: 800, color: C.teal, background: "#E7F0EC", borderRadius: 7, padding: "3px 7px", fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>ПМО 2.0 {fmt1(s.pmoScore)}</span>
-              </div>
+              <div style={{ fontSize: 15.5, fontWeight: 700, letterSpacing: "-.01em" }}>{s.name}</div>
               <div style={{ fontSize: 12, color: C.faint, fontWeight: 600, margin: "7px 0 9px" }}>{metaLine(s)}</div>
               <div style={{ fontSize: 12.5, color: "#6B5E4D", lineHeight: 1.45 }}>{clampText(s.description, 160)}</div>
             </div>
