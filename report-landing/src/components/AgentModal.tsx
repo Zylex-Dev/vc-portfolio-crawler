@@ -38,7 +38,7 @@ export default function AgentModal({ agent, onClose }: { agent: Agent | null; on
             <button
               onClick={onClose}
               aria-label="Закрыть"
-              className="flex h-[34px] w-[34px] flex-none cursor-pointer items-center justify-center rounded-full border border-border bg-white text-[17px] text-[#837A6C]"
+              className="flex h-[34px] w-[34px] flex-none cursor-pointer items-center justify-center rounded-full border border-border bg-white text-[17px] text-muted"
             >
               ✕
             </button>
@@ -49,7 +49,7 @@ export default function AgentModal({ agent, onClose }: { agent: Agent | null; on
           >
             {agent.name}
           </h2>
-          {agent.role && <p className="m-0 text-[14.5px] leading-[1.5] text-[#6B5E4D]">{agent.role}</p>}
+          {agent.role && <p className="m-0 text-[14.5px] leading-[1.5] text-prose">{agent.role}</p>}
           {agent.resourceLink && (
             <a
               href={agent.resourceLink}
