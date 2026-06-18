@@ -5,7 +5,7 @@ export default function Header() {
         <div className="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-clay text-[18px] font-extrabold text-white">
           П
         </div>
-        <div className="text-[21px] font-bold tracking-[-.015em]">ПМО - Карта рынка агентов</div>
+        <div className="text-[21px] font-bold tracking-[-.015em]">ПМО - Лучшие мировые практики</div>
       </div>
     </header>
   );
