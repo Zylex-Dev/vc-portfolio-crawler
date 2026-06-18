@@ -12,6 +12,7 @@ import GridView from "./components/views/GridView";
 import CompactView from "./components/views/CompactView";
 import MapView from "./components/views/MapView";
 import UnmatchedSection from "./components/UnmatchedSection";
+import { LegendItem } from "./components/shared";
 
 const report = reportData as Report;
 
@@ -127,25 +128,21 @@ export default function App() {
   }, [selected, agents, unmatched]);
 
   return (
-    <div style={{ background: C.paper, minHeight: "100vh" }}>
-      {/* TOP BAR */}
+    <div className="min-h-screen bg-paper">
       <Header />
-
-      {/* HERO */}
       <Hero meta={meta} />
-
-      {/* CONTROLS */}
       <Controls view={view} setView={setView} status={status} setStatus={setStatus} minRel={minRel} setMinRel={setMinRel} q={q} setQ={setQ} sort={sort} setSort={setSort} dir={dir} setDir={setDir} />
 
-      {/* MAIN */}
-      <main style={{ maxWidth: 1240, margin: "0 auto", padding: "30px 28px 70px" }}>
-        <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 16, marginBottom: 20 }}>
-          <h2 style={{ fontFamily: FONT_SERIF, fontWeight: 400, fontSize: 24, letterSpacing: "-.01em", margin: 0 }}><span style={{ fontWeight: 700 }}>{meta.totalAgents}</span> Агента персонализированной модели образования</h2>
-          <div style={{ fontSize: 13, color: C.muted, fontWeight: 500 }}>
-            Показано <b style={{ color: C.ink }}>{shown.length}</b> из {meta.totalAgents}
+      <main className="mx-auto max-w-[1240px] px-[28px] pb-[70px] pt-[30px]">
+        <div className="mb-[20px] flex items-baseline justify-between gap-[16px]">
+          <h2 className="m-0 text-[24px] font-normal tracking-[-.01em]" style={{ fontFamily: FONT_SERIF }}>
+            <span className="font-bold">{meta.totalAgents}</span> Агента персонализированной модели образования
+          </h2>
+          <div className="text-[13px] font-medium text-muted">
+            Показано <b className="text-ink">{shown.length}</b> из {meta.totalAgents}
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 22, fontSize: 12, color: "#9A8F7C", fontWeight: 600, flexWrap: "wrap" }}>
+        <div className="mb-[22px] flex flex-wrap items-center gap-[18px] text-[12px] font-semibold text-[#9A8F7C]">
           <LegendItem square color={C.clay} text="релевантность" />
           <LegendItem square color={C.teal} text="соответствие ПМО 2.0" />
           <LegendItem color="#3F7D55" text="в проде" />
@@ -153,7 +150,7 @@ export default function App() {
         </div>
 
         {shown.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "60px 20px", color: C.faint, fontWeight: 500 }}>
+          <div className="px-[20px] py-[60px] text-center font-medium text-faint">
             Нет агентов под текущие фильтры
           </div>
         ) : view === "grid" ? (
@@ -170,15 +167,6 @@ export default function App() {
       <Drawer open={drawerOpen} selection={selection} minRel={minRel} dsort={dsort} onDsort={setDsort} onClose={() => setDrawerOpen(false)} onOpenInfo={setInfoAgent} />
       <AgentModal agent={infoAgent} onClose={() => setInfoAgent(null)} />
     </div>
-  );
-}
-
-function LegendItem({ color, text, square }: { color: string; text: string; square?: boolean }) {
-  return (
-    <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-      <span style={{ width: 9, height: 9, borderRadius: square ? 2 : "50%", background: color }} />
-      {text}
-    </span>
   );
 }
 
