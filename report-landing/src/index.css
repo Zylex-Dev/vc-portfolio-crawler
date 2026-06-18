@@ -14,15 +14,10 @@
   --color-clay: #C2603C;
   --color-clay-deep: #A6431F;
   --color-teal: #3F8A78;
-  --color-prod: #3F7D55;
-  --color-dev: #A9781F;
   --color-prose: #6B5E4D;
 
   --font-sans: "Hanken Grotesk", system-ui, sans-serif;
   --font-serif: "Newsreader", serif;
-
-  --animate-fade-up: fadeUp 0.5s both;
-  --animate-fade-in: fadeIn 0.2s both;
 }
 
 html,
