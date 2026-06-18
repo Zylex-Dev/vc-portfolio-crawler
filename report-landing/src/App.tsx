@@ -8,23 +8,9 @@ import Drawer, { type DrawerSelection, type DsortKey } from "./components/Drawer
 import AgentModal from "./components/AgentModal";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Controls, { type View, type SortKey } from "./components/Controls";
 
 const report = reportData as Report;
-
-type View = "grid" | "compact" | "map";
-type SortKey = "count" | "relevance" | "pmo" | "name" | "status";
-
-const VIEW_MODES: { v: View; label: string }[] = [
-  { v: "grid", label: "Сетка" },
-  { v: "compact", label: "Список" },
-  { v: "map", label: "Карта групп" },
-];
-
-const STATUS_CHIPS: { v: string; label: string; dot: string }[] = [
-  { v: "all", label: "Все", dot: "transparent" },
-  { v: "Протестировать", label: "В проде", dot: "#3F7D55" },
-  { v: "В разработке", label: "В разработке", dot: "#A9781F" },
-];
 
 export default function App() {
   const data = useMemo(() => enrich(report), []);
@@ -146,69 +132,7 @@ export default function App() {
       <Hero meta={meta} />
 
       {/* CONTROLS */}
-      <div style={{ position: "sticky", top: 53, zIndex: 40, background: "rgba(244,238,228,.92)", backdropFilter: "blur(12px)", borderBottom: `1px solid ${C.border}` }}>
-        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "14px 28px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: 14 }}>
-          <div style={{ display: "flex", gap: 4, background: "#EBE2D2", border: "1px solid #E1D6C2", borderRadius: 99, padding: 4 }}>
-            {VIEW_MODES.map((m) => {
-              const on = view === m.v;
-              return (
-                <button
-                  key={m.v}
-                  onClick={() => setView(m.v)}
-                  style={{ border: "none", cursor: "pointer", fontWeight: 600, fontSize: 13, padding: "7px 15px", borderRadius: 99, transition: "all .15s", background: on ? C.ink : "transparent", color: on ? "#fff" : C.muted }}
-                >
-                  {m.label}
-                </button>
-              );
-            })}
-          </div>
-
-          <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-            {STATUS_CHIPS.map((c) => {
-              const on = status === c.v;
-              return (
-                <button
-                  key={c.v}
-                  onClick={() => setStatus(c.v)}
-                  style={{ display: "inline-flex", alignItems: "center", gap: 7, border: `1px solid ${on ? C.ink : C.border}`, cursor: "pointer", fontWeight: 600, fontSize: 12.5, padding: "7px 13px", borderRadius: 99, transition: "all .15s", background: on ? C.ink : "#fff", color: on ? "#fff" : "#4A4339" }}
-                >
-                  <span style={{ width: 7, height: 7, borderRadius: "50%", background: on ? (c.v === "all" ? "#fff" : c.dot) : c.dot }} />
-                  {c.label}
-                </button>
-              );
-            })}
-          </div>
-
-          <div style={{ display: "flex", alignItems: "center", gap: 11, background: "#fff", border: `1px solid ${C.border}`, borderRadius: 99, padding: "7px 15px" }}>
-            <span style={{ fontSize: 12.5, fontWeight: 600, color: C.muted, whiteSpace: "nowrap" }}>Релевантность ≥</span>
-            <input type="range" min={0} max={10} step={1} value={minRel} onChange={(e) => setMinRel(Number(e.target.value))} style={{ width: 108 }} aria-label="Минимальная релевантность" />
-            <span style={{ fontSize: 12.5, fontWeight: 700, color: C.clay, fontVariantNumeric: "tabular-nums", minWidth: 34 }}>{minRel === 0 ? "любая" : minRel}</span>
-          </div>
-
-          <div style={{ flex: 1 }} />
-
-          <div style={{ position: "relative", display: "flex", alignItems: "center", background: "#fff", border: `1px solid ${C.border}`, borderRadius: 99, padding: "0 6px 0 14px" }}>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A9997F" strokeWidth="2.2">
-              <circle cx="11" cy="11" r="7" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            <input type="text" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Поиск агента…" aria-label="Поиск агента" style={{ border: "none", outline: "none", background: "transparent", fontSize: 13, padding: "8px 8px", width: 140, color: C.ink }} />
-          </div>
-
-          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-            <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} aria-label="Сортировка" style={{ border: `1px solid ${C.border}`, background: "#fff", borderRadius: 99, padding: "8px 13px", fontSize: 12.5, fontWeight: 600, color: "#4A4339", cursor: "pointer", outline: "none" }}>
-              <option value="count">По размеру группы</option>
-              <option value="relevance">По релевантности</option>
-              <option value="pmo">По соответствию ПМО 2.0</option>
-              <option value="name">По названию</option>
-              <option value="status">По статусу</option>
-            </select>
-            <button onClick={() => setDir(dir === "asc" ? "desc" : "asc")} title="Направление" aria-label="Направление сортировки" style={{ border: `1px solid ${C.border}`, background: "#fff", borderRadius: "50%", width: 34, height: 34, cursor: "pointer", fontSize: 14, color: "#4A4339", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              {dir === "asc" ? "↑" : "↓"}
-            </button>
-          </div>
-        </div>
-      </div>
+      <Controls view={view} setView={setView} status={status} setStatus={setStatus} minRel={minRel} setMinRel={setMinRel} q={q} setQ={setQ} sort={sort} setSort={setSort} dir={dir} setDir={setDir} />
 
       {/* MAIN */}
       <main style={{ maxWidth: 1240, margin: "0 auto", padding: "30px 28px 70px" }}>
