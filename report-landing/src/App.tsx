@@ -7,6 +7,7 @@ import { StatusBadge, metaLine } from "./components/shared";
 import Drawer, { type DrawerSelection, type DsortKey } from "./components/Drawer";
 import AgentModal from "./components/AgentModal";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 const report = reportData as Report;
 
@@ -136,49 +137,13 @@ export default function App() {
     };
   }, [selected, agents, unmatched]);
 
-  const heroStats = [
-    { v: fmtInt(meta.totalCollected), l: "стартапов собрано", color: C.ink },
-    { v: fmtInt(meta.totalStartups), l: "EdTech отфильтровано", color: C.ink },
-    { v: fmtInt(meta.totalAgents), l: "ИИ-агентов ПМО", color: C.ink },
-    { v: fmtInt(meta.matched), l: "сматчено с агентами", color: C.teal },
-    { v: fmtInt(meta.unmatched), l: "новых идей вне покрытия", color: C.clay },
-    { v: fmtInt(meta.totalFunds), l: "венчурных фондов", color: C.ink },
-  ];
-
   return (
     <div style={{ background: C.paper, minHeight: "100vh" }}>
       {/* TOP BAR */}
       <Header />
 
       {/* HERO */}
-      <section style={{ position: "relative", overflow: "hidden", borderBottom: `1px solid ${C.border}` }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(#D9CDB6 1.1px,transparent 1.1px)", backgroundSize: "24px 24px", opacity: 0.5 }} />
-        <div style={{ position: "absolute", top: -160, right: -120, width: 520, height: 520, borderRadius: "50%", background: "radial-gradient(circle,rgba(194,96,60,.20),transparent 65%)" }} />
-        <div style={{ position: "absolute", bottom: -200, left: -100, width: 480, height: 480, borderRadius: "50%", background: "radial-gradient(circle,rgba(63,138,120,.14),transparent 65%)" }} />
-        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto", padding: "64px 28px 40px", animation: "fadeUp .5s both" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", border: `1px solid ${C.border}`, borderRadius: 99, padding: "6px 14px", fontSize: 12.5, fontWeight: 600, color: "#9A6A4A", marginBottom: 24 }}>
-            <span style={{ width: 7, height: 7, borderRadius: "50%", background: C.clay }} />
-            Исследование венчурных портфелей 2026
-          </div>
-          <h1 style={{ fontFamily: FONT_SERIF, fontWeight: 400, fontSize: 54, lineHeight: 1.04, letterSpacing: "-.015em", margin: "0 0 18px" }}>
-            Лучшие мировые практики EdTech&nbsp;стартапов для воплощения ПМО на практике
-          </h1>
-          <p style={{ fontSize: 18, lineHeight: 1.55, color: C.inkSoft, maxWidth: "62ch", margin: "0 0 40px", fontWeight: 450 }}>
-            Мы собрали <b style={{ color: C.ink, fontWeight: 700 }}>{fmtInt(meta.totalCollected)}</b> стартапов из портфелей крупных венчурных фондов,
-            отфильтровали <b style={{ color: C.ink, fontWeight: 700 }}>{fmtInt(meta.totalStartups)}</b> EdTech-решений и сопоставили каждое
-            с <b style={{ color: C.ink, fontWeight: 700 }}>{meta.totalAgents}</b> ИИ-агентами персонализированной модели образования.
-            Ниже — интерактивная карта совпадений и зона новых идей.
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))", gap: 1, background: C.border, border: `1px solid ${C.border}`, borderRadius: 18, overflow: "hidden" }}>
-            {heroStats.map((s) => (
-              <div key={s.l} style={{ background: C.card, padding: "22px 22px 20px" }}>
-                <div style={{ fontFamily: FONT_SERIF, fontSize: 34, lineHeight: 1, letterSpacing: "-.02em", fontVariantNumeric: "tabular-nums", color: s.color }}>{s.v}</div>
-                <div style={{ fontSize: 12.5, color: "#837A6C", marginTop: 8, fontWeight: 500, lineHeight: 1.35 }}>{s.l}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Hero meta={meta} />
 
       {/* CONTROLS */}
       <div style={{ position: "sticky", top: 53, zIndex: 40, background: "rgba(244,238,228,.92)", backdropFilter: "blur(12px)", borderBottom: `1px solid ${C.border}` }}>
