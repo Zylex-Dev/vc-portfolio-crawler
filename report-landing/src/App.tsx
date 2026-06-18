@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import reportData from "./data/report.json";
 import type { Agent, AgentGroup, Report, Startup } from "./types";
 import { enrich } from "./lib/report";
-import { C, FONT_SERIF, barW, fmt1, fmtInt, statusMeta } from "./theme";
+import { C, FONT_SERIF, fmt1, fmtInt, statusMeta } from "./theme";
 import { metaLine } from "./components/shared";
 import Drawer, { type DrawerSelection, type DsortKey } from "./components/Drawer";
 import AgentModal from "./components/AgentModal";
@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Controls, { type View, type SortKey } from "./components/Controls";
 import GridView from "./components/views/GridView";
+import CompactView from "./components/views/CompactView";
 
 const report = reportData as Report;
 
@@ -177,55 +178,6 @@ function LegendItem({ color, text, square }: { color: string; text: string; squa
       <span style={{ width: 9, height: 9, borderRadius: square ? 2 : "50%", background: color }} />
       {text}
     </span>
-  );
-}
-
-/* ---------- COMPACT ---------- */
-function CompactView({ agents, maxCount, onOpen }: { agents: AgentGroup[]; maxCount: number; onOpen: (id: number) => void }) {
-  const cols = "1fr 120px 116px 116px 40px";
-  return (
-    <div style={{ background: C.card, border: `1px solid ${C.borderWarm}`, borderRadius: 18, overflow: "hidden" }}>
-      <div style={{ display: "grid", gridTemplateColumns: cols, gap: 14, padding: "13px 20px", borderBottom: "1px solid #EFE6D6", fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".03em", color: C.faint }}>
-        <span>Агент</span>
-        <span>Группа</span>
-        <span>Релевантность</span>
-        <span>Соответствие ПМО 2.0</span>
-        <span />
-      </div>
-      {agents.map((a) => {
-        const sm = statusMeta(a.status);
-        return (
-          <button key={a.id} className="agent-row" onClick={() => onOpen(a.id)} style={{ width: "100%", textAlign: "left", cursor: "pointer", background: "transparent", border: "none", borderBottom: "1px solid #F0E8D9", display: "grid", gridTemplateColumns: cols, gap: 14, alignItems: "center", padding: "13px 20px" }}>
-            <span style={{ display: "flex", alignItems: "center", gap: 11, minWidth: 0 }}>
-              <span style={{ width: 8, height: 8, borderRadius: "50%", background: sm.color, flex: "none" }} />
-              <span style={{ minWidth: 0 }}>
-                <span style={{ display: "block", fontSize: 14.5, fontWeight: 700, letterSpacing: "-.01em", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{a.name}</span>
-                <span style={{ display: "block", fontSize: 11.5, color: C.faint, fontWeight: 500 }}>{a.category}</span>
-              </span>
-            </span>
-            <span style={{ display: "flex", alignItems: "center", gap: 9 }}>
-              <span style={{ fontSize: 15, fontWeight: 700, fontVariantNumeric: "tabular-nums", minWidth: 30 }}>{fmtInt(a.count)}</span>
-              <span style={{ flex: 1, height: 6, borderRadius: 99, background: C.track, overflow: "hidden" }}>
-                <span style={{ display: "block", height: "100%", background: "#C9A98C", width: `${Math.round((a.count / maxCount) * 100)}%` }} />
-              </span>
-            </span>
-            <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ flex: 1, height: 6, borderRadius: 99, background: C.track, overflow: "hidden" }}>
-                <span style={{ display: "block", height: "100%", background: C.clay, width: barW(a.avgRel) }} />
-              </span>
-              <span style={{ fontSize: 12.5, fontWeight: 700, color: C.clay, fontVariantNumeric: "tabular-nums" }}>{fmt1(a.avgRel)}</span>
-            </span>
-            <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ flex: 1, height: 6, borderRadius: 99, background: C.track, overflow: "hidden" }}>
-                <span style={{ display: "block", height: "100%", background: C.teal, width: barW(a.avgPmo) }} />
-              </span>
-              <span style={{ fontSize: 12.5, fontWeight: 700, color: C.teal, fontVariantNumeric: "tabular-nums" }}>{fmt1(a.avgPmo)}</span>
-            </span>
-            <span style={{ color: C.clay, fontWeight: 700, fontSize: 15, textAlign: "right" }}>→</span>
-          </button>
-        );
-      })}
-    </div>
   );
 }
 
