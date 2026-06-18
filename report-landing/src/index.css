@@ -88,9 +88,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* hover/focus hook classes — removed per-component as elements are tailwindized */
-.agent-card { transition: all 0.16s; box-shadow: 0 1px 0 rgba(120, 90, 50, 0.03); }
-.agent-card:hover,
-.agent-card:focus-visible { border-color: #D9C3B0; box-shadow: 0 10px 26px -14px rgba(120, 70, 40, 0.28); transform: translateY(-2px); outline: none; }
 .agent-row { transition: background 0.14s; }
 .agent-row:hover,
 .agent-row:focus-visible { background: #F5EEE0; outline: none; }

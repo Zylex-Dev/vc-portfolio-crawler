@@ -3,12 +3,13 @@ import reportData from "./data/report.json";
 import type { Agent, AgentGroup, Report, Startup } from "./types";
 import { enrich } from "./lib/report";
 import { C, FONT_SERIF, barW, fmt1, fmtInt, statusMeta } from "./theme";
-import { StatusBadge, metaLine } from "./components/shared";
+import { metaLine } from "./components/shared";
 import Drawer, { type DrawerSelection, type DsortKey } from "./components/Drawer";
 import AgentModal from "./components/AgentModal";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Controls, { type View, type SortKey } from "./components/Controls";
+import GridView from "./components/views/GridView";
 
 const report = reportData as Report;
 
@@ -176,33 +177,6 @@ function LegendItem({ color, text, square }: { color: string; text: string; squa
       <span style={{ width: 9, height: 9, borderRadius: square ? 2 : "50%", background: color }} />
       {text}
     </span>
-  );
-}
-
-/* ---------- GRID ---------- */
-function GridView({ agents, onOpen }: { agents: AgentGroup[]; onOpen: (id: number) => void }) {
-  return (
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(286px,1fr))", gap: 14 }}>
-      {agents.map((a) => {
-        const sm = statusMeta(a.status);
-        return (
-          <button key={a.id} className="agent-card" onClick={() => onOpen(a.id)} style={{ textAlign: "left", cursor: "pointer", background: C.card, border: `1px solid ${C.borderWarm}`, borderRadius: 18, padding: "18px 18px 16px", display: "flex", flexDirection: "column", gap: 14 }}>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-              <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: ".02em", textTransform: "uppercase", color: C.faint }}>{a.category}</span>
-              <StatusBadge label={sm.label} color={sm.color} bg={sm.bg} small />
-            </div>
-            <div style={{ fontSize: 19, fontWeight: 700, letterSpacing: "-.01em", lineHeight: 1.25, color: C.ink, minHeight: "3.75em", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }} title={a.name}>{a.name}</div>
-            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 8, borderTop: "1px solid #EFE6D6", paddingTop: 11, marginTop: "auto" }}>
-              <span style={{ display: "flex", alignItems: "baseline", gap: 7 }}>
-                <span style={{ fontFamily: FONT_SERIF, fontSize: 32, lineHeight: 1, letterSpacing: "-.02em", fontVariantNumeric: "tabular-nums", color: C.ink }}>{fmtInt(a.count)}</span>
-                <span style={{ fontSize: 12.5, color: C.muted, fontWeight: 500 }}>стартапов</span>
-              </span>
-              <span style={{ fontSize: 12.5, fontWeight: 700, color: C.clay }}>Открыть →</span>
-            </div>
-          </button>
-        );
-      })}
-    </div>
   );
 }
 
