@@ -5,34 +5,25 @@ export function metaLine(s: Startup): string {
   return [s.fund, s.stage || "—", s.foundedYear ?? "—"].join(" · ");
 }
 
-export function StatusBadge({
-  label,
-  color,
-  bg,
-  small,
-}: {
-  label: string;
-  color: string;
-  bg: string;
-  small?: boolean;
-}) {
+export function StatusBadge({ label, color, bg, small }: { label: string; color: string; bg: string; small?: boolean }) {
   return (
     <span
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        gap: 6,
-        fontSize: small ? 11.5 : 12,
-        fontWeight: 700,
-        padding: small ? "4px 9px" : "4px 10px",
-        borderRadius: 99,
-        background: bg,
-        color,
-        whiteSpace: "nowrap",
-      }}
+      className={`inline-flex items-center gap-[6px] font-bold rounded-full whitespace-nowrap ${
+        small ? "text-[11.5px] px-[9px] py-[4px]" : "text-[12px] px-[10px] py-[4px]"
+      }`}
+      style={{ background: bg, color }}
     >
-      <span style={{ width: 6, height: 6, borderRadius: "50%", background: color }} />
+      <span className="w-[6px] h-[6px] rounded-full" style={{ background: color }} />
       {label}
+    </span>
+  );
+}
+
+export function LegendItem({ color, text, square }: { color: string; text: string; square?: boolean }) {
+  return (
+    <span className="inline-flex items-center gap-[6px]">
+      <span className={`w-[9px] h-[9px] ${square ? "rounded-[2px]" : "rounded-full"}`} style={{ background: color }} />
+      {text}
     </span>
   );
 }
