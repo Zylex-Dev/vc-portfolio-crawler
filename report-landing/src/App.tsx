@@ -1,9 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import reportData from "./data/report.json";
-import type { Agent, AgentGroup, Report, Startup } from "./types";
+import type { Agent, AgentGroup, Report } from "./types";
 import { enrich } from "./lib/report";
-import { C, FONT_SERIF, fmt1, fmtInt, statusMeta } from "./theme";
-import { metaLine } from "./components/shared";
+import { C, FONT_SERIF, statusMeta } from "./theme";
 import Drawer, { type DrawerSelection, type DsortKey } from "./components/Drawer";
 import AgentModal from "./components/AgentModal";
 import Header from "./components/Header";
@@ -12,6 +11,7 @@ import Controls, { type View, type SortKey } from "./components/Controls";
 import GridView from "./components/views/GridView";
 import CompactView from "./components/views/CompactView";
 import MapView from "./components/views/MapView";
+import UnmatchedSection from "./components/UnmatchedSection";
 
 const report = reportData as Report;
 
@@ -182,57 +182,3 @@ function LegendItem({ color, text, square }: { color: string; text: string; squa
   );
 }
 
-/* ---------- UNMATCHED ---------- */
-function UnmatchedSection({ unmatched, onOpen }: { unmatched: ReturnType<typeof enrich>["unmatched"]; onOpen: () => void }) {
-  const samples: Startup[] = [...unmatched.group].sort((a, b) => b.pmoScore - a.pmoScore).slice(0, 4);
-  return (
-    <section style={{ marginTop: 46, position: "relative", overflow: "hidden", borderRadius: 24, border: "1px solid #E6CDB8", background: "linear-gradient(135deg,#FBEDE2,#F7F0E4)" }}>
-      <div style={{ position: "absolute", top: -90, right: -60, width: 340, height: 340, borderRadius: "50%", background: "radial-gradient(circle,rgba(194,96,60,.16),transparent 65%)" }} />
-      <div style={{ position: "relative", padding: "34px 32px" }}>
-        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: 20, marginBottom: 26 }}>
-          <div style={{ maxWidth: "54ch" }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", border: "1px solid #E6CDB8", borderRadius: 99, padding: "5px 13px", fontSize: 12, fontWeight: 700, color: C.clayDeep, marginBottom: 16 }}>
-              <span style={{ width: 7, height: 7, borderRadius: "50%", background: C.clay }} />
-              Зона новых идей
-            </div>
-            <h2 style={{ fontFamily: FONT_SERIF, fontWeight: 400, fontSize: 30, letterSpacing: "-.015em", margin: "0 0 10px", lineHeight: 1.1 }}>
-              {fmtInt(unmatched.count)} стартапов вне покрытия 44 агентов
-            </h2>
-            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, color: "#6B5E4D", fontWeight: 450 }}>
-              Эти команды не совпали ни с одним нашим агентом — самый ценный срез исследования. Каждый из них — кандидат на новую продуктовую гипотезу для пайплайна ПМО.
-            </p>
-          </div>
-          <button onClick={onOpen} style={{ cursor: "pointer", fontWeight: 700, fontSize: 14, color: "#fff", background: C.clay, border: "none", borderRadius: 99, padding: "13px 22px", whiteSpace: "nowrap", boxShadow: "0 8px 20px -8px rgba(194,96,60,.6)" }}>
-            Смотреть все {fmtInt(unmatched.count)} →
-          </button>
-        </div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 22 }}>
-          <div style={{ background: "#fff", border: "1px solid #EBDCC9", borderRadius: 13, padding: "13px 18px" }}>
-            <div style={{ fontFamily: FONT_SERIF, fontSize: 25, lineHeight: 1, color: C.teal, fontVariantNumeric: "tabular-nums" }}>{fmt1(unmatched.avgPmo)}</div>
-            <div style={{ fontSize: 11.5, color: "#9A8F7C", fontWeight: 600, marginTop: 5 }}>среднее соответствие ПМО 2.0</div>
-          </div>
-          {unmatched.topSectors.map((s) => (
-            <div key={s} style={{ background: "#fff", border: "1px solid #EBDCC9", borderRadius: 13, padding: "13px 18px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <div style={{ fontSize: 14, fontWeight: 700, color: C.ink }}>{s}</div>
-              <div style={{ fontSize: 11.5, color: "#9A8F7C", fontWeight: 600, marginTop: 4 }}>частый сектор</div>
-            </div>
-          ))}
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(250px,1fr))", gap: 12 }}>
-          {samples.map((s) => (
-            <div key={s.id} style={{ background: "#fff", border: "1px solid #EBDCC9", borderRadius: 15, padding: 16 }}>
-              <div style={{ fontSize: 15.5, fontWeight: 700, letterSpacing: "-.01em" }}>{s.name}</div>
-              <div style={{ fontSize: 12, color: C.faint, fontWeight: 600, margin: "7px 0 9px" }}>{metaLine(s)}</div>
-              <div style={{ fontSize: 12.5, color: "#6B5E4D", lineHeight: 1.45 }}>{clampText(s.description, 160)}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function clampText(text: string, max: number): string {
-  if (!text) return "";
-  return text.length <= max ? text : text.slice(0, max).trimEnd() + "…";
-}
