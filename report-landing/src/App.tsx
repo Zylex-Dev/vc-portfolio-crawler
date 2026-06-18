@@ -6,6 +6,7 @@ import { C, FONT_SERIF, barW, fmt1, fmtInt, statusMeta } from "./theme";
 import { StatusBadge, metaLine } from "./components/shared";
 import Drawer, { type DrawerSelection, type DsortKey } from "./components/Drawer";
 import AgentModal from "./components/AgentModal";
+import Header from "./components/Header";
 
 const report = reportData as Report;
 
@@ -147,23 +148,7 @@ export default function App() {
   return (
     <div style={{ background: C.paper, minHeight: "100vh" }}>
       {/* TOP BAR */}
-      <header
-        style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 50,
-          background: "rgba(244,238,228,.86)",
-          backdropFilter: "blur(12px)",
-          borderBottom: `1px solid ${C.border}`,
-        }}
-      >
-        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "15px 28px", display: "flex", alignItems: "center", justifyContent: "center", gap: 13 }}>
-          <div style={{ width: 34, height: 34, borderRadius: 10, background: C.clay, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800, fontSize: 18 }}>
-            П
-          </div>
-          <div style={{ fontWeight: 700, fontSize: 21, letterSpacing: "-.015em" }}>ПМО - Карта рынка агентов</div>
-        </div>
-      </header>
+      <Header />
 
       {/* HERO */}
       <section style={{ position: "relative", overflow: "hidden", borderBottom: `1px solid ${C.border}` }}>
