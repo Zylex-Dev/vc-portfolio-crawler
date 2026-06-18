@@ -11,6 +11,7 @@ import Hero from "./components/Hero";
 import Controls, { type View, type SortKey } from "./components/Controls";
 import GridView from "./components/views/GridView";
 import CompactView from "./components/views/CompactView";
+import MapView from "./components/views/MapView";
 
 const report = reportData as Report;
 
@@ -178,27 +179,6 @@ function LegendItem({ color, text, square }: { color: string; text: string; squa
       <span style={{ width: 9, height: 9, borderRadius: square ? 2 : "50%", background: color }} />
       {text}
     </span>
-  );
-}
-
-/* ---------- MAP ---------- */
-function MapView({ agents, maxCount, onOpen }: { agents: AgentGroup[]; maxCount: number; onOpen: (id: number) => void }) {
-  return (
-    <div style={{ background: C.card, border: `1px solid ${C.borderWarm}`, borderRadius: 18, padding: 22 }}>
-      <p style={{ margin: "0 0 18px", fontSize: 13, color: C.muted, fontWeight: 500 }}>Размер плитки — число стартапов в группе. Цвет — стадия реализации агента.</p>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "flex-end" }}>
-        {agents.map((a) => {
-          const sm = statusMeta(a.status);
-          const size = Math.round(54 + Math.sqrt(a.count / maxCount) * 116);
-          return (
-            <button key={a.id} className="agent-tile" onClick={() => onOpen(a.id)} title={a.name} style={{ cursor: "pointer", border: `1px solid ${sm.color}`, background: sm.bg, color: sm.color, borderRadius: 13, padding: 10, display: "flex", flexDirection: "column", justifyContent: "space-between", overflow: "hidden", width: size, height: size }}>
-              <span style={{ fontSize: 11, fontWeight: 700, lineHeight: 1.15, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>{a.name}</span>
-              <span style={{ fontFamily: FONT_SERIF, fontSize: 21, lineHeight: 1, fontVariantNumeric: "tabular-nums", alignSelf: "flex-end" }}>{fmtInt(a.count)}</span>
-            </button>
-          );
-        })}
-      </div>
-    </div>
   );
 }
 
