@@ -1,7 +1,7 @@
 import type { ReportMeta } from "../types";
 import { C, FONT_SERIF } from "../theme";
 
-const U = "/uploads";
+const U = "./uploads";
 
 /** Scattered fund logos (desktop) — absolute placement ported from the mockup. */
 const SCATTER = [
