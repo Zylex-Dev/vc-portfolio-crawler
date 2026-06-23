@@ -69,6 +69,15 @@ def main():
     # Full crawl before EdTech filtering — the top of the research funnel.
     total_collected = sum(1 for _ in csv.DictReader(open(os.path.join(DATA_DIR, "all_companies.csv"), encoding="utf-8")))
 
+    # Functional grouping of the 232 unmatched ("new ideas"), keyed by startup id.
+    # Splits them into 7 niches (G1–G7) and carries a per-startup AI rationale.
+    idea_groups = {}
+    for g in csv.DictReader(open(os.path.join(DATA_DIR, "unmatched_groups.csv"), encoding="utf-8")):
+        idea_groups[g["id"]] = {
+            "functionalGroup": (g["functional_group"] or "").strip(),
+            "groupRationale": (g["group_rationale"] or "").strip(),
+        }
+
     agents = []
     for a in agents_raw:
         agents.append({
@@ -99,6 +108,7 @@ def main():
             matched += 1
         funds.add(r["fund"])
         sectors = [s.strip() for s in (r["sectors"] or "").split(";") if s.strip()]
+        idea = idea_groups.get(r["id"], {})
         startups.append({
             "id": int(r["id"]),
             "fund": FUND_LABELS.get(r["fund"], r["fund"]),
@@ -108,6 +118,7 @@ def main():
             "description": (r["description"] or "").strip(),
             "stage": (r["stage"] or "").strip(),
             "foundedYear": year(r["founded_year"]),
+            "investedYear": year(r["invested_year"]),
             "pmoScore": num(r["pmo_score"], 0),
             "pmoSub": {
                 "traj": num(r["pmo_traj"], 0),
@@ -119,6 +130,9 @@ def main():
             "relevance": num(r["relevance"], 0),
             "rationale": (r["rationale"] or "").strip(),
             "assignedAgent": assigned if is_matched else UNMATCHED,
+            # Niche bucket + AI rationale for unmatched "new ideas" (null for matched).
+            "functionalGroup": idea.get("functionalGroup"),
+            "groupRationale": idea.get("groupRationale", ""),
         })
 
     report = {
