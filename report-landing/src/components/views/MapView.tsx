@@ -84,14 +84,17 @@ export default function MapView({
                     <path d={p.path} fill={`url(#${p.gid})`} stroke={col.stroke} strokeWidth={2.25} strokeLinejoin="round" />
                   </svg>
                   <span className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-[6px] p-[10px] text-center">
-                    <span
-                      className="max-w-[184px] break-words text-[13.5px] font-bold leading-[1.2] tracking-[-.01em] [text-wrap:balance]"
-                      style={{ color: col.text }}
-                    >
-                      {p.label}
+                    {/* fixed-height wrapper so counter stays on the same line across all pieces */}
+                    <span className="flex h-[80px] items-center justify-center">
+                      <span
+                        className="max-w-[184px] break-words text-[15.5px] font-bold leading-[1.2] tracking-[-.01em] [text-wrap:balance]"
+                        style={{ color: col.text }}
+                      >
+                        {p.label}
+                      </span>
                     </span>
                     <span
-                      className="whitespace-nowrap text-[11px] font-bold tracking-[.02em] [font-variant-numeric:tabular-nums]"
+                      className="whitespace-nowrap text-[12.5px] font-bold tracking-[.02em] [font-variant-numeric:tabular-nums]"
                       style={{ color: col.meta }}
                     >
                       {p.count} {p.unit}
