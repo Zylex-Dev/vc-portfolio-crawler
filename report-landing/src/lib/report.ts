@@ -1,5 +1,5 @@
-import type { Agent, AgentGroup, PmoSub, Report, Startup } from "../types";
-import { UNMATCHED } from "../types";
+import type { AgentGroup, PmoSub, Report, Startup } from "../types";
+import { IDEA_GROUP_ORDER, SREDSTVO_ORDER, UNMATCHED } from "../types";
 
 const round1 = (n: number) => Math.round(n * 10) / 10;
 
@@ -18,32 +18,44 @@ function subOf(group: Startup[]): PmoSub {
   };
 }
 
-export interface UnmatchedBucket {
-  group: Startup[];
+/** A puzzle-map slot: a group label with its item count. */
+export interface GroupMeta {
+  name: string;
   count: number;
-  avgRel: number;
-  avgPmo: number;
-  sub: PmoSub;
-  topSectors: string[];
+}
+
+/** A rendered section: ПМО средство (agents) or idea niche (startups). */
+export interface Section<T> {
+  name: string;
+  idx: string; // "01", "02", … over *shown* sections only
+  count: number;
+  items: T[];
 }
 
 export interface EnrichedReport {
   meta: Report["meta"];
-  agents: AgentGroup[];
-  maxCount: number;
-  unmatched: UnmatchedBucket;
+  agents: AgentGroup[]; // all 44 agents, enriched with their startup group
+  ideas: Startup[]; // 232 unmatched "new idea" startups
+  pmoMeta: GroupMeta[]; // 5 средства + agent counts (puzzle / baseline)
+  ideaMeta: GroupMeta[]; // 7 niches + startup counts
+  ideaSectors: string[];
+  ideaFunds: string[];
+  ideaStages: string[];
 }
 
-/** Group startups under their assigned agent and compute group aggregates. */
+// Known funding stages float to the top of the filter; messy values trail behind.
+const STAGE_ORDER = ["Pre-Seed", "Pre-Seed/Seed", "Seed", "Series A", "Series B", "Series C", "Series D", "Growth"];
+
+/** Group startups under their assigned agent and precompute everything the UI needs. */
 export function enrich(report: Report): EnrichedReport {
   const byAgent = new Map<string, Startup[]>();
-  report.agents.forEach((a: Agent) => byAgent.set(a.name, []));
+  report.agents.forEach((a) => byAgent.set(a.name, []));
 
-  const unmatchedStartups: Startup[] = [];
+  const ideas: Startup[] = [];
   report.startups.forEach((s) => {
     const bucket = byAgent.get(s.assignedAgent);
     if (s.assignedAgent !== UNMATCHED && bucket) bucket.push(s);
-    else unmatchedStartups.push(s);
+    else ideas.push(s);
   });
 
   const agents: AgentGroup[] = report.agents.map((a) => {
@@ -58,36 +70,42 @@ export function enrich(report: Report): EnrichedReport {
     };
   });
 
-  const maxCount = Math.max(1, ...agents.map((a) => a.count));
+  const pmoMeta: GroupMeta[] = SREDSTVO_ORDER.map((name) => ({
+    name,
+    count: agents.filter((a) => a.sredstvo === name).length,
+  }));
+  const ideaMeta: GroupMeta[] = IDEA_GROUP_ORDER.map((name) => ({
+    name,
+    count: ideas.filter((s) => s.functionalGroup === name).length,
+  }));
 
-  // Count sectors case-insensitively; keep the most frequent original spelling
-  // as the display label (raw data mixes "Education" / "education").
-  const secCount = new Map<string, { total: number; labels: Map<string, number> }>();
-  unmatchedStartups.forEach((s) =>
-    s.sectors.forEach((sec) => {
-      const key = sec.toLowerCase();
-      const entry = secCount.get(key) ?? { total: 0, labels: new Map<string, number>() };
-      entry.total += 1;
-      entry.labels.set(sec, (entry.labels.get(sec) ?? 0) + 1);
-      secCount.set(key, entry);
-    }),
+  const ideaSectors = [...new Set(ideas.flatMap((s) => s.sectors))].sort((a, b) => a.localeCompare(b, "ru"));
+  const ideaFunds = [...new Set(ideas.map((s) => s.fund))].sort((a, b) => a.localeCompare(b, "ru"));
+  const stageSet = new Set(ideas.map((s) => s.stage).filter(Boolean));
+  const ideaStages = [
+    ...STAGE_ORDER.filter((s) => stageSet.has(s)),
+    ...[...stageSet].filter((s) => !STAGE_ORDER.includes(s)).sort((a, b) => a.localeCompare(b, "ru")),
+  ];
+
+  return { meta: report.meta, agents, ideas, pmoMeta, ideaMeta, ideaSectors, ideaFunds, ideaStages };
+}
+
+/** Bucket already-filtered agents into their 5 средства, numbering shown sections. */
+export function groupAgents(agents: AgentGroup[]): Section<AgentGroup>[] {
+  return numberSections(
+    SREDSTVO_ORDER.map((name) => ({ name, items: agents.filter((a) => a.sredstvo === name) })),
   );
-  const topSectors = [...secCount.values()]
-    .sort((a, b) => b.total - a.total)
-    .slice(0, 4)
-    .map((e) => [...e.labels.entries()].sort((a, b) => b[1] - a[1])[0][0]);
+}
 
-  return {
-    meta: report.meta,
-    agents,
-    maxCount,
-    unmatched: {
-      group: unmatchedStartups,
-      count: unmatchedStartups.length,
-      avgRel: avg(unmatchedStartups, (s) => s.relevance),
-      avgPmo: avg(unmatchedStartups, (s) => s.pmoScore),
-      sub: subOf(unmatchedStartups),
-      topSectors,
-    },
-  };
+/** Bucket already-filtered ideas into their 7 niches, numbering shown sections. */
+export function groupIdeas(ideas: Startup[]): Section<Startup>[] {
+  return numberSections(
+    IDEA_GROUP_ORDER.map((name) => ({ name, items: ideas.filter((s) => s.functionalGroup === name) })),
+  );
+}
+
+function numberSections<T>(raw: { name: string; items: T[] }[]): Section<T>[] {
+  return raw
+    .filter((g) => g.items.length)
+    .map((g, i) => ({ name: g.name, idx: String(i + 1).padStart(2, "0"), count: g.items.length, items: g.items }));
 }

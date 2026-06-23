@@ -19,6 +19,21 @@ export const C = {
 
 export const FONT_SERIF = "'Newsreader',serif";
 
+/** Per-side colours for the puzzle map + space accents (ported from the mockup). */
+export const PUZZLE = {
+  pmo: { c1: "#FBF4EB", c2: "#F4E6D6", stroke: "#CC9A6F", text: "#894A2D", meta: "#A9744E" },
+  idea: { c1: "#F2F8F3", c2: "#E4EFE8", stroke: "#8FB59E", text: "#2D6A54", meta: "#4E8C75" },
+} as const;
+
+/** Legend / accordion swatch fills. */
+export const LEGEND = {
+  pmo: { bg: "#DEBFA7", border: "#CBA587" },
+  idea: { bg: "#C0D2C6", border: "#A4BEAC" },
+} as const;
+
+/** Muted labels under the big рел / пмо numbers on cards. */
+export const SCORE_LABEL = { rel: "#C9A98C", pmo: "#9DBAAE" } as const;
+
 export interface StatusMeta {
   label: string;
   color: string;
@@ -27,11 +42,11 @@ export interface StatusMeta {
 
 /**
  * Real research data only has two agent statuses:
- *   «Протестировать» (data value) — agent built & ready, shown as «В проде» → green
- *   «В разработке»                — still under construction                → amber
+ *   «Протестировать» (data value) — agent built & ready, shown as «Готов MVP» → green
+ *   «В разработке»                — still under construction                 → amber
  */
 export function statusMeta(s: AgentStatus | string): StatusMeta {
-  if (s === "Протестировать") return { label: "В проде", color: "#3F7D55", bg: "#E7F0E8" };
+  if (s === "Протестировать") return { label: "Готов MVP", color: "#3F7D55", bg: "#E7F0E8" };
   if (s === "В разработке") return { label: "В разработке", color: "#A9781F", bg: "#F4EAD4" };
   return { label: s || "—", color: "#8A7461", bg: "#EEE6DB" };
 }
