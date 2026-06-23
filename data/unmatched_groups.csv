@@ -1,0 +1,233 @@
+id,fund,name,website,sectors,pmo_score,relevance,group_id,functional_group,group_rationale
+1169,edu-capital,vocal,https://apps.apple.com/fr/app/vocal-image-coach-vocal-ia/id1535324205,Future of education,6.4,6,G1,"Комплексные платформы, школы и курсы",Мобильный AI-коуч по коммуникативным навыкам (самостоятельное приложение).
+1189,gsv-ventures,CoLearn,https://colearn.id/,K-12,2.8,6,G1,"Комплексные платформы, школы и курсы","Платформа, позволяющая репетиторам создавать онлайн-курсы."
+1502,new-schools,"Oko Labs, Inc.",https://okolabs.ai,Learning Solutions,6.2,6,G1,"Комплексные платформы, школы и курсы",AI-платформа малогрупповой инструкции для педагогов.
+1631,owl-ventures,Amira Learning,https://amiralearning.com/,Pre K-12,5.6,6,G1,"Комплексные платформы, школы и курсы",AI-ассистент чтения: слушает ученика и тьюторит (приложение).
+1712,owl-ventures,Ulesson,https://ulesson.com/,Pre K-12;Post-Secondary,3.0,6,G1,"Комплексные платформы, школы и курсы","Комплексное обучающее приложение (видео-уроки, релевантная программа)."
+1812,reach-capital,Tynker,https://www.tynker.com/,Learning,6.6,6,G1,"Комплексные платформы, школы и курсы",Самостоятельные геймифицированные курсы программирования для детей.
+2228,y-combinator,Platzi,https://platzi.com,Education,4.0,6,G1,"Комплексные платформы, школы и курсы",Платформа курсов (дизайн/маркетинг/программирование) с коллаборацией.
+2285,y-combinator,Scrimba,https://scrimba.com,Education,2.8,6,G1,"Комплексные платформы, школы и курсы",Платформа интерактивных курсов программирования (скринкасты).
+1139,edu-capital,opendigitaleducation,https://opendigitaleducation.com/index.php?lang=fr,Future of education,4.4,5,G1,"Комплексные платформы, школы и курсы",Социальная сеть/среда взаимодействия для школ.
+1616,new-schools,Vinn Labs LLC,https://www.simili.app,Learning Solutions,2.8,5,G1,"Комплексные платформы, школы и курсы",Голосовая математическая платформа с вербальным рассуждением.
+1752,reach-capital,Iago,https://getiago.com/,Learning,5.2,5,G1,"Комплексные платформы, школы и курсы",Изучение языков через культурное погружение (приложение).
+2299,y-combinator,EduRev,http://edurev.in,Education,3.6,5,G1,"Комплексные платформы, школы и курсы",Content-first платформа («Netflix для образования») с соцслоем.
+2329,y-combinator,Quad,http://thequad.com,Education,1.8,5,G1,"Комплексные платформы, школы и курсы",Студенческое приложение управления задачами и сроками.
+2326,y-combinator,Vidcode,http://vidcode.com,Education,3.6,4,G1,"Комплексные платформы, школы и курсы",Самоуправляемые курсы программирования для подростков (платформа).
+1683,owl-ventures,Noodle Partners,https://www.noodle.com/,Post-Secondary,4.4,3,G1,"Комплексные платформы, школы и курсы",OPM: создание и управление онлайн-программами вузов.
+677,a16z,Maven,https://maven.com/,,3.4,0,G1,"Комплексные платформы, школы и курсы",Платформа для создания и запуска когортных онлайн-курсов.
+1137,edu-capital,digischool,https://www.digischool.fr,Future of education,2.2,0,G1,"Комплексные платформы, школы и курсы",Образовательные приложения общего назначения для K12 и вузов.
+1144,edu-capital,fourthrev,https://fourthrev.com,Future of education,3.8,0,G1,"Комплексные платформы, школы и курсы",Платформа онлайн-курсов от tech-компаний и университетов.
+1156,edu-capital,mentorshow,https://mentorshow.com,Future of education,0.0,0,G1,"Комплексные платформы, школы и курсы",Платформа онлайн-курсов от знаменитых менторов.
+1168,edu-capital,tomorrow,https://www.tomorrow.university,Future of education,2.2,0,G1,"Комплексные платформы, школы и курсы",Целостный онлайн-университет.
+1195,gsv-ventures,DISCO,https://www.disco.co,,3.0,0,G1,"Комплексные платформы, школы и курсы",Платформа для создателей живого онлайн-обучения (LMS).
+1214,gsv-ventures,LEAD,https://leadschool.in/,K-12,1.2,0,G1,"Комплексные платформы, школы и курсы",Интегрированная школьная система (технологии+программа+педагогика).
+1241,gsv-ventures,Speak,https://www.speak.com/,,5.2,0,G1,"Комплексные платформы, школы и курсы",AI-тьютор разговорной речи с мгновенной обратной связью (приложение).
+1247,gsv-ventures,Toddle,https://www.toddleapp.com/,,7.0,0,G1,"Комплексные платформы, школы и курсы",All-in-one платформа: план/преподавание/оценивание/отчёты.
+1256,gsv-ventures,Valenture Institute,https://www.valentureinstitute.com/,PreK-12,4.0,0,G1,"Комплексные платформы, школы и курсы",Глобальная частная онлайн-школа.
+1272,learn-capital,Coursera,https://www.coursera.org/,education,4.0,0,G1,"Комплексные платформы, школы и курсы",MOOC-платформа курсов и степеней.
+1288,learn-capital,Guidepost Global Education,https://guideposteducation.com/,education;community,4.8,0,G1,"Комплексные платформы, школы и курсы",Глобальная сеть Монтессори-школ с централизованной платформой.
+1305,learn-capital,NewGlobe,https://newglobe.education/,education,2.0,0,G1,"Комплексные платформы, школы и курсы",Системный оператор школ для правительств (педагогика+данные+коучинг).
+1322,learn-capital,SoloLearn,https://www.sololearn.com/,education,3.8,0,G1,"Комплексные платформы, школы и курсы",Мобильная платформа обучения программированию с сообществом.
+1327,learn-capital,Teachable,https://teachable.com/,education,2.6,0,G1,"Комплексные платформы, школы и курсы",Платформа создания и продажи онлайн-курсов.
+1328,learn-capital,Teachmint,https://www.teachmint.com/,education,2.2,0,G1,"Комплексные платформы, школы и курсы",Интегрированная школьная платформа (LMS+коммуникация+контент).
+1330,learn-capital,Udemy,https://www.udemy.com/,education,3.0,0,G1,"Комплексные платформы, школы и курсы",Маркетплейс онлайн-курсов по запросу.
+1611,new-schools,"Urban Assembly, Inc.",https://www.urbanassembly.org,Teaching Reimagined,3.0,0,G1,"Комплексные платформы, школы и курсы",Сеть карьерно-ориентированных школ (school network).
+1641,owl-ventures,Brisk Teaching,https://www.briskteaching.com/,Pre K-12,1.0,0,G1,"Комплексные платформы, школы и курсы","AI Chrome-расширение, автоматизирующее работу учителя."
+1673,owl-ventures,Leleketang,https://www.leleketang.com/,Pre K-12,0.0,0,G1,"Комплексные платформы, школы и курсы",Платформа доступа к качественному K-12 образованию.
+1696,owl-ventures,Sizzle,https://web.szl.ai/,Pre K-12;Future of Work,7.2,0,G1,"Комплексные платформы, школы и курсы",AI + социальное обучающее приложение (комплексное).
+1703,owl-ventures,Subject,https://subject.com/,Pre K-12,1.8,0,G1,"Комплексные платформы, школы и курсы",Платформа аккредитованных HS-курсов с преподавателями (онлайн-школа).
+1729,reach-capital,CoderHouse,https://www.coderhouse.com/,Learning,0.8,0,G1,"Комплексные платформы, школы и курсы",Живые онлайн-курсы для апскилла профессионалов (провайдер курсов).
+1732,reach-capital,Curiosities,https://www.curiosities.ai/,Learning,5.2,0,G1,"Комплексные платформы, школы и курсы",AI-приложение для развития критического мышления у детей.
+1803,reach-capital,SuperHi,https://www.superhi.com/,Learning,0.6,0,G1,"Комплексные платформы, школы и курсы",Протокол/маркетплейс обмена образовательным контентом за оплату.
+1806,reach-capital,TeachShare,https://www.teachshare.com/,Learning,6.6,0,G1,"Комплексные платформы, школы и курсы",All-in-one платформа адаптивного образования (создать/гейм/проверка).
+1807,reach-capital,Teachy,https://www.teachy.com.br/,Learning,0.0,0,G1,"Комплексные платформы, школы и курсы",AI-рабочее пространство для учителей.
+2247,y-combinator,Shepherd,https://www.shepherd.study,Education,5.4,0,G1,"Комплексные платформы, школы и курсы",Комплексная платформа: AI-самообучение+тьюторинг+коллаборация+аналитика.
+2261,y-combinator,Koala,https://www.teachwithkoala.com,Education,3.0,0,G1,"Комплексные платформы, школы и курсы",Интерактивная платформа для онлайн-преподавания детям.
+2275,y-combinator,AppX,https://appx.co.in,Education,3.2,0,G1,"Комплексные платформы, школы и курсы",Платформа для создателей: запуск приложений и монетизация курсов.
+2277,y-combinator,Kiwify,https://kiwify.com.br,Education,0.0,0,G1,"Комплексные платформы, школы и курсы",Платформа создания и продажи онлайн-курсов (Бразилия).
+2281,y-combinator,Kidato,https://www.kidato.com,Education,2.6,0,G1,"Комплексные платформы, школы и курсы",Полноценная онлайн-школа с живыми учителями (5:1).
+2320,y-combinator,Edwin,https://edwin.ai,Education,6.8,0,G1,"Комплексные платформы, школы и курсы",Адаптивное обучение + NLU разговорная практика + инструкторы.
+2331,y-combinator,One Month,http://onemonth.com,Education,0.8,0,G1,"Комплексные платформы, школы и курсы",Ускоренная обучающая платформа с готовыми курсами.
+2339,y-combinator,Degrees of Freedom,https://www.DegreesOfFreedom.org,Education,2.4,0,G1,"Комплексные платформы, школы и курсы",Blended/VR модель получения степени (онлайн-вуз).
+2341,y-combinator,Foreword,https://www.foreword.live/,Education,2.8,0,G1,"Комплексные платформы, школы и курсы",Маркетплейс живых онлайн-воркшопов для профессионалов.
+1201,gsv-ventures,Filo,https://askfilo.com/en-us,,5.8,4,G2,Живое обучение и репетиторы,Мгновенное живое 1:1 видео-тьюторство.
+2280,y-combinator,Poliglota,https://www.poliglota.org/,Education,3.2,3,G2,Живое обучение и репетиторы,Онлайн-языковая школа с групповыми живыми занятиями.
+1555,new-schools,Step Up Tutoring,https://www.stepuptutoring.org/,"GenAI Math Tutoring,Learning Solutions",3.2,2,G2,Живое обучение и репетиторы,Виртуальное 1:1 тьюторство + GenAI-инструменты для тьюторов.
+1783,reach-capital,PeerTeach,https://www.peerteach.org/,Learning,2.8,2,G2,Живое обучение и репетиторы,Data-driven взаимное (peer) обучение математике.
+1163,edu-capital,preply,https://preply.com,Future of education,3.4,0,G2,Живое обучение и репетиторы,Маркетплейс репетиторов по языкам.
+1226,gsv-ventures,Openhouse,https://openhouse.study/,,3.6,0,G2,Живое обучение и репетиторы,Физическое внешкольное пространство с живыми занятиями.
+1304,learn-capital,Nerdy,https://www.nerdy.com/,education,7.2,0,G2,Живое обучение и репетиторы,Маркетплейс репетиторов (Varsity Tutors).
+1663,owl-ventures,Ignite,https://ignite-reading.com/,Pre K-12,4.8,0,G2,Живое обучение и репетиторы,1:1 виртуальное тьюторство чтения K-8.
+1688,owl-ventures,Preplay,https://preply.com/,Future of Work,2.6,0,G2,Живое обучение и репетиторы,Платформа подбора репетиторов через онлайн-чат.
+1787,reach-capital,Preply,https://preply.com/,Learning,3.4,0,G2,Живое обучение и репетиторы,Маркетплейс репетиторов.
+2230,y-combinator,Cambly,http://www.cambly.com,Education,5.0,0,G2,Живое обучение и репетиторы,Мгновенный 1:1 видео-чат с носителями языка (репетиторы).
+2279,y-combinator,UPchieve,https://www.upchieve.org,Education,2.4,0,G2,Живое обучение и репетиторы,Бесплатное живое 24/7 тьюторство для малоимущих школьников.
+2333,y-combinator,Marathon Education,https://www.marathon.edu.vn,Education,2.2,0,G2,Живое обучение и репетиторы,Живые интерактивные тьюторские занятия K-12.
+2343,y-combinator,Tutorspree,http://tutorspree.com,Education,1.4,0,G2,Живое обучение и репетиторы,Маркетплейс репетиторов (Wyzant).
+1154,edu-capital,makers,https://makers.tech,Future of education,3.4,6,G3,"Карьера, трудоустройство и профориентация",Буткемп по программированию с фокусом на трудоустройство.
+1286,learn-capital,General Assembly,https://generalassemb.ly/,education,3.6,6,G3,"Карьера, трудоустройство и профориентация",Иммерсивные программы под востребованные профессии (трудоустройство).
+1312,learn-capital,Pathrise,https://www.pathrise.com/,education,5.8,6,G3,"Карьера, трудоустройство и профориентация","Карьерный коучинг, подготовка к интервью, job search (ISA)."
+1513,new-schools,Pathlitics,https://pathlitics.com,Learning Differences,3.2,6,G3,"Карьера, трудоустройство и профориентация",Планирование путей после школы для студентов с ОВЗ (данные/карьера).
+512,a16z,Formation,https://formation.dev,,5.0,5,G3,"Карьера, трудоустройство и профориентация",Remote fellowship для инженеров с целью карьерного шага.
+1284,learn-capital,Extern,https://www.paragonone.com,education,3.0,5,G3,"Карьера, трудоустройство и профориентация",Короткие удалённые экстерншипы для карьерного исследования.
+1785,reach-capital,PeopleGrove,https://www.peoplegrove.com/,Learning,3.8,5,G3,"Карьера, трудоустройство и профориентация",Менторинг и консультирование студентов (карьера/persistence).
+2272,y-combinator,Jovian,https://www.jovian.com,Education,2.6,5,G3,"Карьера, трудоустройство и профориентация",Онлайн-университет SWE/data science для карьерного роста.
+2293,y-combinator,Bloom Institute of Technology,https://www.bloomtech.com,Education,1.4,5,G3,"Карьера, трудоустройство и профориентация",CS-образование «бесплатно до трудоустройства» (ISA).
+1427,new-schools,Gladeo Inc.,https://www.gladeo.org,Learning Differences,2.6,4,G3,"Карьера, трудоустройство и профориентация",Постшкольная готовность и career-development для студентов с IEP.
+2257,y-combinator,Avocademy,http://www.Avocademy.com,Education,1.0,4,G3,"Карьера, трудоустройство и профориентация",Буткемп для смены карьеры в дизайн (трудоустройство).
+1788,reach-capital,Realworld,https://www.realworld.co/,Learning,2.4,3,G3,"Карьера, трудоустройство и профориентация",Навигация по взрослой жизни и карьере (готовность к взрослению).
+1146,edu-capital,prepacademy,https://www.prepacademy.fr,Future of education,2.0,0,G3,"Карьера, трудоустройство и профориентация",Онлайн-обучение под дефицитные профессии (трудоустройство).
+1166,edu-capital,studentpop,https://www.studentpop.fr,Future of education,0.0,0,G3,"Карьера, трудоустройство и профориентация",Платформа студенческих подработок (занятость).
+1200,gsv-ventures,Fairygodboss,https://fairygodboss.com/,Future of Talent@Work,0.0,0,G3,"Карьера, трудоустройство и профориентация",Сообщество отзывов о работодателях и карьерных советов.
+1243,gsv-ventures,Tara,https://tara.ai/,Future of Talent@Work,0.0,0,G3,"Карьера, трудоустройство и профориентация",Talent Acquisition & Recruiting Automation / управление проектами.
+1289,learn-capital,HireArt,https://www.hireart.com/,education,0.0,0,G3,"Карьера, трудоустройство и профориентация",Платформа найма и трудоустройства контрактных работников.
+1290,learn-capital,Kalibrr,https://www.kalibrr.com/,education,0.0,0,G3,"Карьера, трудоустройство и профориентация",Платформа подбора вакансий и соискателей (найм).
+1299,learn-capital,Mentor Collective,https://www.mentorcollective.org/,education,2.8,0,G3,"Карьера, трудоустройство и профориентация",Платформа подбора менторов для студентов (карьера/belonging).
+1310,learn-capital,On Deck,https://www.beondeck.com/,education;community,0.0,0,G3,"Карьера, трудоустройство и профориентация",Феллоушипы и сообщество для предпринимателей (карьера).
+1317,learn-capital,Scoutible,https://www.scoutible.com/,education;gaming,0.0,0,G3,"Карьера, трудоустройство и профориентация",Игровой AI для найма и психометрии кандидатов.
+1610,new-schools,Uprooted Academy,https://www.uprootedacademy.org/,Learning Differences,2.4,0,G3,"Карьера, трудоустройство и профориентация",Постшкольное планирование для студентов с ОВЗ + тренинг консультантов.
+1731,reach-capital,CommonTime Pathways,https://www.ctpathways.com/,Learning,0.0,0,G3,"Карьера, трудоустройство и профориентация",Рекрутинг креативщиков вузами + поиск стипендий (admissions).
+1770,reach-capital,Major League Hacking,https://mlh.io/,Learning,0.0,0,G3,"Карьера, трудоустройство и профориентация",Связь работодателей с техническими талантами (хакатоны/наём).
+1790,reach-capital,Riipen,https://riipen.com/,Learning,2.4,0,G3,"Карьера, трудоустройство и профориентация",Реальные проекты студентов с компаниями за зачёт (work-based).
+2264,y-combinator,Stepful,https://www.stepful.com,Education,1.0,0,G3,"Карьера, трудоустройство и профориентация",Обучение + трудоустройство в healthcare за 4 месяца.
+2298,y-combinator,Quero Education,http://querobolsa.com.br,Education,0.0,0,G3,"Карьера, трудоустройство и профориентация",Маркетплейс программ колледжей: поиск/сравнение/зачисление.
+2303,y-combinator,Microverse,https://www.microverse.org,Education,3.4,0,G3,"Карьера, трудоустройство и профориентация",Обучение и связь талантов с глобальными вакансиями.
+2305,y-combinator,Juno College of Technology,http://junocollege.com,Education,1.6,0,G3,"Карьера, трудоустройство и профориентация",Буткемп программирования («университет будущего»).
+2315,y-combinator,Fullstack Academy,http://fullstackacademy.com,Education,3.0,0,G3,"Карьера, трудоустройство и профориентация",Буткемп веб-разработки (трудоустройство).
+2318,y-combinator,FunctionUp (FanPlay),https://www.functionup.org/,Education,1.6,0,G3,"Карьера, трудоустройство и профориентация",Placement-буткемп по ISA-модели (трудоустройство).
+2336,y-combinator,Mentorcam,https://mentor.cam/,Education,0.0,0,G3,"Карьера, трудоустройство и профориентация",Маркетплейс 1:1 бизнес- и карьерных консультаций.
+1179,gsv-ventures,Begin,https://www.speakaboos.com/,Future of Talent in PreK-12,5.6,6,G4,"Контент, учебные программы и обучающие инструменты",Игровой контент раннего обучения чтению/языку (HOMER/Speakaboos).
+1259,learn-capital,Amplify,https://amplify.com/,education,4.6,6,G4,"Контент, учебные программы и обучающие инструменты",Инструкционные программы по предметам + отслеживание прогресса.
+1270,learn-capital,CodeHS,https://codehs.com/,education,2.6,6,G4,"Контент, учебные программы и обучающие инструменты",CS-учебная программа + инструменты учителя для школ.
+1371,new-schools,Capti – Charmtech Labs LLC,http://www.captivoice.com,Learning Solutions,3.0,6,G4,"Контент, учебные программы и обучающие инструменты",Платформа грамотности и прототипирования reading-интервенций.
+1590,new-schools,The Practice Space,https://www.practice-space.org,Learning Solutions,3.0,6,G4,"Контент, учебные программы и обучающие инструменты",Контент и curriculum по навыкам публичных выступлений.
+2330,y-combinator,Leada,http://www.teamleada.com,Education,2.6,6,G4,"Контент, учебные программы и обучающие инструменты",Корпоративная программа обучения работе с данными (контент).
+1342,new-schools,Acuarela Curriculum Cooperative,https://www.acuarelacurriculum.org/,Learning Solutions,1.2,5,G4,"Контент, учебные программы и обучающие инструменты",Культурно-устойчивые двуязычные междисциплинарные curricula.
+1501,new-schools,OJI:SDA’ Sustainable Indigenous Futures,https://www.ojisda.org/,Learning Solutions,1.8,5,G4,"Контент, учебные программы и обучающие инструменты","Land-based коренные учебные модули, встроенные в предметы."
+1562,new-schools,Talkido,https://talkido.co,Learning Solutions,5.6,5,G4,"Контент, учебные программы и обучающие инструменты",Безэкранная система языковой поддержки малышей — продукт.
+1584,new-schools,"The Institute for Anti-Racist Education, Inc.",https://www.antiracisted.org/,Learning Solutions,3.4,5,G4,"Контент, учебные программы и обучающие инструменты",Анти-расистская curriculum + инструмент дизайна обучения.
+1658,owl-ventures,Genially,https://genially.com/,Pre K-12,0.0,5,G4,"Контент, учебные программы и обучающие инструменты",Инструмент создания интерактивных презентаций и визуального контента.
+1475,new-schools,Local Civics,https://www.localcivics.io/,Learning Solutions,3.2,3,G4,"Контент, учебные программы и обучающие инструменты",Проектная гражданская образовательная программа (civics).
+1504,new-schools,Open Source Phonics,http://www.opensourcephonics.org,Learning Solutions,0.6,2,G4,"Контент, учебные программы и обучающие инструменты",Опубликованные уроки и дешифруемые истории по фонетике.
+1508,new-schools,"Outline It, Inc.",https://www.halcyonhouse.org/venture/outline-it-inc/,Learning Solutions,0.8,2,G4,"Контент, учебные программы и обучающие инструменты",Платформа структурирования эссе — инструмент письма.
+1434,new-schools,Hola Books,https://holabooks.com,Learning Solutions,0.6,1,G4,"Контент, учебные программы и обучающие инструменты",Издательство дешифруемых двуязычных книг для обучения чтению.
+1153,edu-capital,lunii,https://lunii.com/fr-fr/,Future of education,2.0,0,G4,"Контент, учебные программы и обучающие инструменты",Безэкранный рассказчик историй для детей — физический продукт.
+1208,gsv-ventures,Hellosaurus,https://www.hellosaurus.com/,PK-12,1.6,0,G4,"Контент, учебные программы и обучающие инструменты",Готовые творческие программы и видеозанятия для детей.
+1291,learn-capital,Kibeam,https://kibeam.com/,education;community;gaming,4.0,0,G4,"Контент, учебные программы и обучающие инструменты",Безэкранное устройство интерактивного чтения бумажных книг.
+1319,learn-capital,Sharpen,https://sharpen.com/,education;health,3.2,0,G4,"Контент, учебные программы и обучающие инструменты",Структурированная программа обучения чтению (родитель+ребёнок).
+1335,learn-capital,Wonder Workshop,https://www.makewonder.com/,education,4.4,0,G4,"Контент, учебные программы и обучающие инструменты",Программируемые роботы + учебная программа — физический продукт.
+1369,new-schools,California Indian Museum and Cultural Center,https://cimcc.org/education-center/,Learning Solutions,1.4,0,G4,"Контент, учебные программы и обучающие инструменты",Музей и культурные образовательные программы/экспозиции.
+1466,new-schools,Lectores para el futuro,http://www.lectorespr.org,Learning Differences,1.8,0,G4,"Контент, учебные программы и обучающие инструменты",Доказательное обучение чтению и интервенции при трудностях.
+1499,new-schools,Novel Education Partners,https://www.novelpartners.org,Learning Solutions,0.4,0,G4,"Контент, учебные программы и обучающие инструменты",Внедрение культурно-отзывчивых ELA-программ в школах.
+1531,new-schools,RISE Child Development Center,https://www.risecdc.org/,Learning Solutions,1.2,0,G4,"Контент, учебные программы и обучающие инструменты",Игровая ECE-программа + PD-модули (учебная программа).
+1551,new-schools,Springpoint,http://springpointschools.org,Learning Solutions,4.4,0,G4,"Контент, учебные программы и обучающие инструменты",Готовые проектные учебные программы (TLE) для старшей школы.
+1568,new-schools,Teachley LLC,https://www.teachley.com,Learning Solutions,4.4,0,G4,"Контент, учебные программы и обучающие инструменты",Высокодозовая математическая программа для малых групп (игры+медиа).
+1577,new-schools,The Calculus Project,https://thecalculusproject.org/,Learning Solutions,1.0,0,G4,"Контент, учебные программы и обучающие инструменты",Исследовательская программа повышения мат.успеваемости.
+1626,new-schools,Young Data Scientists League,https://www.youngdatascientists.org/,Learning Solutions,5.0,0,G4,"Контент, учебные программы и обучающие инструменты",Учебная программа по data science и этике ИИ.
+1666,owl-ventures,Jotit,https://www.jotit.io/,Pre K-12,0.6,0,G4,"Контент, учебные программы и обучающие инструменты",Гибридный аналогово-цифровой обучающий продукт.
+1674,owl-ventures,Letrus,https://www.letrus.com/,Pre K-12,1.6,0,G4,"Контент, учебные программы и обучающие инструменты",Комплексная программа развития грамотности и языка.
+1709,owl-ventures,Tinkergarten,https://www.tinkergarten.com/,Pre K-12,3.0,0,G4,"Контент, учебные программы и обучающие инструменты",Программа развития навыков через игры на улице — продукт.
+1755,reach-capital,InquirED,https://www.inquired.org/,Learning,1.0,0,G4,"Контент, учебные программы и обучающие инструменты",Качественные готовые учебные материалы.
+1766,reach-capital,Lovevery,https://lovevery.com/,Learning,3.0,0,G4,"Контент, учебные программы и обучающие инструменты",Поэтапные игровые наборы для развития ребёнка — физический продукт.
+2258,y-combinator,Lingt,https://www.lingt.com/,Education,1.8,0,G4,"Контент, учебные программы и обучающие инструменты",Создание и управление устными заданиями (инструмент контента).
+2314,y-combinator,Study Edge,http://studyedge.com,Education,0.6,0,G4,"Контент, учебные программы и обучающие инструменты",Производство и дистрибуция кастомного видеоконтента курсов.
+1742,reach-capital,Ellevation,https://ellevationeducation.com/home/default,Learning,3.2,6,G5,"Управление, данные и финансы",Управление ELL-программами + инструменты (program management).
+1794,reach-capital,Scout Edu,https://www.scoutforschools.com/,Learning,1.8,4,G5,"Управление, данные и финансы",AI-native студенческая информационная система (SIS).
+2231,y-combinator,Panorama Education,https://www.panoramaed.com/,Education,1.6,4,G5,"Управление, данные и финансы",Аналитическая платформа успешности учащихся.
+2321,y-combinator,Glimpse K12,http://www.glimpsek12.com/,Education,0.0,2,G5,"Управление, данные и финансы",Измерение education-ROI: расходы против успеваемости (аналитика).
+1132,edu-capital,appscho,https://www.appscho.com/,Future of education,0.0,1,G5,"Управление, данные и финансы",Приложение для управления школой для учеников.
+233,a16z-speedrun,Straia,https://straia.io,AI;Edtech;Enterprise SaaS,0.0,0,G5,"Управление, данные и финансы",Agentic AI-платформа для объединения данных и автоматизации процессов вузов.
+1081,brighteye,Seven Education,https://www.7education.com/,Learning,1.4,0,G5,"Управление, данные и финансы",Операционная система для школ и детских садов (управление).
+1182,gsv-ventures,CampusLogic,https://campuslogic.com/,Future of Talent in Post-Secondary,0.0,0,G5,"Управление, данные и финансы",SaaS студенческих финансовых услуг (financial aid).
+1187,gsv-ventures,Clever,https://clever.com/,Future of Talent in PreK-12,1.0,0,G5,"Управление, данные и финансы",Платформа единого доступа и интеграции данных школьных приложений.
+1203,gsv-ventures,Glimpse,https://www.glimpsek12.com/,Future of Talent in PreK-12,0.0,0,G5,"Управление, данные и финансы",Финансовая аналитика неэффективных расходов школ.
+1211,gsv-ventures,Intellispark,https://intellispark.com/,K-12,0.0,0,G5,"Управление, данные и финансы",Аналитика данных «целостного развития ребёнка» с участием семьи.
+1265,learn-capital,BrightBytes,https://www.google.com/,education,0.0,0,G5,"Управление, данные и финансы",Платформа данных и предиктивной аналитики для школ.
+1269,learn-capital,Climb Credit,https://climbcredit.com/,education;finance,0.0,0,G5,"Управление, данные и финансы",Студенческие кредиты и финансирование обучения (EdFinance).
+1292,learn-capital,Landed,https://www.landed.com/,community;finance;education,0.0,0,G5,"Управление, данные и финансы",Финансовая поддержка и коучинг покупки жилья для педагогов.
+1294,learn-capital,Learning Machine,https://www.hyland.com/en/solutions/products/hyland-credentials,education,0.0,0,G5,"Управление, данные и финансы",Блокчейн-выпуск верифицируемых дипломов и сертификатов (инфраструктура).
+1600,new-schools,Timely Schools,https://www.timelyschools.com,Teaching Reimagined,0.0,0,G5,"Управление, данные и финансы",AI-оптимизация составления школьного расписания.
+1629,owl-ventures,Abl,https://www.ablschools.com/,Pre K-12,0.0,0,G5,"Управление, данные и финансы",Анализ школьного расписания для системных улучшений.
+1634,owl-ventures,Authentica,https://authenticasolutions.com/,Pre K-12;Post-Secondary,0.0,0,G5,"Управление, данные и финансы",Education Cloud / intelligence management — данные и инфраструктура.
+1661,owl-ventures,Honorlock,https://honorlock.com/,Post-Secondary,0.0,0,G5,"Управление, данные и финансы",Онлайн-прокторинг и контроль честности экзаменов.
+1668,owl-ventures,Kuali,https://www.kuali.co/,Post-Secondary,0.0,0,G5,"Управление, данные и финансы","Административное ПО для вузов (финансы, сервисы)."
+1671,owl-ventures,LeapFinance,https://leapfinance.com/,Post-Secondary,0.0,0,G5,"Управление, данные и финансы",Доступ к глобальному образованию + финансирование (EdFinance).
+1691,owl-ventures,RaiseME,https://www.raise.me/,Pre K-12,0.0,0,G5,"Управление, данные и финансы",Микро-стипендии и доступ к financial aid (EdFinance).
+1705,owl-ventures,Swing,https://swingeducation.com/,Pre K-12,0.0,0,G5,"Управление, данные и финансы",Подбор запасных учителей — школьный staffing.
+1730,reach-capital,Cometa,https://www.getcometa.com/,Learning,0.0,0,G5,"Управление, данные и финансы",Операционная система для частных школ (управление).
+1736,reach-capital,Doorman,https://doorman.school/,Learning,0.0,0,G5,"Управление, данные и финансы",Блокировка отвлекающих приложений и мониторинг в классе.
+1740,reach-capital,Ednition,https://www.ednition.com/,Learning,0.0,0,G5,"Управление, данные и финансы",Ростеринг и интеграция данных для edtech-компаний (инфраструктура).
+1748,reach-capital,GPTZero,https://gptzero.me/,Learning,0.0,0,G5,"Управление, данные и финансы",Платформа AI-детекции и ответственного внедрения ИИ (целостность).
+1791,reach-capital,SchoolMint,https://www.schoolmint.com/,Learning,0.0,0,G5,"Управление, данные и финансы",Решение для зачисления учащихся и school choice (админ).
+1796,reach-capital,SmartPass,https://www.smartpass.app/,Learning,0.0,0,G5,"Управление, данные и финансы",Цифровой школьный пропуск (операции/безопасность).
+1805,reach-capital,TeachFX,https://teachfx.com/,Learning,4.0,0,G5,"Управление, данные и финансы",Аналитика диалога в классе с обратной связью учителю.
+2227,y-combinator,GiveCampus,http://go.givecampus.com,Education,0.0,0,G5,"Управление, данные и финансы",Платформа фандрайзинга для образовательных учреждений.
+2233,y-combinator,Risely AI,https://www.risely.ai/,Education,0.0,0,G5,"Управление, данные и финансы",AI-агенты как ОС вузов (retention/productivity) — админ/инфраструктура.
+2292,y-combinator,Nimble,http://www.hirenimble.com,Education,0.0,0,G5,"Управление, данные и финансы",Предиктивный ATS для найма учителей — школьный HR.
+2307,y-combinator,Schoolable,http://schoolable.co,Education,0.0,0,G5,"Управление, данные и финансы",Финтех оплаты школьных взносов с рассрочкой (EdFinance).
+2328,y-combinator,LendEDU,https://lendedu.com,Education,0.0,0,G5,"Управление, данные и финансы",Сайт сравнения финансовых продуктов (студ. кредиты).
+1746,reach-capital,EveryDay Labs,https://www.everydaylabs.com/,Learning,2.0,6,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Снижение пропусков через поведенческую науку и рассылки семье.
+1416,new-schools,Family Engagement Lab,http://www.familyengagementlab.org/,Learning Solutions,2.4,5,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Цифровые продукты для вовлечения семьи.
+1442,new-schools,Indigitize,https://www.indigitize.org/,Teaching Reimagined,1.8,5,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Развитие цифровой грамотности у коренных сообществ.
+1463,new-schools,Lead Collaborative,https://www.leadcolab.org/,Additional Investments,2.6,5,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Развитие потенциала образовательных лидеров (PD).
+1388,new-schools,DC Public Education Fund,http://www.dcedfund.org,Learning Solutions,1.2,4,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Образовательный фонд: грантмейкинг и инкубация программ.
+2294,y-combinator,Dost Education,http://www.dosteducation.com/,Education,1.2,3,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Родительское просвещение для раннего развития (вовлечение семьи).
+2295,y-combinator,ClassDojo,http://www.classdojo.com,Education,4.2,3,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Приложение коммуникации учитель-семья-ученик.
+1263,learn-capital,BloomBoard,https://bloomboard.com,education,3.6,2,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Магистратура/сертификация педагогов на рабочем месте (PD).
+1415,new-schools,Fair Schools,https://www.fairschools.org/,Learning Differences,0.6,2,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Поддержка школьных лидеров в создании инклюзивной среды.
+1467,new-schools,Liberation Journeys,https://www.liberationjourneys.org/,Learning Solutions,3.6,2,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Совместное проектирование анти-расистских школ (PD/системное).
+1571,new-schools,The Ability Challenge,https://theabilitychallenge.org/,Learning Differences,4.2,2,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Консалтинг и тренинг школ по спецобразованию (PD).
+1350,new-schools,All Means All,https://www.amaleaders.org/,Learning Differences,3.0,1,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Коучинг/PD школьных лидеров по инклюзии.
+1331,learn-capital,Uppercase,https://www.uppercaseteach.com/,,5.8,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Коучинг и поддержка учителей + AI-коуч (PD).
+1345,new-schools,AI for Equity,https://www.ai-for-equity.org,Learning Solutions,0.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Поддержка когорт школьных лидеров по внедрению ИИ (PD/системное).
+1349,new-schools,ALL in Education,https://allineducation.org/,Teaching Reimagined,0.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Вовлечение семей и сообществ для борьбы с неравенством.
+1372,new-schools,Celebrate Dyslexia,https://celebratedyslexia.org/,"Early Identification,Learning Differences",1.4,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",НКО поддержки и адвокации людей с дислексией.
+1381,new-schools,CommunityShare,https://www.communityshare.org/,Teaching Reimagined,4.4,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Ко-создание реальных учебных проектов с участием сообщества.
+1393,new-schools,Dyslexia Alliance for Black Children,https://www.dyslexiaallianceforblackchildren.org/,Learning Differences,0.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Альянс за равенство для чернокожих детей с дислексией (адвокация).
+1399,new-schools,Education Evolving (Teacher Powered Schools),https://www.teacherpowered.org/,Teaching Reimagined,1.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Коучинг для teacher-powered школ (PD/системное).
+1425,new-schools,FULCRUM,https://www.fulcrumliteracy.org/,Learning Solutions,1.4,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",НКО за научно обоснованное обучение чтению (политика/подготовка).
+1430,new-schools,"Green Schools National Network, Inc.",https://greenschoolsnationalnetwork.org/,Learning Solutions,2.2,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Целостная трансформация школ через устойчивое развитие (системное).
+1440,new-schools,"Impactful Projects, Inc",http://www.impactfulpbl.com,Learning Solutions,1.8,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Сеть PBL: развитие компетенций педагогов (PD).
+1447,new-schools,Intersection Collective,https://www.intersectioncollective.com,Learning Differences,0.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Адвокация прав людей с инвалидностью на стыке с расой.
+1486,new-schools,MindWorks Collaborative,http://www.mindworkscollab.org,Learning Differences,1.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Кадровое и сервисное обеспечение спецобразования в школах.
+1493,new-schools,National Accelerator of Autism Charter Schools,https://autismcharterschools.org,Learning Differences,0.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Поддержка запуска чартерных школ для аутистов (феллоушипы).
+1529,new-schools,Relay Graduate School of Education,https://www.relay.edu/,Teaching Reimagined,5.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Аккредитованный вуз по подготовке учителей (teacher prep).
+1535,new-schools,Rural Opportunity Institute (ROI),https://www.ruralopportunity.org/,Learning Differences,0.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Сообщество исцеления от травм и психического здоровья (системное).
+1539,new-schools,SELF,http://SELFnola.org,Learning Differences,2.2,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Офлайн-программа обучения школьных лидеров инклюзии.
+1546,new-schools,Social Optics,http://www.mysocialoptics.com,Learning Differences,3.2,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Обучение социальной коммуникации нейроотличных подростков (SEL).
+1550,new-schools,Spelligent Education,http://www.spelligent.org,Learning Differences,2.2,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Дизайн школьных систем под вариативность учащихся (PD/спецобр.).
+1554,new-schools,STEM4Real,http://www.stem4real.org,Learning Solutions,3.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)","Профессиональное обучение педагогов STEM (equity, PD)."
+1583,new-schools,The Inspired Community Project,https://theinspiredcommunityproject.org/,Learning Differences,2.6,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)","НКО раннего вмешательства, адвокации и career-обучения."
+1601,new-schools,Transformative Learning Solutions,http://www.crebydesign.com,Learning Solutions,1.8,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Консалтинг и развитие учителей и школьных лидеров (PD).
+1632,owl-ventures,Answersnow,https://www.getanswersnow.com/,Pre K-12,1.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Телемедицинская ABA-терапия аутизма и тренинг родителей.
+1645,owl-ventures,Coala,https://coalasaude.com.br/,Pre K-12,0.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Телемедицинская платформа для школ (здоровье).
+1660,owl-ventures,Hazel Health,https://www.hazel.co/,Pre K-12,0.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Телемедицина для детей в школе (здоровье).
+1687,owl-ventures,ParentSqueare,https://www.parentsquare.com/,Pre K-12,0.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Коммуникационная платформа школьного сообщества (семья).
+1690,owl-ventures,Raftr,https://www.raftr.com/,Post-Secondary,0.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Коммуникационная платформа студенческих сообществ и событий.
+1724,reach-capital,Breathe For Change,https://www.breatheforchange.com/,Learning,2.6,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Wellness-тренинг для учителей (благополучие/PD).
+1771,reach-capital,Marker Learning,https://markerlearning.com/,Learning,6.0,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Услуги дистанционного обучения и помощи при нарушениях внимания.
+1813,reach-capital,Wayfinder,https://www.projectwayfinder.com/,Learning,2.6,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Curriculum SEL и ментального здоровья (благополучие).
+2342,y-combinator,ExceptionALLY,https://growexceptionally.com/,Education,0.8,0,G6,"Поддержка участников (семья, благополучие, педагоги, сообщество)",Доступная экспертиза для родителей детей с особыми потребностями.
+2253,y-combinator,Epsilon,https://www.epsilon-ai.com,Education,0.0,5,G7,Прочее / смежные нишевые сервисы,AI-ответы на исследовательские вопросы с цитатами — research-инструмент.
+501,a16z,Flash Hoops,https://www.flashhoops.com/,,4.2,0,G7,Прочее / смежные нишевые сервисы,Обучение математике через очные баскетбольные тренировки — нишевой гибридный формат.
+1082,brighteye,Ornikar,https://www.ornikar.com/,Learning,4.8,0,G7,Прочее / смежные нишевые сервисы,Маркетплейс инструкторов вождения и страхования — другой домен.
+1170,edu-capital,wecandoo,https://wecandoo.fr,Future of education,1.2,0,G7,Прочее / смежные нишевые сервисы,Маркетплейс ремесленных досуговых мастер-классов.
+1180,gsv-ventures,Bookclub,https://www.bookclub.com/,Adult Consumer Learning,0.0,0,G7,Прочее / смежные нишевые сервисы,Потребительские виртуальные книжные клубы с авторами.
+1210,gsv-ventures,Hustle,https://www.hustle.com/,Future of Talent@Work,0.0,0,G7,Прочее / смежные нишевые сервисы,Платформа массовых 1:1 SMS-рассылок для организаций — вне образования.
+1223,gsv-ventures,Motimatic,https://motimatic.com/,Future of Talent in Post-Secondary,0.0,0,G7,Прочее / смежные нишевые сервисы,Автоматические мотивационные рассылки (adtech) для удержания.
+1278,learn-capital,EdSurge,https://www.edsurge.com/,education,0.0,0,G7,Прочее / смежные нишевые сервисы,Журналистика и аналитика рынка EdTech — медиа.
+1281,learn-capital,Emergence,https://www.emergence.ai/,education,0.0,0,G7,Прочее / смежные нишевые сервисы,Agentic AI-платформа для бизнес-автоматизации — вне образования.
+1596,new-schools,Thrive,http://www.thriveps.org/,Teaching Reimagined,0.0,0,G7,Прочее / смежные нишевые сервисы,Нет содержательного описания — классификация невозможна.
+1681,owl-ventures,Morressier,https://www.morressier.com/,Post-Secondary,0.0,0,G7,Прочее / смежные нишевые сервисы,Платформа научных конференций и обмена знаниями.
+1692,owl-ventures,Rebel,https://www.rebelgirls.com/,Pre K-12,0.0,0,G7,Прочее / смежные нишевые сервисы,Развлекательный бренд для девочек — не EdTech-инструмент.
+1708,owl-ventures,Thunkable,https://thunkable.com/,Pre K-12;Future of Work,0.0,0,G7,Прочее / смежные нишевые сервисы,No-code платформа разработки мобильных приложений.
+1715,owl-ventures,Welcome Tech,https://www.welcome.tech/,Post-Secondary,0.8,0,G7,Прочее / смежные нишевые сервисы,Платформа ресурсов для иммигрантов — вне ядра обучения.
+1738,reach-capital,Dropback,https://www.dropback.com/,Learning,0.0,0,G7,Прочее / смежные нишевые сервисы,Финансовая инфраструктура для команд студенческого спорта.
+1758,reach-capital,Kanu,https://kanu.us/,Learning,0.0,0,G7,Прочее / смежные нишевые сервисы,P2P кампус-маркетплейс с элементами предпринимательства.
+1798,reach-capital,Songscription,https://songscription.ai/,Learning,1.8,0,G7,Прочее / смежные нишевые сервисы,Транскрипция песен для музыкантов — нишевой инструмент.
+1809,reach-capital,The Podcast App,https://podcast.app/,Learning,1.0,0,G7,Прочее / смежные нишевые сервисы,Поисковая платформа подкастов — медиа/потребитель.
+1969,sequoia,Harmonic,https://harmonic.fun/,AI,2.8,0,G7,Прочее / смежные нишевые сервисы,Движок математического рассуждения / AI-research.
+2248,y-combinator,Deep24,https://deep24.com,Education,0.0,0,G7,Прочее / смежные нишевые сервисы,"Общий лайф-коуч, синхронизирующий данные пользователя."
+2297,y-combinator,Jumpcut,http://www.jumpcut.com,Education,2.2,0,G7,Прочее / смежные нишевые сервисы,Помощь креаторам стать вирусными и монетизироваться — creator economy.
+2312,y-combinator,Our World in Data,https://ourworldindata.org/,Education,0.0,0,G7,Прочее / смежные нишевые сервисы,Открытая публикация данных и визуализаций о мире — данные/медиа.
+2325,y-combinator,KidPass,https://kidpass.com,Education,0.0,0,G7,Прочее / смежные нишевые сервисы,Маркетплейс бронирования детских внешкольных активностей.

@@ -19,14 +19,14 @@ export default function AgentModal({ agent, onClose }: { agent: Agent | null; on
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-[rgba(40,28,18,.46)] px-[16px] py-[5vh] [backdrop-filter:blur(3px)] [animation:fadeIn_.2s_both]"
+      className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-[rgba(40,28,18,.46)] px-[16px] py-[5vh] [backdrop-filter:blur(3px)]"
     >
       <div
         role="dialog"
         aria-modal="true"
         aria-label={agent.name}
         onClick={(e) => e.stopPropagation()}
-        className="w-[min(720px,100%)] overflow-hidden rounded-[22px] border border-border bg-card-alt [box-shadow:0_30px_80px_-30px_rgba(60,40,20,.6)] [animation:fadeUp_.26s_both]"
+        className="w-[min(720px,100%)] overflow-hidden rounded-[22px] border border-border bg-card-alt [box-shadow:0_30px_80px_-30px_rgba(60,40,20,.6)]"
       >
         {/* header */}
         <div className="border-b border-border bg-card px-[30px] pb-[20px] pt-[24px]">
