@@ -235,7 +235,7 @@ export default function App() {
   const m = data.meta;
 
   return (
-    <div className="relative min-h-screen overflow-x-clip bg-paper">
+    <div className="relative min-h-screen overflow-x-clip">
       {/* ambient glow (desktop) */}
       <div aria-hidden className="pointer-events-none absolute -left-[160px] top-[430px] -z-[1] hidden h-[620px] w-[620px] rounded-full md:block" style={{ background: "radial-gradient(circle,rgba(63,138,120,.16),transparent 62%)" }} />
       <div aria-hidden className="pointer-events-none absolute -right-[140px] -top-[180px] -z-[1] hidden h-[600px] w-[600px] rounded-full md:block" style={{ background: "radial-gradient(circle,rgba(194,96,60,.20),transparent 64%)" }} />
