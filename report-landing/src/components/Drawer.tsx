@@ -89,7 +89,7 @@ export default function Drawer({
               <button
                 onClick={() => onOpenInfo(agent)}
                 title="Открыть подробную информацию об агенте"
-                className="cursor-pointer border-none bg-transparent p-0 text-left text-ink transition-colors duration-150 hover:text-clay hover:underline hover:[text-decoration-thickness:1.5px] hover:[text-underline-offset:4px] focus-visible:text-clay focus-visible:underline focus-visible:outline-none"
+                className="cursor-pointer border-none bg-transparent p-0 text-left text-ink hover:text-clay hover:underline hover:[text-decoration-thickness:1.5px] hover:[text-underline-offset:4px] focus-visible:text-clay focus-visible:underline focus-visible:outline-none"
                 style={{ fontFamily: "inherit", fontSize: "inherit", fontWeight: "inherit", letterSpacing: "inherit", lineHeight: "inherit" }}
               >
                 {agent.name}
@@ -236,7 +236,19 @@ function StartupCard({ s }: { s: Startup }) {
     <div className="rounded-[14px] border border-border-warm bg-white px-[15px] py-[14px] md:rounded-[15px] md:px-[18px] md:py-[17px]">
       <div className="flex items-start justify-between gap-[12px] md:gap-[16px]">
         <div className="min-w-0">
-          <div className="text-[15.5px] font-bold leading-[1.2] tracking-[-.01em] md:text-[16px]">{s.name}</div>
+          {s.website ? (
+            <a
+              href={webHref(s.website)}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-[15.5px] font-bold leading-[1.2] tracking-[-.01em] text-ink no-underline hover:text-clay md:text-[16px]"
+            >
+              {s.name} <span className="opacity-40">↗</span>
+            </a>
+          ) : (
+            <div className="text-[15.5px] font-bold leading-[1.2] tracking-[-.01em] md:text-[16px]">{s.name}</div>
+          )}
           <div className="mt-[4px] flex flex-wrap items-center gap-[8px] md:mt-[6px]">
             <span className="text-[11.5px] font-semibold text-faint md:text-[12px]">{metaLine(s)}</span>
             {s.sectors.slice(0, 2).map((t) => (
